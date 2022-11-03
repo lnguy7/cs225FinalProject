@@ -11,4 +11,7 @@ GitHub - Sharing Code:
                                                   git push
 
       - For pulling data:                         git pull
+                                                  git merge
+
+
 
