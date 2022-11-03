@@ -1,2 +1,18 @@
+For the twitch-gamer dataset we will be using, we are going to use a B-Tree data structure for to represent the data.
 
+- Node = individuals stream
+- std::vector<T> streamer_information: 1. views
+                                       2. mature
+                                       3. life_time
+                                       4. created_at
+                                       5. updated_at
+                                       6. numeric_id
+                                       7. dead_account  
+                                       8. language  
+                                       9. affiliate    
+
+- std::vector<Node> streamer_relations: In the dataset, the edges coming from each streamer point to a streamer id that represents  another streamer. They represent individual follower relationships between them. This means that the current streamer's followers follow the other streamer.
+
+- For more information on the dataset, click on the official dataset link below
+                                       http://snap.stanford.edu/data/twitch_gamers.html 
 
