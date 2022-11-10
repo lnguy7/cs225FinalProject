@@ -1,0 +1,53 @@
+## Leading Question 
+How does gaming culture change across different regions? How does language affect how connected and large each community on Twitch is?
+This can be solved by analyzing and comparing:
+- Languages
+- Mutual Followers
+- Viewership
+
+# Dataset Acquisition
+
+## Data Format
+The data that we decided to use for our final project is one that we found on standford data site. The data comes from Twitch which is a large streaming site with millions of global users. The datasheet displays a bunch of different information on different streamers accross the platform including, viewcount, maturity ratings, channel lifetime, start point, end point, language, and more. We were able to access this data as an excel spreadsheet, but are also able to convert it into a working file for vscode. The data set has about 168114 nodes, and 6,797,557 edges. The edges between nodes represent streamers who have mutual followers on twitch. We plan on only using the data involving the streamers id, their viewcount, the language they speak, and the mutual followers edges of the graph. To access our specific subset we can just ignore the columns of data we are not interested in.
+
+## Data Correction
+When we are reading all of the data into our graph, we will check for a few different things. If there is data that has a blank or missing part (specifically in the subcategories that we need) we will just skip that line of data entirely since it does not have the required information we need to analyze it. While we don't think it is likely that the data will have statistically impossible inputs, we will still do checks on each value to make sure that there isn't any negative values, out-of-bounds values, etc. Additionally we plan to check for doubly inputted data where it should not be such as repeated streamer information, or repeated graph edges.
+
+## Data Storage
+To use the data in an efficient way, we will be using a B-Tree to store the data. Every Node will represent an individual streamer (which is obtained from the data set by the streamer id provided in the "edges" file). Inside each node will be a vector of features for each streamer:
+                                          
+1. views
+
+2. mature
+                                          
+3. life_time
+                                          
+4. created_at
+                                          
+5. updated_at
+                                          
+6. numeric_id
+                                          
+7. dead_account 
+                                          
+8. language  
+                                          
+9. affiliate    
+                                          
+There will also be a vector of ints that represent the streamer ids from the "edges". This is where we will access the other nodes. The estimated total storage costs of the dataset inside the B-tree should be O(log(n)).
+
+## Algorithm 
+To store the streamer data, we will use an std::vector<std::pair<int, std::vector<T>>>. Each index in the vector will represent an individual streamer. At each index, is a pair. The .first of the pair will store the streamer's id. The .second of the pair will store a vector of the streamer's feature data. 
+
+To store the edges of the dataset, an std::vector<std::pair<int, int>> will be used. The .first of the pair will be one streamer, and the .second of the pair will be the other streamer that connects to them.
+
+The first algorithm will be a B-tree helper algorithm that will take in the data and convert it into a B-tree node to return. The input will be a vector of the current streamer's feature data. The B-tree node created in the function will have a vector of features and vector of children (which will be created later). The B-tree node that is returned will be set to a variable name that is the streamer's id provided by the dataset. This algorithm will be called however many times needed to represent each individual streamer in a node. This function should take at most O(n) time.
+
+The second algorithm, will be a sorting algorithm that will take in the edges in the dataset (std::vector<std::pair<int, int>>) as an input and sort the edges so that all the edges that lead from one streamer id are together (this will be helpful for the third algorithm below). This function will not return anything, and just sort the vector. This function should take at most O(n) time.
+
+The third algorithm will be a graph algorithm that takes the nodes created in the helper function above, and converts them into a B-tree. Both the streamer data (std::vector<std::pair<int, std::vector<T>>>) and the dataset edges (std::vector<std::pair<int, int>>) will be inputs. Inside the function, an std::vector<B-tree node> will be created. First, we will loop through the streamer data, and call the first algorithm graph helper function on each streamer's feature data to create the B-tree nodes (O(n)). Once all the B-tree nodes have been created and pushed back into the nodes vector, we will create a nested loop and use the dataset edge data to add children to each node. This function will return the vector of nodes. This function should take at most O(n^2) time.
+
+Once the third algorithm has been instantiated and we have access to the nodes in the B-tree, we can experiment with printing out the tree by printing out individual streamers (one node) and their connections (their children), versus printing out all nodes and their connections (all the nodes in the vector and their children).
+
+## Timeline
+Since with our project proposal we have already found our dataset and imported it into our repository that step has been completed. Processing our data will take some time as our dataset is large and in a .csv. We plan to spend a week to 2 weeks on processing and cleaning our data (this being because during this time we will have MP6 to work on). From there each member will be assigned indivdual algorithms to for analyzing the dataset. These will build upon each other and must be completed by the 4th week of the project. Our final deliverable will most likely be a set of graphics and our program which ran said data to create those graphics. This will be done in the last week of the project.
