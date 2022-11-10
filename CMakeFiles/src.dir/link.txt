@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsrc.a CMakeFiles/src.dir/BTree.o CMakeFiles/src.dir/src.o
+/usr/bin/ranlib libsrc.a
