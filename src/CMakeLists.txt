@@ -1,6 +1,5 @@
 # Path definitions.
 set(src_dir ${CMAKE_CURRENT_SOURCE_DIR})
-set(BTree_dir ${CMAKE_CURRENT_BTREE_DIR})
 
 # Add overall src library.
 file(GLOB_RECURSE src_sources CONFIGURE_DEPENDS ${src_dir}/*.cpp ${src_dir}/*.hpp)
