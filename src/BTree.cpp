@@ -42,3 +42,11 @@ void BTree::BTreeNode::setStreamerData(string id, vector<string> streamer_featur
 void BTree::BTreeNode::setMutualFollowers(vector<BTreeNode*> mutual_follows) {
     mutual_followers = mutual_follows;
 }
+
+
+BTree::BTree() {}
+
+BTree::BTree(vector<BTreeNode> streamers) { b_tree = streamers; }
+
+vector<BTree::BTreeNode> BTree::getBTree() { return b_tree; }
+
