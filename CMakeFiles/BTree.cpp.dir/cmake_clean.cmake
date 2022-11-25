@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/BTree.cpp.dir/BTree.o"
   "CMakeFiles/BTree.cpp.dir/BTree.o.d"
+  "CMakeFiles/BTree.cpp.dir/Data.o"
+  "CMakeFiles/BTree.cpp.dir/Data.o.d"
   "CMakeFiles/BTree.cpp.dir/src.o"
   "CMakeFiles/BTree.cpp.dir/src.o.d"
   "libBTree.cpp.a"

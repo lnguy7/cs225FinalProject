@@ -83,10 +83,24 @@ CMakeFiles/src.dir/BTree.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/BTree.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/workspaces/CS 225 FInal Project/cs225FinalProject/src/BTree.cpp" -o CMakeFiles/src.dir/BTree.s
 
+CMakeFiles/src.dir/Data.o: CMakeFiles/src.dir/flags.make
+CMakeFiles/src.dir/Data.o: src/Data.cpp
+CMakeFiles/src.dir/Data.o: CMakeFiles/src.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/workspaces/CS 225 FInal Project/cs225FinalProject/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/src.dir/Data.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/src.dir/Data.o -MF CMakeFiles/src.dir/Data.o.d -o CMakeFiles/src.dir/Data.o -c "/workspaces/CS 225 FInal Project/cs225FinalProject/src/Data.cpp"
+
+CMakeFiles/src.dir/Data.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/src.dir/Data.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/workspaces/CS 225 FInal Project/cs225FinalProject/src/Data.cpp" > CMakeFiles/src.dir/Data.i
+
+CMakeFiles/src.dir/Data.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/Data.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/workspaces/CS 225 FInal Project/cs225FinalProject/src/Data.cpp" -o CMakeFiles/src.dir/Data.s
+
 CMakeFiles/src.dir/src.o: CMakeFiles/src.dir/flags.make
 CMakeFiles/src.dir/src.o: src/src.cpp
 CMakeFiles/src.dir/src.o: CMakeFiles/src.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/workspaces/CS 225 FInal Project/cs225FinalProject/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/src.dir/src.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/workspaces/CS 225 FInal Project/cs225FinalProject/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/src.dir/src.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/src.dir/src.o -MF CMakeFiles/src.dir/src.o.d -o CMakeFiles/src.dir/src.o -c "/workspaces/CS 225 FInal Project/cs225FinalProject/src/src.cpp"
 
 CMakeFiles/src.dir/src.i: cmake_force
@@ -100,16 +114,18 @@ CMakeFiles/src.dir/src.s: cmake_force
 # Object files for target src
 src_OBJECTS = \
 "CMakeFiles/src.dir/BTree.o" \
+"CMakeFiles/src.dir/Data.o" \
 "CMakeFiles/src.dir/src.o"
 
 # External object files for target src
 src_EXTERNAL_OBJECTS =
 
 libsrc.a: CMakeFiles/src.dir/BTree.o
+libsrc.a: CMakeFiles/src.dir/Data.o
 libsrc.a: CMakeFiles/src.dir/src.o
 libsrc.a: CMakeFiles/src.dir/build.make
 libsrc.a: CMakeFiles/src.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/workspaces/CS 225 FInal Project/cs225FinalProject/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libsrc.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/workspaces/CS 225 FInal Project/cs225FinalProject/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libsrc.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/src.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/src.dir/link.txt --verbose=$(VERBOSE)
 

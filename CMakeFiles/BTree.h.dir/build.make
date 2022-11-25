@@ -83,10 +83,24 @@ CMakeFiles/BTree.h.dir/BTree.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BTree.h.dir/BTree.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/workspaces/CS 225 FInal Project/cs225FinalProject/src/BTree.cpp" -o CMakeFiles/BTree.h.dir/BTree.s
 
+CMakeFiles/BTree.h.dir/Data.o: CMakeFiles/BTree.h.dir/flags.make
+CMakeFiles/BTree.h.dir/Data.o: src/Data.cpp
+CMakeFiles/BTree.h.dir/Data.o: CMakeFiles/BTree.h.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/workspaces/CS 225 FInal Project/cs225FinalProject/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/BTree.h.dir/Data.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BTree.h.dir/Data.o -MF CMakeFiles/BTree.h.dir/Data.o.d -o CMakeFiles/BTree.h.dir/Data.o -c "/workspaces/CS 225 FInal Project/cs225FinalProject/src/Data.cpp"
+
+CMakeFiles/BTree.h.dir/Data.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BTree.h.dir/Data.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/workspaces/CS 225 FInal Project/cs225FinalProject/src/Data.cpp" > CMakeFiles/BTree.h.dir/Data.i
+
+CMakeFiles/BTree.h.dir/Data.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BTree.h.dir/Data.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/workspaces/CS 225 FInal Project/cs225FinalProject/src/Data.cpp" -o CMakeFiles/BTree.h.dir/Data.s
+
 CMakeFiles/BTree.h.dir/src.o: CMakeFiles/BTree.h.dir/flags.make
 CMakeFiles/BTree.h.dir/src.o: src/src.cpp
 CMakeFiles/BTree.h.dir/src.o: CMakeFiles/BTree.h.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/workspaces/CS 225 FInal Project/cs225FinalProject/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/BTree.h.dir/src.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/workspaces/CS 225 FInal Project/cs225FinalProject/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/BTree.h.dir/src.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BTree.h.dir/src.o -MF CMakeFiles/BTree.h.dir/src.o.d -o CMakeFiles/BTree.h.dir/src.o -c "/workspaces/CS 225 FInal Project/cs225FinalProject/src/src.cpp"
 
 CMakeFiles/BTree.h.dir/src.i: cmake_force
@@ -100,16 +114,18 @@ CMakeFiles/BTree.h.dir/src.s: cmake_force
 # Object files for target BTree.h
 BTree_h_OBJECTS = \
 "CMakeFiles/BTree.h.dir/BTree.o" \
+"CMakeFiles/BTree.h.dir/Data.o" \
 "CMakeFiles/BTree.h.dir/src.o"
 
 # External object files for target BTree.h
 BTree_h_EXTERNAL_OBJECTS =
 
 libBTree.h.a: CMakeFiles/BTree.h.dir/BTree.o
+libBTree.h.a: CMakeFiles/BTree.h.dir/Data.o
 libBTree.h.a: CMakeFiles/BTree.h.dir/src.o
 libBTree.h.a: CMakeFiles/BTree.h.dir/build.make
 libBTree.h.a: CMakeFiles/BTree.h.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/workspaces/CS 225 FInal Project/cs225FinalProject/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libBTree.h.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/workspaces/CS 225 FInal Project/cs225FinalProject/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libBTree.h.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/BTree.h.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/BTree.h.dir/link.txt --verbose=$(VERBOSE)
 

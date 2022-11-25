@@ -6,6 +6,7 @@ cmake_policy(SET CMP0009 NEW)
 file(GLOB_RECURSE NEW_GLOB FOLLOW_SYMLINKS LIST_DIRECTORIES false "/workspaces/CS 225 FInal Project/cs225FinalProject/src/*.cpp")
 set(OLD_GLOB
   "/workspaces/CS 225 FInal Project/cs225FinalProject/src/BTree.cpp"
+  "/workspaces/CS 225 FInal Project/cs225FinalProject/src/Data.cpp"
   "/workspaces/CS 225 FInal Project/cs225FinalProject/src/src.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")

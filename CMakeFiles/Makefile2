@@ -66,6 +66,8 @@ CMAKE_BINARY_DIR = "/workspaces/CS 225 FInal Project/cs225FinalProject"
 all: CMakeFiles/src.dir/all
 all: CMakeFiles/BTree.h.dir/all
 all: CMakeFiles/BTree.cpp.dir/all
+all: CMakeFiles/Data.h.dir/all
+all: CMakeFiles/Data.cpp.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -76,6 +78,8 @@ preinstall:
 clean: CMakeFiles/src.dir/clean
 clean: CMakeFiles/BTree.h.dir/clean
 clean: CMakeFiles/BTree.cpp.dir/clean
+clean: CMakeFiles/Data.h.dir/clean
+clean: CMakeFiles/Data.cpp.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -85,12 +89,12 @@ clean: CMakeFiles/BTree.cpp.dir/clean
 CMakeFiles/src.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/workspaces/CS 225 FInal Project/cs225FinalProject/CMakeFiles" --progress-num=7,8,9 "Built target src"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/workspaces/CS 225 FInal Project/cs225FinalProject/CMakeFiles" --progress-num=17,18,19,20 "Built target src"
 .PHONY : CMakeFiles/src.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/src.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/workspaces/CS 225 FInal Project/cs225FinalProject/CMakeFiles" 3
+	$(CMAKE_COMMAND) -E cmake_progress_start "/workspaces/CS 225 FInal Project/cs225FinalProject/CMakeFiles" 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/src.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/workspaces/CS 225 FInal Project/cs225FinalProject/CMakeFiles" 0
 .PHONY : CMakeFiles/src.dir/rule
@@ -111,12 +115,12 @@ CMakeFiles/src.dir/clean:
 CMakeFiles/BTree.h.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BTree.h.dir/build.make CMakeFiles/BTree.h.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BTree.h.dir/build.make CMakeFiles/BTree.h.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/workspaces/CS 225 FInal Project/cs225FinalProject/CMakeFiles" --progress-num=4,5,6 "Built target BTree.h"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/workspaces/CS 225 FInal Project/cs225FinalProject/CMakeFiles" --progress-num=5,6,7,8 "Built target BTree.h"
 .PHONY : CMakeFiles/BTree.h.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/BTree.h.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/workspaces/CS 225 FInal Project/cs225FinalProject/CMakeFiles" 3
+	$(CMAKE_COMMAND) -E cmake_progress_start "/workspaces/CS 225 FInal Project/cs225FinalProject/CMakeFiles" 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/BTree.h.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/workspaces/CS 225 FInal Project/cs225FinalProject/CMakeFiles" 0
 .PHONY : CMakeFiles/BTree.h.dir/rule
@@ -137,12 +141,12 @@ CMakeFiles/BTree.h.dir/clean:
 CMakeFiles/BTree.cpp.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BTree.cpp.dir/build.make CMakeFiles/BTree.cpp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BTree.cpp.dir/build.make CMakeFiles/BTree.cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/workspaces/CS 225 FInal Project/cs225FinalProject/CMakeFiles" --progress-num=1,2,3 "Built target BTree.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/workspaces/CS 225 FInal Project/cs225FinalProject/CMakeFiles" --progress-num=1,2,3,4 "Built target BTree.cpp"
 .PHONY : CMakeFiles/BTree.cpp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/BTree.cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/workspaces/CS 225 FInal Project/cs225FinalProject/CMakeFiles" 3
+	$(CMAKE_COMMAND) -E cmake_progress_start "/workspaces/CS 225 FInal Project/cs225FinalProject/CMakeFiles" 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/BTree.cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/workspaces/CS 225 FInal Project/cs225FinalProject/CMakeFiles" 0
 .PHONY : CMakeFiles/BTree.cpp.dir/rule
@@ -155,6 +159,58 @@ BTree.cpp: CMakeFiles/BTree.cpp.dir/rule
 CMakeFiles/BTree.cpp.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BTree.cpp.dir/build.make CMakeFiles/BTree.cpp.dir/clean
 .PHONY : CMakeFiles/BTree.cpp.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/Data.h.dir
+
+# All Build rule for target.
+CMakeFiles/Data.h.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Data.h.dir/build.make CMakeFiles/Data.h.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Data.h.dir/build.make CMakeFiles/Data.h.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/workspaces/CS 225 FInal Project/cs225FinalProject/CMakeFiles" --progress-num=13,14,15,16 "Built target Data.h"
+.PHONY : CMakeFiles/Data.h.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Data.h.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/workspaces/CS 225 FInal Project/cs225FinalProject/CMakeFiles" 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Data.h.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/workspaces/CS 225 FInal Project/cs225FinalProject/CMakeFiles" 0
+.PHONY : CMakeFiles/Data.h.dir/rule
+
+# Convenience name for target.
+Data.h: CMakeFiles/Data.h.dir/rule
+.PHONY : Data.h
+
+# clean rule for target.
+CMakeFiles/Data.h.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Data.h.dir/build.make CMakeFiles/Data.h.dir/clean
+.PHONY : CMakeFiles/Data.h.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/Data.cpp.dir
+
+# All Build rule for target.
+CMakeFiles/Data.cpp.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Data.cpp.dir/build.make CMakeFiles/Data.cpp.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Data.cpp.dir/build.make CMakeFiles/Data.cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/workspaces/CS 225 FInal Project/cs225FinalProject/CMakeFiles" --progress-num=9,10,11,12 "Built target Data.cpp"
+.PHONY : CMakeFiles/Data.cpp.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Data.cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/workspaces/CS 225 FInal Project/cs225FinalProject/CMakeFiles" 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Data.cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/workspaces/CS 225 FInal Project/cs225FinalProject/CMakeFiles" 0
+.PHONY : CMakeFiles/Data.cpp.dir/rule
+
+# Convenience name for target.
+Data.cpp: CMakeFiles/Data.cpp.dir/rule
+.PHONY : Data.cpp
+
+# clean rule for target.
+CMakeFiles/Data.cpp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Data.cpp.dir/build.make CMakeFiles/Data.cpp.dir/clean
+.PHONY : CMakeFiles/Data.cpp.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
