@@ -23,6 +23,7 @@ class Data {
     public:
       BTree get_data_b_tree();
 
+      vector<vector<string>> file_to_nested_vector(const std::string& filename);
 
 
     private:
@@ -30,5 +31,8 @@ class Data {
       string trim_right_side(const string& string);
       string trim_left_side(const string& string);
       string trim_all(const string& string);
+      int split_string(const string& string_one, char sep, vector<string>& fields);
+
       BTree data_b_tree;
+      vector<vector<string>> data_in_vector_structure;
 };
