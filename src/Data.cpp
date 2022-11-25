@@ -6,8 +6,23 @@
 #include "Data.h"
 #include <sstream>
 
+Data::Data() {}
+
 BTree Data::get_data_b_tree() {
     return data_b_tree;
+}
+
+void Data::create_B_tree(vector<vector<string>> data_in_vector_structure) {
+    vector<BTree::BTreeNode> data_in_b_tree_nodes;
+
+    int index = 0;
+    while (index < (int) data_in_vector_structure.at(0).size()) {
+        BTree::BTreeNode b_tree_node = BTree::BTreeNode(data_in_vector_structure.at(0));
+        data_in_b_tree_nodes.push_back(b_tree_node);
+        index++;
+    }
+
+    data_b_tree = BTree(data_in_b_tree_nodes);
 }
 
 vector<vector<string>> Data::file_to_nested_vector(const std::string& filename) {
@@ -35,7 +50,6 @@ vector<vector<string>> Data::file_to_nested_vector(const std::string& filename) 
         individual_objects.clear();
         index++;
     }
-
     return my_vector;
 }
 

@@ -22,21 +22,7 @@
            */
            BTreeNode();
 
-           /*
-           * Creates the streamer feature data for the individual streamer (denoted by the streamer's id).
-           *
-           * @param id the streamer's unique id.
-           * @param streamer_feature_data the feature data for the specific streamer.
-           */
-           void setStreamerData(string id, vector<string> streamer_feature_data);
-
-           /*
-           * Adds the children of the current streamer. According to the dataset, a streamer's 'children' 
-           * represent other streamers with whom they share mutual followers.
-           *
-           * @param mutual_followers a vector of all the streamers the current streamer shares a connection with.
-           */
-           void setMutualFollowers(vector<BTreeNode*> mutual_follows);
+           BTreeNode(vector<string> streamer_id_and_feature_data);
 
            /*
            * Returns the streamer id.
@@ -111,7 +97,7 @@
            * The nodes in the vector represent the people that the 
            * currect streamer shares mutual followers with.
            */
-           vector<BTreeNode*> mutual_followers;
+           vector<string> mutual_followers;
 
       };
 

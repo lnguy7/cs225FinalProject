@@ -7,6 +7,23 @@
 
 BTree::BTreeNode::BTreeNode() {}
 
+BTree::BTreeNode::BTreeNode(vector<string> streamer_id_and_feature_data) {
+    vector<string> feature_data;
+
+    //numeric id is item #6 on each line in the dataset, so it's at index 5 when converted into vector form.
+    int index = 0;
+    while (index < 5) {
+        feature_data.push_back(streamer_id_and_feature_data.at(index));
+        index++;
+    }
+
+    feature_data.push_back(streamer_id_and_feature_data.at(6));
+    feature_data.push_back(streamer_id_and_feature_data.at(7));
+    feature_data.push_back(streamer_id_and_feature_data.at(8));  
+
+    streamer_data = pair<string, vector<string>>(streamer_id_and_feature_data.at(5), feature_data);
+}
+
 string BTree::BTreeNode::getId() { return streamer_data.first; }
 
 //Inside the streamer data vector, the order of the data is as follows:
@@ -33,15 +50,6 @@ string BTree::BTreeNode::getDeadAccount() { return streamer_data.second.at(5); }
 string BTree::BTreeNode::getLanguage() { return streamer_data.second.at(6); }
 
 string BTree::BTreeNode::getAffiliate() { return streamer_data.second.at(7); }
-
-void BTree::BTreeNode::setStreamerData(string id, vector<string> streamer_feature_data) {
-    streamer_data.first = id;
-    streamer_data.second = streamer_feature_data;
-}
-
-void BTree::BTreeNode::setMutualFollowers(vector<BTreeNode*> mutual_follows) {
-    mutual_followers = mutual_follows;
-}
 
 
 BTree::BTree() {}

@@ -21,9 +21,13 @@ using namespace std;
 
 class Data {
     public:
+      Data();
+
       BTree get_data_b_tree();
 
       vector<vector<string>> file_to_nested_vector(const std::string& filename);
+
+      void create_B_tree(vector<vector<string>> data_in_vector_structure);
 
 
     private:
@@ -34,5 +38,4 @@ class Data {
       int split_string(const string& string_one, char sep, vector<string>& fields);
 
       BTree data_b_tree;
-      vector<vector<string>> data_in_vector_structure;
 };
