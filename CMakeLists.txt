@@ -1,5 +1,11 @@
 cmake_minimum_required(VERSION 3.10)
 
+# Assignment Information (these are the *only* things you need to change here between assignments)
+set(assignment_name "cs225FinalProject") # Name of the assignment
+set(assignment_version 11.2022.26.0) # Version, where minor=semester_year, patch=semester_end_month, tweak=revision
+set(assignment_entrypoints "main" ) # Entrypoints to run the program
+set(assignment_container "fa22") # Container we are targetting
+
 # Add color support to our messages.
 # See: https://stackoverflow.com/questions/18968979/how-to-get-colorized-output-with-cmake
 if(NOT WIN32)

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libBTree.h.a CMakeFiles/BTree.h.dir/BTree.cpp.o CMakeFiles/BTree.h.dir/Data.cpp.o CMakeFiles/BTree.h.dir/src.cpp.o
+/usr/bin/ranlib libBTree.h.a

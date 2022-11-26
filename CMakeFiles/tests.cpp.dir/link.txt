@@ -1,2 +1,0 @@
-/usr/bin/ar qc libtests.cpp.a CMakeFiles/tests.cpp.dir/BTree.o CMakeFiles/tests.cpp.dir/src.o
-/usr/bin/ranlib libtests.cpp.a

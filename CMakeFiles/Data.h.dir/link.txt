@@ -1,2 +1,0 @@
-/usr/bin/ar qc libData.h.a CMakeFiles/Data.h.dir/BTree.o CMakeFiles/Data.h.dir/Data.o CMakeFiles/Data.h.dir/src.o
-/usr/bin/ranlib libData.h.a
