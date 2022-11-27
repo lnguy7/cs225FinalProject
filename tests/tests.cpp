@@ -1,15 +1,19 @@
 #include "BTree.h"
+#include <algorithm>
+#include <iostream>
+#include <string>
+#include <vector>
 using namespace std;
 
-BTreeNode constructBTreeNode() {
+BTree::BTreeNode constructBTreeNode() {
     string streamer_id = "0";
-    vector<string> streamer_data;
+    vector<int> streamer_data;
     int index = 0;
     while (index < 8) {
         streamer_data.push_back(index);
         index++;
     }
-    BTreeNode b_tree_node;
+    BTree::BTreeNode b_tree_node;
     b_tree_node.setStreamerData(id, streamer_data);
     return b_tree_node;
 }
