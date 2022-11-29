@@ -1,4 +1,5 @@
 #include "BTree.h"
+#include "Data.h"
 #include <algorithm>
 #include <iostream>
 #include <string>
@@ -14,7 +15,7 @@ BTree::BTreeNode constructBTreeNode() {
         index++;
     }
     BTree::BTreeNode b_tree_node;
-    b_tree_node.setStreamerData(id, streamer_data);
+    b_tree_node.setStreamerData(streamer_id, streamer_data);
     return b_tree_node;
 }
 

@@ -93,6 +93,9 @@
            * @return affiliate.
            */
            string getAffiliate();
+           
+           void setStreamerData(std::string id, vector<std::string> streamer_data1);
+
          private:
            /*
            * The .first of the pair is the streamer id.

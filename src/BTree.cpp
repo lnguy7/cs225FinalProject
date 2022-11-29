@@ -51,6 +51,11 @@ string BTree::BTreeNode::getLanguage() { return streamer_data.second.at(6); }
 
 string BTree::BTreeNode::getAffiliate() { return streamer_data.second.at(7); }
 
+void BTree::BTreeNode::setStreamerData(std::string id, vector<int> streamer_data1) {
+    streamer_data.first = id;
+    streamer_data.second = streamer_data1;
+}
+
 
 BTree::BTree() {}
 
