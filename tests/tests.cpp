@@ -8,10 +8,10 @@ using namespace std;
 
 BTree::BTreeNode constructBTreeNode() {
     string streamer_id = "0";
-    vector<int> streamer_data;
+    vector<std::string> streamer_data;
     int index = 0;
     while (index < 8) {
-        streamer_data.push_back(index);
+        streamer_data.push_back(to_string(index));
         index++;
     }
     BTree::BTreeNode b_tree_node;
