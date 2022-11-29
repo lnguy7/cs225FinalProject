@@ -7,7 +7,7 @@ file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/workspaces/finalProject/cs22
 set(OLD_GLOB
   "/workspaces/finalProject/cs225FinalProject/src/BTree.cpp"
   "/workspaces/finalProject/cs225FinalProject/src/Data.cpp"
-  "/workspaces/finalProject/cs225FinalProject/src/src.cpp"
+  "/workspaces/finalProject/cs225FinalProject/src/ReadCSV.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
