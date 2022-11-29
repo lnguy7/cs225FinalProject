@@ -8,6 +8,7 @@
 #include <vector>
 #include <iostream>
 #include <algorithm>
+#include <sstream>
 #include "ReadCSV.h"
 #include "Data.h"
 
@@ -38,8 +39,14 @@ vector<int> ReadCSV::getMutuals(int id){
     vector<int> mutuals;
 
     for(vector<string> mId: edgesVector_){
-        int num0 = stoi(mId[0]);
-        int num1 = stoi(mId[1]);
+        string str0 = mId[0];
+        string str1 = mId[1];
+        stringstream stream0(str0);
+        int num0 = 0;
+        stream0 >> num0;
+        stringstream stream1(str1);
+        int num1 = 0;
+        stream1 >> num1;
         if(num0 == id){
             mutuals.push_back(num1);
         }else if(num1 == id){
