@@ -57,17 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /workspaces/FinalProject/cs225FinalProject
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /workspaces/FinalProject/cs225FinalProject/build
-=======
-CMAKE_SOURCE_DIR = /workspaces/finalProject/cs225FinalProject
-
-# The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspaces/finalProject/cs225FinalProject/build
->>>>>>> refs/remotes/origin/main
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -94,24 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-<<<<<<< HEAD
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(CMAKE_COMMAND) -E cmake_progress_start /workspaces/FinalProject/cs225FinalProject/build/CMakeFiles /workspaces/FinalProject/cs225FinalProject/build/src//CMakeFiles/progress.marks
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/FinalProject/cs225FinalProject/build/CMakeFiles 0
-=======
-	cd /workspaces/finalProject/cs225FinalProject/build && $(CMAKE_COMMAND) -E cmake_progress_start /workspaces/finalProject/cs225FinalProject/build/CMakeFiles /workspaces/finalProject/cs225FinalProject/build/src//CMakeFiles/progress.marks
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/finalProject/cs225FinalProject/build/CMakeFiles 0
->>>>>>> refs/remotes/origin/main
 .PHONY : all
 
 # The main clean target
 clean:
-<<<<<<< HEAD
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
-=======
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
->>>>>>> refs/remotes/origin/main
 .PHONY : clean
 
 # The main clean target
@@ -120,40 +103,23 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-<<<<<<< HEAD
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
-=======
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
->>>>>>> refs/remotes/origin/main
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-<<<<<<< HEAD
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
-=======
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
->>>>>>> refs/remotes/origin/main
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-<<<<<<< HEAD
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(CMAKE_COMMAND) -P /workspaces/FinalProject/cs225FinalProject/build/CMakeFiles/VerifyGlobs.cmake
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
-=======
-	cd /workspaces/finalProject/cs225FinalProject/build && $(CMAKE_COMMAND) -P /workspaces/finalProject/cs225FinalProject/build/CMakeFiles/VerifyGlobs.cmake
-	cd /workspaces/finalProject/cs225FinalProject/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
->>>>>>> refs/remotes/origin/main
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/src.dir/rule:
-<<<<<<< HEAD
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/src.dir/rule
-=======
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/src.dir/rule
->>>>>>> refs/remotes/origin/main
 .PHONY : src/CMakeFiles/src.dir/rule
 
 # Convenience name for target.
@@ -162,20 +128,12 @@ src: src/CMakeFiles/src.dir/rule
 
 # fast build rule for target.
 src/fast:
-<<<<<<< HEAD
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/build
-=======
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/build
->>>>>>> refs/remotes/origin/main
 .PHONY : src/fast
 
 # Convenience name for target.
 src/CMakeFiles/BTree.h.dir/rule:
-<<<<<<< HEAD
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/BTree.h.dir/rule
-=======
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/BTree.h.dir/rule
->>>>>>> refs/remotes/origin/main
 .PHONY : src/CMakeFiles/BTree.h.dir/rule
 
 # Convenience name for target.
@@ -184,20 +142,12 @@ BTree.h: src/CMakeFiles/BTree.h.dir/rule
 
 # fast build rule for target.
 BTree.h/fast:
-<<<<<<< HEAD
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.h.dir/build.make src/CMakeFiles/BTree.h.dir/build
-=======
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.h.dir/build.make src/CMakeFiles/BTree.h.dir/build
->>>>>>> refs/remotes/origin/main
 .PHONY : BTree.h/fast
 
 # Convenience name for target.
 src/CMakeFiles/BTree.cpp.dir/rule:
-<<<<<<< HEAD
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/BTree.cpp.dir/rule
-=======
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/BTree.cpp.dir/rule
->>>>>>> refs/remotes/origin/main
 .PHONY : src/CMakeFiles/BTree.cpp.dir/rule
 
 # Convenience name for target.
@@ -206,20 +156,12 @@ BTree.cpp: src/CMakeFiles/BTree.cpp.dir/rule
 
 # fast build rule for target.
 BTree.cpp/fast:
-<<<<<<< HEAD
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.cpp.dir/build.make src/CMakeFiles/BTree.cpp.dir/build
-=======
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.cpp.dir/build.make src/CMakeFiles/BTree.cpp.dir/build
->>>>>>> refs/remotes/origin/main
 .PHONY : BTree.cpp/fast
 
 # Convenience name for target.
 src/CMakeFiles/Data.h.dir/rule:
-<<<<<<< HEAD
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/Data.h.dir/rule
-=======
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/Data.h.dir/rule
->>>>>>> refs/remotes/origin/main
 .PHONY : src/CMakeFiles/Data.h.dir/rule
 
 # Convenience name for target.
@@ -228,20 +170,12 @@ Data.h: src/CMakeFiles/Data.h.dir/rule
 
 # fast build rule for target.
 Data.h/fast:
-<<<<<<< HEAD
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.h.dir/build.make src/CMakeFiles/Data.h.dir/build
-=======
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.h.dir/build.make src/CMakeFiles/Data.h.dir/build
->>>>>>> refs/remotes/origin/main
 .PHONY : Data.h/fast
 
 # Convenience name for target.
 src/CMakeFiles/Data.cpp.dir/rule:
-<<<<<<< HEAD
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/Data.cpp.dir/rule
-=======
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/Data.cpp.dir/rule
->>>>>>> refs/remotes/origin/main
 .PHONY : src/CMakeFiles/Data.cpp.dir/rule
 
 # Convenience name for target.
@@ -250,11 +184,7 @@ Data.cpp: src/CMakeFiles/Data.cpp.dir/rule
 
 # fast build rule for target.
 Data.cpp/fast:
-<<<<<<< HEAD
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.cpp.dir/build.make src/CMakeFiles/Data.cpp.dir/build
-=======
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.cpp.dir/build.make src/CMakeFiles/Data.cpp.dir/build
->>>>>>> refs/remotes/origin/main
 .PHONY : Data.cpp/fast
 
 BTree.o: BTree.cpp.o
@@ -262,19 +192,11 @@ BTree.o: BTree.cpp.o
 
 # target to build an object file
 BTree.cpp.o:
-<<<<<<< HEAD
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/BTree.cpp.o
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.h.dir/build.make src/CMakeFiles/BTree.h.dir/BTree.cpp.o
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.cpp.dir/build.make src/CMakeFiles/BTree.cpp.dir/BTree.cpp.o
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.h.dir/build.make src/CMakeFiles/Data.h.dir/BTree.cpp.o
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.cpp.dir/build.make src/CMakeFiles/Data.cpp.dir/BTree.cpp.o
-=======
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/BTree.cpp.o
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.h.dir/build.make src/CMakeFiles/BTree.h.dir/BTree.cpp.o
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.cpp.dir/build.make src/CMakeFiles/BTree.cpp.dir/BTree.cpp.o
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.h.dir/build.make src/CMakeFiles/Data.h.dir/BTree.cpp.o
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.cpp.dir/build.make src/CMakeFiles/Data.cpp.dir/BTree.cpp.o
->>>>>>> refs/remotes/origin/main
 .PHONY : BTree.cpp.o
 
 BTree.i: BTree.cpp.i
@@ -282,19 +204,11 @@ BTree.i: BTree.cpp.i
 
 # target to preprocess a source file
 BTree.cpp.i:
-<<<<<<< HEAD
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/BTree.cpp.i
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.h.dir/build.make src/CMakeFiles/BTree.h.dir/BTree.cpp.i
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.cpp.dir/build.make src/CMakeFiles/BTree.cpp.dir/BTree.cpp.i
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.h.dir/build.make src/CMakeFiles/Data.h.dir/BTree.cpp.i
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.cpp.dir/build.make src/CMakeFiles/Data.cpp.dir/BTree.cpp.i
-=======
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/BTree.cpp.i
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.h.dir/build.make src/CMakeFiles/BTree.h.dir/BTree.cpp.i
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.cpp.dir/build.make src/CMakeFiles/BTree.cpp.dir/BTree.cpp.i
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.h.dir/build.make src/CMakeFiles/Data.h.dir/BTree.cpp.i
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.cpp.dir/build.make src/CMakeFiles/Data.cpp.dir/BTree.cpp.i
->>>>>>> refs/remotes/origin/main
 .PHONY : BTree.cpp.i
 
 BTree.s: BTree.cpp.s
@@ -302,19 +216,11 @@ BTree.s: BTree.cpp.s
 
 # target to generate assembly for a file
 BTree.cpp.s:
-<<<<<<< HEAD
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/BTree.cpp.s
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.h.dir/build.make src/CMakeFiles/BTree.h.dir/BTree.cpp.s
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.cpp.dir/build.make src/CMakeFiles/BTree.cpp.dir/BTree.cpp.s
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.h.dir/build.make src/CMakeFiles/Data.h.dir/BTree.cpp.s
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.cpp.dir/build.make src/CMakeFiles/Data.cpp.dir/BTree.cpp.s
-=======
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/BTree.cpp.s
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.h.dir/build.make src/CMakeFiles/BTree.h.dir/BTree.cpp.s
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.cpp.dir/build.make src/CMakeFiles/BTree.cpp.dir/BTree.cpp.s
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.h.dir/build.make src/CMakeFiles/Data.h.dir/BTree.cpp.s
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.cpp.dir/build.make src/CMakeFiles/Data.cpp.dir/BTree.cpp.s
->>>>>>> refs/remotes/origin/main
 .PHONY : BTree.cpp.s
 
 Data.o: Data.cpp.o
@@ -322,19 +228,11 @@ Data.o: Data.cpp.o
 
 # target to build an object file
 Data.cpp.o:
-<<<<<<< HEAD
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Data.cpp.o
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.h.dir/build.make src/CMakeFiles/BTree.h.dir/Data.cpp.o
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.cpp.dir/build.make src/CMakeFiles/BTree.cpp.dir/Data.cpp.o
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.h.dir/build.make src/CMakeFiles/Data.h.dir/Data.cpp.o
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.cpp.dir/build.make src/CMakeFiles/Data.cpp.dir/Data.cpp.o
-=======
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Data.cpp.o
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.h.dir/build.make src/CMakeFiles/BTree.h.dir/Data.cpp.o
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.cpp.dir/build.make src/CMakeFiles/BTree.cpp.dir/Data.cpp.o
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.h.dir/build.make src/CMakeFiles/Data.h.dir/Data.cpp.o
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.cpp.dir/build.make src/CMakeFiles/Data.cpp.dir/Data.cpp.o
->>>>>>> refs/remotes/origin/main
 .PHONY : Data.cpp.o
 
 Data.i: Data.cpp.i
@@ -342,19 +240,11 @@ Data.i: Data.cpp.i
 
 # target to preprocess a source file
 Data.cpp.i:
-<<<<<<< HEAD
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Data.cpp.i
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.h.dir/build.make src/CMakeFiles/BTree.h.dir/Data.cpp.i
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.cpp.dir/build.make src/CMakeFiles/BTree.cpp.dir/Data.cpp.i
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.h.dir/build.make src/CMakeFiles/Data.h.dir/Data.cpp.i
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.cpp.dir/build.make src/CMakeFiles/Data.cpp.dir/Data.cpp.i
-=======
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Data.cpp.i
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.h.dir/build.make src/CMakeFiles/BTree.h.dir/Data.cpp.i
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.cpp.dir/build.make src/CMakeFiles/BTree.cpp.dir/Data.cpp.i
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.h.dir/build.make src/CMakeFiles/Data.h.dir/Data.cpp.i
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.cpp.dir/build.make src/CMakeFiles/Data.cpp.dir/Data.cpp.i
->>>>>>> refs/remotes/origin/main
 .PHONY : Data.cpp.i
 
 Data.s: Data.cpp.s
@@ -362,19 +252,11 @@ Data.s: Data.cpp.s
 
 # target to generate assembly for a file
 Data.cpp.s:
-<<<<<<< HEAD
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Data.cpp.s
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.h.dir/build.make src/CMakeFiles/BTree.h.dir/Data.cpp.s
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.cpp.dir/build.make src/CMakeFiles/BTree.cpp.dir/Data.cpp.s
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.h.dir/build.make src/CMakeFiles/Data.h.dir/Data.cpp.s
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.cpp.dir/build.make src/CMakeFiles/Data.cpp.dir/Data.cpp.s
-=======
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Data.cpp.s
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.h.dir/build.make src/CMakeFiles/BTree.h.dir/Data.cpp.s
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.cpp.dir/build.make src/CMakeFiles/BTree.cpp.dir/Data.cpp.s
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.h.dir/build.make src/CMakeFiles/Data.h.dir/Data.cpp.s
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.cpp.dir/build.make src/CMakeFiles/Data.cpp.dir/Data.cpp.s
->>>>>>> refs/remotes/origin/main
 .PHONY : Data.cpp.s
 
 ReadCSV.o: ReadCSV.cpp.o
@@ -382,19 +264,11 @@ ReadCSV.o: ReadCSV.cpp.o
 
 # target to build an object file
 ReadCSV.cpp.o:
-<<<<<<< HEAD
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/ReadCSV.cpp.o
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.h.dir/build.make src/CMakeFiles/BTree.h.dir/ReadCSV.cpp.o
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.cpp.dir/build.make src/CMakeFiles/BTree.cpp.dir/ReadCSV.cpp.o
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.h.dir/build.make src/CMakeFiles/Data.h.dir/ReadCSV.cpp.o
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.cpp.dir/build.make src/CMakeFiles/Data.cpp.dir/ReadCSV.cpp.o
-=======
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/ReadCSV.cpp.o
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.h.dir/build.make src/CMakeFiles/BTree.h.dir/ReadCSV.cpp.o
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.cpp.dir/build.make src/CMakeFiles/BTree.cpp.dir/ReadCSV.cpp.o
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.h.dir/build.make src/CMakeFiles/Data.h.dir/ReadCSV.cpp.o
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.cpp.dir/build.make src/CMakeFiles/Data.cpp.dir/ReadCSV.cpp.o
->>>>>>> refs/remotes/origin/main
 .PHONY : ReadCSV.cpp.o
 
 ReadCSV.i: ReadCSV.cpp.i
@@ -402,19 +276,11 @@ ReadCSV.i: ReadCSV.cpp.i
 
 # target to preprocess a source file
 ReadCSV.cpp.i:
-<<<<<<< HEAD
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/ReadCSV.cpp.i
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.h.dir/build.make src/CMakeFiles/BTree.h.dir/ReadCSV.cpp.i
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.cpp.dir/build.make src/CMakeFiles/BTree.cpp.dir/ReadCSV.cpp.i
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.h.dir/build.make src/CMakeFiles/Data.h.dir/ReadCSV.cpp.i
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.cpp.dir/build.make src/CMakeFiles/Data.cpp.dir/ReadCSV.cpp.i
-=======
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/ReadCSV.cpp.i
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.h.dir/build.make src/CMakeFiles/BTree.h.dir/ReadCSV.cpp.i
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.cpp.dir/build.make src/CMakeFiles/BTree.cpp.dir/ReadCSV.cpp.i
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.h.dir/build.make src/CMakeFiles/Data.h.dir/ReadCSV.cpp.i
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.cpp.dir/build.make src/CMakeFiles/Data.cpp.dir/ReadCSV.cpp.i
->>>>>>> refs/remotes/origin/main
 .PHONY : ReadCSV.cpp.i
 
 ReadCSV.s: ReadCSV.cpp.s
@@ -422,19 +288,11 @@ ReadCSV.s: ReadCSV.cpp.s
 
 # target to generate assembly for a file
 ReadCSV.cpp.s:
-<<<<<<< HEAD
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/ReadCSV.cpp.s
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.h.dir/build.make src/CMakeFiles/BTree.h.dir/ReadCSV.cpp.s
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.cpp.dir/build.make src/CMakeFiles/BTree.cpp.dir/ReadCSV.cpp.s
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.h.dir/build.make src/CMakeFiles/Data.h.dir/ReadCSV.cpp.s
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.cpp.dir/build.make src/CMakeFiles/Data.cpp.dir/ReadCSV.cpp.s
-=======
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/ReadCSV.cpp.s
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.h.dir/build.make src/CMakeFiles/BTree.h.dir/ReadCSV.cpp.s
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.cpp.dir/build.make src/CMakeFiles/BTree.cpp.dir/ReadCSV.cpp.s
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.h.dir/build.make src/CMakeFiles/Data.h.dir/ReadCSV.cpp.s
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.cpp.dir/build.make src/CMakeFiles/Data.cpp.dir/ReadCSV.cpp.s
->>>>>>> refs/remotes/origin/main
 .PHONY : ReadCSV.cpp.s
 
 # Help Target
@@ -470,12 +328,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-<<<<<<< HEAD
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(CMAKE_COMMAND) -P /workspaces/FinalProject/cs225FinalProject/build/CMakeFiles/VerifyGlobs.cmake
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
-=======
-	cd /workspaces/finalProject/cs225FinalProject/build && $(CMAKE_COMMAND) -P /workspaces/finalProject/cs225FinalProject/build/CMakeFiles/VerifyGlobs.cmake
-	cd /workspaces/finalProject/cs225FinalProject/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
->>>>>>> refs/remotes/origin/main
 .PHONY : cmake_check_build_system
 

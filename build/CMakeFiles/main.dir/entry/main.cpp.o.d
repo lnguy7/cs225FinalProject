@@ -1,9 +1,5 @@
 CMakeFiles/main.dir/entry/main.cpp.o: \
-<<<<<<< HEAD
   /workspaces/FinalProject/cs225FinalProject/entry/main.cpp \
-=======
-  /workspaces/finalProject/cs225FinalProject/entry/main.cpp \
->>>>>>> refs/remotes/origin/main
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/iostream \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11/bits/c++config.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -177,11 +173,7 @@ CMakeFiles/main.dir/entry/main.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/ostream.tcc \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/istream \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/istream.tcc \
-<<<<<<< HEAD
   /workspaces/FinalProject/cs225FinalProject/src/ReadCSV.h \
-=======
-  /workspaces/finalProject/cs225FinalProject/src/ReadCSV.h \
->>>>>>> refs/remotes/origin/main
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/vector \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_uninitialized.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_vector.h \
@@ -197,13 +189,8 @@ CMakeFiles/main.dir/entry/main.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/debug/safe_container.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/debug/safe_iterator.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/debug/safe_iterator.tcc \
-<<<<<<< HEAD
   /workspaces/FinalProject/cs225FinalProject/src/Data.h \
   /workspaces/FinalProject/cs225FinalProject/src/BTree.h \
-=======
-  /workspaces/finalProject/cs225FinalProject/src/Data.h \
-  /workspaces/finalProject/cs225FinalProject/src/BTree.h \
->>>>>>> refs/remotes/origin/main
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/map \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_tree.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/ext/aligned_buffer.h \

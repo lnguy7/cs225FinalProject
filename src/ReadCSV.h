@@ -10,6 +10,7 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include <utility>
 
 using namespace std;
 
@@ -19,10 +20,11 @@ class ReadCSV{
         ReadCSV(const string & featureFile, const string & edgesFile);
         vector<string> getFeatureVector(int id);
         vector<int> getMutuals(int id);
+        vector<pair<string,string>> fileToVecPair(const string & filename);
         int size;
     private:
         string featureFile_;
         string edgesFile_;
         vector<vector<string>> featureVector_;
-        vector<vector<string>> edgesVector_;
+        vector<pair<string,string>> edgesVector_;
 };

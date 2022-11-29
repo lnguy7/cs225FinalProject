@@ -53,17 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /workspaces/FinalProject/cs225FinalProject
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /workspaces/FinalProject/cs225FinalProject/build
-=======
-CMAKE_SOURCE_DIR = /workspaces/finalProject/cs225FinalProject
-
-# The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspaces/finalProject/cs225FinalProject/build
->>>>>>> refs/remotes/origin/main
 
 # Include any dependencies generated for this target.
 include CMakeFiles/test.dir/depend.make
@@ -79,7 +72,6 @@ include CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/tests/tests.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/tests/tests.cpp.o: ../tests/tests.cpp
 CMakeFiles/test.dir/tests/tests.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/FinalProject/cs225FinalProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test.dir/tests/tests.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/tests/tests.cpp.o -MF CMakeFiles/test.dir/tests/tests.cpp.o.d -o CMakeFiles/test.dir/tests/tests.cpp.o -c /workspaces/FinalProject/cs225FinalProject/tests/tests.cpp
 
@@ -90,18 +82,6 @@ CMakeFiles/test.dir/tests/tests.cpp.i: cmake_force
 CMakeFiles/test.dir/tests/tests.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/tests/tests.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/FinalProject/cs225FinalProject/tests/tests.cpp -o CMakeFiles/test.dir/tests/tests.cpp.s
-=======
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/finalProject/cs225FinalProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test.dir/tests/tests.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/tests/tests.cpp.o -MF CMakeFiles/test.dir/tests/tests.cpp.o.d -o CMakeFiles/test.dir/tests/tests.cpp.o -c /workspaces/finalProject/cs225FinalProject/tests/tests.cpp
-
-CMakeFiles/test.dir/tests/tests.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/tests/tests.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/finalProject/cs225FinalProject/tests/tests.cpp > CMakeFiles/test.dir/tests/tests.cpp.i
-
-CMakeFiles/test.dir/tests/tests.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/tests/tests.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/finalProject/cs225FinalProject/tests/tests.cpp -o CMakeFiles/test.dir/tests/tests.cpp.s
->>>>>>> refs/remotes/origin/main
 
 # Object files for target test
 test_OBJECTS = \
@@ -116,15 +96,9 @@ test: /usr/lib/libCatch2Main.a
 test: src/libsrc.a
 test: /usr/lib/libCatch2.a
 test: CMakeFiles/test.dir/link.txt
-<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/workspaces/FinalProject/cs225FinalProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test.dir/link.txt --verbose=$(VERBOSE)
 	/usr/bin/cmake -D TEST_TARGET=test -D TEST_EXECUTABLE=/workspaces/FinalProject/cs225FinalProject/build/test -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/workspaces/FinalProject/cs225FinalProject/build -D TEST_SPEC= -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_LIST=test_TESTS -D TEST_REPORTER= -D TEST_OUTPUT_DIR= -D TEST_OUTPUT_PREFIX= -D TEST_OUTPUT_SUFFIX= -D TEST_DL_PATHS= -D CTEST_FILE=/workspaces/FinalProject/cs225FinalProject/build/test_tests-b12d07c.cmake -P /usr/lib/cmake/Catch2/CatchAddTests.cmake
-=======
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/workspaces/finalProject/cs225FinalProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable test"
-	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test.dir/link.txt --verbose=$(VERBOSE)
-	/usr/bin/cmake -D TEST_TARGET=test -D TEST_EXECUTABLE=/workspaces/finalProject/cs225FinalProject/build/test -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/workspaces/finalProject/cs225FinalProject/build -D TEST_SPEC= -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_LIST=test_TESTS -D TEST_REPORTER= -D TEST_OUTPUT_DIR= -D TEST_OUTPUT_PREFIX= -D TEST_OUTPUT_SUFFIX= -D TEST_DL_PATHS= -D CTEST_FILE=/workspaces/finalProject/cs225FinalProject/build/test_tests-b12d07c.cmake -P /usr/lib/cmake/Catch2/CatchAddTests.cmake
->>>>>>> refs/remotes/origin/main
 
 # Rule to build all files generated by this target.
 CMakeFiles/test.dir/build: test
@@ -135,10 +109,6 @@ CMakeFiles/test.dir/clean:
 .PHONY : CMakeFiles/test.dir/clean
 
 CMakeFiles/test.dir/depend:
-<<<<<<< HEAD
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspaces/FinalProject/cs225FinalProject /workspaces/FinalProject/cs225FinalProject /workspaces/FinalProject/cs225FinalProject/build /workspaces/FinalProject/cs225FinalProject/build /workspaces/FinalProject/cs225FinalProject/build/CMakeFiles/test.dir/DependInfo.cmake --color=$(COLOR)
-=======
-	cd /workspaces/finalProject/cs225FinalProject/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspaces/finalProject/cs225FinalProject /workspaces/finalProject/cs225FinalProject /workspaces/finalProject/cs225FinalProject/build /workspaces/finalProject/cs225FinalProject/build /workspaces/finalProject/cs225FinalProject/build/CMakeFiles/test.dir/DependInfo.cmake --color=$(COLOR)
->>>>>>> refs/remotes/origin/main
 .PHONY : CMakeFiles/test.dir/depend
 

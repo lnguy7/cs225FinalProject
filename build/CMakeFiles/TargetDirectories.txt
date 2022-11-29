@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /workspaces/FinalProject/cs225FinalProject/build/CMakeFiles/test.dir
 /workspaces/FinalProject/cs225FinalProject/build/CMakeFiles/main.dir
 /workspaces/FinalProject/cs225FinalProject/build/CMakeFiles/edit_cache.dir
@@ -12,18 +11,3 @@
 /workspaces/FinalProject/cs225FinalProject/build/src/CMakeFiles/Data.cpp.dir
 /workspaces/FinalProject/cs225FinalProject/build/src/CMakeFiles/edit_cache.dir
 /workspaces/FinalProject/cs225FinalProject/build/src/CMakeFiles/rebuild_cache.dir
-=======
-/workspaces/finalProject/cs225FinalProject/build/CMakeFiles/test.dir
-/workspaces/finalProject/cs225FinalProject/build/CMakeFiles/main.dir
-/workspaces/finalProject/cs225FinalProject/build/CMakeFiles/edit_cache.dir
-/workspaces/finalProject/cs225FinalProject/build/CMakeFiles/rebuild_cache.dir
-/workspaces/finalProject/cs225FinalProject/build/lib/CMakeFiles/edit_cache.dir
-/workspaces/finalProject/cs225FinalProject/build/lib/CMakeFiles/rebuild_cache.dir
-/workspaces/finalProject/cs225FinalProject/build/src/CMakeFiles/src.dir
-/workspaces/finalProject/cs225FinalProject/build/src/CMakeFiles/BTree.h.dir
-/workspaces/finalProject/cs225FinalProject/build/src/CMakeFiles/BTree.cpp.dir
-/workspaces/finalProject/cs225FinalProject/build/src/CMakeFiles/Data.h.dir
-/workspaces/finalProject/cs225FinalProject/build/src/CMakeFiles/Data.cpp.dir
-/workspaces/finalProject/cs225FinalProject/build/src/CMakeFiles/edit_cache.dir
-/workspaces/finalProject/cs225FinalProject/build/src/CMakeFiles/rebuild_cache.dir
->>>>>>> refs/remotes/origin/main

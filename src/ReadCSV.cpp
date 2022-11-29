@@ -18,7 +18,7 @@ ReadCSV::ReadCSV(){
     featureFile_ = "../lib/large_twitch_features.csv";
     edgesFile_ =    "../lib/large_twitch_edges.csv";
     featureVector_ = CSVFile.file_to_nested_vector(featureFile_);
-    edgesVector_ = CSVFile.file_to_nested_vector(featureFile_);
+    edgesVector_ = fileToVecPair(edgesFile_);
     size = featureVector_.size();
 }
 
@@ -27,7 +27,7 @@ ReadCSV::ReadCSV(const string & featureFile, const string & edgesFile){
     featureFile_ = featureFile;
     edgesFile_ = edgesFile;
     featureVector_ = CSVFile.file_to_nested_vector(featureFile_);
-    edgesVector_ = CSVFile.file_to_nested_vector(featureFile_);
+    edgesVector_ = fileToVecPair(edgesFile_);
     size = featureVector_.size();
 }
 
@@ -37,10 +37,11 @@ vector<string> ReadCSV::getFeatureVector(int id){
 
 vector<int> ReadCSV::getMutuals(int id){
     vector<int> mutuals;
+            cout << "SUS" << endl;
 
-    for(vector<string> mId: edgesVector_){
-        string str0 = mId[0];
-        string str1 = mId[1];
+    for(pair<string,string> mId: edgesVector_){
+        string str0 = mId.first;
+        string str1 = mId.second;
         stringstream stream0(str0);
         int num0 = 0;
         stream0 >> num0;
@@ -54,4 +55,37 @@ vector<int> ReadCSV::getMutuals(int id){
         }
     }
     return mutuals;
+}
+
+vector<pair<string,string>> ReadCSV::fileToVecPair(const string & filename){ //Fix bug for pairs
+    vector<pair<string,string>> edges;
+    pair<string,string> sPair;
+    string intStr;
+    FILE * fp = fopen(filename.c_str(), "r");
+    while(true){
+        char c = fgetc(fp);
+        if(c == '\n') break;
+    }
+    while(true){
+        char c = fgetc(fp);
+        if(feof(fp)){
+            edges.push_back(sPair);
+            sPair.second = intStr;
+            break;
+        }if(c == ','){
+            c = fgetc(fp);
+            sPair.first = intStr;
+            intStr.clear();
+        }else if(c == '\n'){
+            sPair.second = intStr;
+            intStr.clear();
+            edges.push_back(sPair);
+            intStr.clear();
+        }else{
+            intStr = intStr + c;
+        }
+        
+    }
+    fclose(fp);
+    return edges;
 }

@@ -205,7 +205,6 @@ src/CMakeFiles/src.dir/BTree.cpp.o: ../src/BTree.cpp \
   /usr/include/c++/11/bits/istream.tcc \
   ../src/BTree.h
 
-<<<<<<< HEAD
 src/CMakeFiles/src.dir/Data.cpp.o: ../src/Data.cpp \
   ../src/Data.h \
   ../src/BTree.h \
@@ -670,6 +669,8 @@ src/CMakeFiles/src.dir/ReadCSV.cpp.o: ../src/ReadCSV.cpp \
   /usr/include/c++/11/debug/safe_local_iterator.h \
   /usr/include/c++/11/debug/safe_local_iterator.tcc \
   /usr/include/c++/11/pstl/execution_defs.h \
+  /usr/include/c++/11/sstream \
+  /usr/include/c++/11/bits/sstream.tcc \
   ../src/ReadCSV.h \
   ../src/Data.h \
   ../src/BTree.h \
@@ -742,8 +743,6 @@ src/CMakeFiles/src.dir/ReadCSV.cpp.o: ../src/ReadCSV.cpp \
 /usr/include/c++/11/bits/uses_allocator.h:
 
 /usr/include/c++/11/bits/stl_map.h:
-=======
->>>>>>> refs/remotes/origin/main
 
 /usr/include/c++/11/bits/istream.tcc:
 
@@ -751,11 +750,8 @@ src/CMakeFiles/src.dir/ReadCSV.cpp.o: ../src/ReadCSV.cpp \
 
 /usr/include/c++/11/bits/locale_facets.tcc:
 
-<<<<<<< HEAD
 /usr/include/c++/11/debug/map:
 
-=======
->>>>>>> refs/remotes/origin/main
 /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h:
 
 ../src/BTree.h:
@@ -766,11 +762,8 @@ src/CMakeFiles/src.dir/ReadCSV.cpp.o: ../src/ReadCSV.cpp \
 
 /usr/include/c++/11/bits/locale_facets.h:
 
-<<<<<<< HEAD
 /usr/include/c++/11/debug/multimap.h:
 
-=======
->>>>>>> refs/remotes/origin/main
 /usr/include/c++/11/bits/streambuf.tcc:
 
 /usr/include/c++/11/stdexcept:
@@ -781,11 +774,8 @@ src/CMakeFiles/src.dir/ReadCSV.cpp.o: ../src/ReadCSV.cpp \
 
 /usr/include/c++/11/bits/locale_classes.h:
 
-<<<<<<< HEAD
 /usr/include/c++/11/set:
 
-=======
->>>>>>> refs/remotes/origin/main
 /usr/include/c++/11/bits/ios_base.h:
 
 /usr/include/c++/11/ostream:
@@ -830,11 +820,8 @@ src/CMakeFiles/src.dir/ReadCSV.cpp.o: ../src/ReadCSV.cpp \
 
 /usr/include/asm-generic/errno.h:
 
-<<<<<<< HEAD
 ../src/Data.h:
 
-=======
->>>>>>> refs/remotes/origin/main
 /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h:
 
 /usr/include/wctype.h:
@@ -857,24 +844,18 @@ src/CMakeFiles/src.dir/ReadCSV.cpp.o: ../src/ReadCSV.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
-<<<<<<< HEAD
 /usr/include/c++/11/ext/aligned_buffer.h:
 
-=======
->>>>>>> refs/remotes/origin/main
 /usr/include/endian.h:
 
 /usr/include/x86_64-linux-gnu/sys/types.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
-<<<<<<< HEAD
 /usr/include/c++/11/debug/set:
 
 /usr/include/c++/11/array:
 
-=======
->>>>>>> refs/remotes/origin/main
 /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h:
 
 /usr/include/c++/11/bits/ostream.tcc:
@@ -883,11 +864,8 @@ src/CMakeFiles/src.dir/ReadCSV.cpp.o: ../src/ReadCSV.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
-<<<<<<< HEAD
 /usr/include/c++/11/bits/uniform_int_dist.h:
 
-=======
->>>>>>> refs/remotes/origin/main
 /usr/include/c++/11/bits/cxxabi_init_exception.h:
 
 /usr/include/wchar.h:
@@ -910,11 +888,8 @@ src/CMakeFiles/src.dir/ReadCSV.cpp.o: ../src/ReadCSV.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
 
-<<<<<<< HEAD
 /usr/include/c++/11/map:
 
-=======
->>>>>>> refs/remotes/origin/main
 /usr/include/c++/11/bits/range_access.h:
 
 /usr/include/c++/11/typeinfo:
@@ -927,11 +902,8 @@ src/CMakeFiles/src.dir/ReadCSV.cpp.o: ../src/ReadCSV.cpp \
 
 /usr/include/c++/11/debug/formatter.h:
 
-<<<<<<< HEAD
 /usr/include/c++/11/algorithm:
 
-=======
->>>>>>> refs/remotes/origin/main
 /usr/include/c++/11/iostream:
 
 /usr/include/x86_64-linux-gnu/bits/select.h:
@@ -956,11 +928,8 @@ src/CMakeFiles/src.dir/ReadCSV.cpp.o: ../src/ReadCSV.cpp \
 
 /usr/include/c++/11/bits/stl_iterator.h:
 
-<<<<<<< HEAD
 /usr/include/c++/11/bits/stl_tempbuf.h:
 
-=======
->>>>>>> refs/remotes/origin/main
 /usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
@@ -989,11 +958,8 @@ src/CMakeFiles/src.dir/ReadCSV.cpp.o: ../src/ReadCSV.cpp \
 
 /usr/include/c++/11/bits/postypes.h:
 
-<<<<<<< HEAD
 /usr/include/c++/11/bits/invoke.h:
 
-=======
->>>>>>> refs/remotes/origin/main
 /usr/include/x86_64-linux-gnu/bits/timex.h:
 
 /usr/include/c++/11/bits/exception_ptr.h:
@@ -1012,22 +978,16 @@ src/CMakeFiles/src.dir/ReadCSV.cpp.o: ../src/ReadCSV.cpp \
 
 /usr/include/c++/11/debug/assertions.h:
 
-<<<<<<< HEAD
 /usr/include/assert.h:
 
-=======
->>>>>>> refs/remotes/origin/main
 /usr/include/c++/11/cstdlib:
 
 /usr/include/c++/11/bits/stl_iterator_base_types.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
-<<<<<<< HEAD
 /usr/include/c++/11/bits/node_handle.h:
 
-=======
->>>>>>> refs/remotes/origin/main
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
@@ -1046,48 +1006,34 @@ src/CMakeFiles/src.dir/ReadCSV.cpp.o: ../src/ReadCSV.cpp \
 
 ../src/ReadCSV.h:
 
-<<<<<<< HEAD
 /usr/include/c++/11/pstl/execution_defs.h:
 
-=======
->>>>>>> refs/remotes/origin/main
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
 
 /usr/include/c++/11/string:
 
-<<<<<<< HEAD
 /usr/include/c++/11/pstl/glue_algorithm_defs.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
 /usr/include/c++/11/bits/stl_multimap.h:
 
-=======
-/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
-
->>>>>>> refs/remotes/origin/main
 /usr/include/features.h:
 
 /usr/include/c++/11/ext/numeric_traits.h:
 
-<<<<<<< HEAD
 /usr/include/c++/11/functional:
 
-=======
->>>>>>> refs/remotes/origin/main
 /usr/include/asm-generic/errno-base.h:
 
 /usr/include/c++/11/bits/char_traits.h:
 
-<<<<<<< HEAD
 /usr/include/c++/11/bits/std_function.h:
 
 ../src/Data.cpp:
 
-=======
->>>>>>> refs/remotes/origin/main
 /usr/include/c++/11/pstl/pstl_config.h:
 
 /usr/include/c++/11/bits/allocator.h:
@@ -1118,26 +1064,20 @@ src/CMakeFiles/src.dir/ReadCSV.cpp.o: ../src/ReadCSV.cpp \
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h:
 
-<<<<<<< HEAD
 /usr/include/c++/11/debug/multiset.h:
 
 /usr/include/c++/11/tuple:
 
 /usr/include/c++/11/bits/stl_tree.h:
 
-=======
->>>>>>> refs/remotes/origin/main
 /usr/include/c++/11/type_traits:
 
 /usr/include/c++/11/bits/exception_defines.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h:
 
-<<<<<<< HEAD
 /usr/include/c++/11/bits/stl_set.h:
 
-=======
->>>>>>> refs/remotes/origin/main
 /usr/include/c++/11/string_view:
 
 /usr/include/stdc-predef.h:
@@ -1146,11 +1086,8 @@ src/CMakeFiles/src.dir/ReadCSV.cpp.o: ../src/ReadCSV.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 
-<<<<<<< HEAD
 /usr/include/c++/11/debug/unordered_map:
 
-=======
->>>>>>> refs/remotes/origin/main
 /usr/include/c++/11/bits/memoryfwd.h:
 
 /usr/include/c++/11/bits/stringfwd.h:
@@ -1169,11 +1106,8 @@ src/CMakeFiles/src.dir/ReadCSV.cpp.o: ../src/ReadCSV.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/sched.h:
 
-<<<<<<< HEAD
 /usr/include/c++/11/bits/unordered_map.h:
 
-=======
->>>>>>> refs/remotes/origin/main
 /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
 
 /usr/include/c++/11/bits/move.h:
@@ -1182,11 +1116,8 @@ src/CMakeFiles/src.dir/ReadCSV.cpp.o: ../src/ReadCSV.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
-<<<<<<< HEAD
 /usr/include/c++/11/bits/codecvt.h:
 
-=======
->>>>>>> refs/remotes/origin/main
 /usr/include/x86_64-linux-gnu/bits/time64.h:
 
 /usr/include/c++/11/iosfwd:
@@ -1195,11 +1126,8 @@ src/CMakeFiles/src.dir/ReadCSV.cpp.o: ../src/ReadCSV.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
-<<<<<<< HEAD
 /usr/include/c++/11/unordered_map:
 
-=======
->>>>>>> refs/remotes/origin/main
 /usr/include/c++/11/cctype:
 
 /usr/include/x86_64-linux-gnu/sys/select.h:
@@ -1264,22 +1192,16 @@ src/CMakeFiles/src.dir/ReadCSV.cpp.o: ../src/ReadCSV.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
-<<<<<<< HEAD
 /usr/include/c++/11/bits/sstream.tcc:
 
-=======
->>>>>>> refs/remotes/origin/main
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/setjmp.h:
 
-<<<<<<< HEAD
 /usr/include/c++/11/fstream:
 
-=======
->>>>>>> refs/remotes/origin/main
 /usr/include/c++/11/bits/cxxabi_forced.h:
 
 /usr/include/c++/11/ext/alloc_traits.h:

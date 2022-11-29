@@ -57,17 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /workspaces/FinalProject/cs225FinalProject
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /workspaces/FinalProject/cs225FinalProject/build
-=======
-CMAKE_SOURCE_DIR = /workspaces/finalProject/cs225FinalProject
-
-# The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspaces/finalProject/cs225FinalProject/build
->>>>>>> refs/remotes/origin/main
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -94,15 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/FinalProject/cs225FinalProject/build/CMakeFiles /workspaces/FinalProject/cs225FinalProject/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
 	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/FinalProject/cs225FinalProject/build/CMakeFiles 0
-=======
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/finalProject/cs225FinalProject/build/CMakeFiles /workspaces/finalProject/cs225FinalProject/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/finalProject/cs225FinalProject/build/CMakeFiles 0
->>>>>>> refs/remotes/origin/main
 .PHONY : all
 
 # The main clean target
@@ -126,11 +113,7 @@ preinstall/fast:
 
 # clear depends
 depend:
-<<<<<<< HEAD
 	$(CMAKE_COMMAND) -P /workspaces/FinalProject/cs225FinalProject/build/CMakeFiles/VerifyGlobs.cmake
-=======
-	$(CMAKE_COMMAND) -P /workspaces/finalProject/cs225FinalProject/build/CMakeFiles/VerifyGlobs.cmake
->>>>>>> refs/remotes/origin/main
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
@@ -305,11 +288,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-<<<<<<< HEAD
 	$(CMAKE_COMMAND) -P /workspaces/FinalProject/cs225FinalProject/build/CMakeFiles/VerifyGlobs.cmake
-=======
-	$(CMAKE_COMMAND) -P /workspaces/finalProject/cs225FinalProject/build/CMakeFiles/VerifyGlobs.cmake
->>>>>>> refs/remotes/origin/main
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
