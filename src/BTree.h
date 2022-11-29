@@ -63,6 +63,7 @@
            int streamer_iden_;
            int viewcount_;
            std::string languages_;
+           ReadCSV csvfiles;
 
            /*
            * The nodes in the vector represent the people that the 
