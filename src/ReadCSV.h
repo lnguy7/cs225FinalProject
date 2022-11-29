@@ -15,9 +15,11 @@ using namespace std;
 
 class ReadCSV{
     public:
+        ReadCSV();
         ReadCSV(const string & featureFile, const string & edgesFile);
-        vector<string> getFeatureVector();
+        vector<string> getFeatureVector(int id);
     private:
-        string & featureFile_;
-        string & edgesFile_;
+        string featureFile_;
+        string edgesFile_;
+        vector<vector<string>> nestedVector_;
 };

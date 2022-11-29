@@ -27,13 +27,6 @@ class Data {
       Data();
 
       /**
-      * Returns the b-tree structure that the data is organized in.
-      * 
-      * @return data_b_tree.
-      */
-      BTree get_data_b_tree();
-
-      /**
       * Given a filename to a CSV-formatted text file, create a 2D vector of strings where each row
       * in the text file is a row in the V2D and each comma-separated value is stripped of whitespace
       * and stored as its own string.
@@ -42,15 +35,6 @@ class Data {
       * @return The vector of vectors of strings imported from filename
       */
       vector<vector<string>> file_to_nested_vector(const std::string& filename);
-
-      /**
-      * Loops through each row of the nested vector and creates a BTreeNode for each row (each row represents a streamer).
-      * The BTree of the dataset is then constructed from the vector of nodes created.
-      * 
-      * @param data_in_vector_structure the nested vector of strings that holds the data from the file, "large_twitch_features.csv".
-      */
-      void create_B_tree(vector<vector<string>> data_in_vector_structure);
-
 
     private:
       /**
@@ -82,7 +66,4 @@ class Data {
       string trim_right_side(const string& string);
       string trim_left_side(const string& string);
       string trim_all(const string& string);
-      
-      /** Private member variable that holds the graphical representation of the data. */
-      BTree data_b_tree;
 };

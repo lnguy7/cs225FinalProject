@@ -264,19 +264,11 @@ ReadCSV.o: ReadCSV.cpp.o
 
 # target to build an object file
 ReadCSV.cpp.o:
-<<<<<<< HEAD
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/ReadCSV.cpp.o
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.h.dir/build.make src/CMakeFiles/BTree.h.dir/ReadCSV.cpp.o
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.cpp.dir/build.make src/CMakeFiles/BTree.cpp.dir/ReadCSV.cpp.o
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.h.dir/build.make src/CMakeFiles/Data.h.dir/ReadCSV.cpp.o
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.cpp.dir/build.make src/CMakeFiles/Data.cpp.dir/ReadCSV.cpp.o
-=======
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/ReadCSV.cpp.o
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.h.dir/build.make src/CMakeFiles/BTree.h.dir/ReadCSV.cpp.o
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.cpp.dir/build.make src/CMakeFiles/BTree.cpp.dir/ReadCSV.cpp.o
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.h.dir/build.make src/CMakeFiles/Data.h.dir/ReadCSV.cpp.o
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.cpp.dir/build.make src/CMakeFiles/Data.cpp.dir/ReadCSV.cpp.o
->>>>>>> refs/remotes/origin/main
 .PHONY : ReadCSV.cpp.o
 
 ReadCSV.i: ReadCSV.cpp.i
@@ -284,19 +276,11 @@ ReadCSV.i: ReadCSV.cpp.i
 
 # target to preprocess a source file
 ReadCSV.cpp.i:
-<<<<<<< HEAD
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/ReadCSV.cpp.i
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.h.dir/build.make src/CMakeFiles/BTree.h.dir/ReadCSV.cpp.i
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.cpp.dir/build.make src/CMakeFiles/BTree.cpp.dir/ReadCSV.cpp.i
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.h.dir/build.make src/CMakeFiles/Data.h.dir/ReadCSV.cpp.i
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.cpp.dir/build.make src/CMakeFiles/Data.cpp.dir/ReadCSV.cpp.i
-=======
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/ReadCSV.cpp.i
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.h.dir/build.make src/CMakeFiles/BTree.h.dir/ReadCSV.cpp.i
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.cpp.dir/build.make src/CMakeFiles/BTree.cpp.dir/ReadCSV.cpp.i
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.h.dir/build.make src/CMakeFiles/Data.h.dir/ReadCSV.cpp.i
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.cpp.dir/build.make src/CMakeFiles/Data.cpp.dir/ReadCSV.cpp.i
->>>>>>> refs/remotes/origin/main
 .PHONY : ReadCSV.cpp.i
 
 ReadCSV.s: ReadCSV.cpp.s
@@ -304,19 +288,11 @@ ReadCSV.s: ReadCSV.cpp.s
 
 # target to generate assembly for a file
 ReadCSV.cpp.s:
-<<<<<<< HEAD
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/ReadCSV.cpp.s
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.h.dir/build.make src/CMakeFiles/BTree.h.dir/ReadCSV.cpp.s
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.cpp.dir/build.make src/CMakeFiles/BTree.cpp.dir/ReadCSV.cpp.s
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.h.dir/build.make src/CMakeFiles/Data.h.dir/ReadCSV.cpp.s
-	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.cpp.dir/build.make src/CMakeFiles/Data.cpp.dir/ReadCSV.cpp.s
-=======
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/ReadCSV.cpp.s
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.h.dir/build.make src/CMakeFiles/BTree.h.dir/ReadCSV.cpp.s
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/BTree.cpp.dir/build.make src/CMakeFiles/BTree.cpp.dir/ReadCSV.cpp.s
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.h.dir/build.make src/CMakeFiles/Data.h.dir/ReadCSV.cpp.s
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Data.cpp.dir/build.make src/CMakeFiles/Data.cpp.dir/ReadCSV.cpp.s
->>>>>>> refs/remotes/origin/main
 .PHONY : ReadCSV.cpp.s
 
 # Help Target

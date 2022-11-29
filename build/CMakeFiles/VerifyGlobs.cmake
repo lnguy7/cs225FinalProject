@@ -5,15 +5,9 @@ cmake_policy(SET CMP0009 NEW)
 # src_sources at src/CMakeLists.txt:5 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/workspaces/FinalProject/cs225FinalProject/src/*.cpp")
 set(OLD_GLOB
-<<<<<<< HEAD
-  "/workspaces/finalProject/cs225FinalProject/src/BTree.cpp"
-  "/workspaces/finalProject/cs225FinalProject/src/Data.cpp"
-  "/workspaces/finalProject/cs225FinalProject/src/ReadCSV.cpp"
-=======
   "/workspaces/FinalProject/cs225FinalProject/src/BTree.cpp"
   "/workspaces/FinalProject/cs225FinalProject/src/Data.cpp"
   "/workspaces/FinalProject/cs225FinalProject/src/ReadCSV.cpp"
->>>>>>> refs/remotes/origin/main
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
