@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Install script for directory: /workspaces/FinalProject/cs225FinalProject/lib
+=======
+# Install script for directory: /workspaces/finalProject/cs225FinalProject/lib
+>>>>>>> refs/remotes/origin/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

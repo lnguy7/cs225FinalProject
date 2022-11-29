@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Install script for directory: /workspaces/FinalProject/cs225FinalProject
+=======
+# Install script for directory: /workspaces/finalProject/cs225FinalProject
+>>>>>>> refs/remotes/origin/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,8 +48,13 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
+<<<<<<< HEAD
   include("/workspaces/FinalProject/cs225FinalProject/build/lib/cmake_install.cmake")
   include("/workspaces/FinalProject/cs225FinalProject/build/src/cmake_install.cmake")
+=======
+  include("/workspaces/finalProject/cs225FinalProject/build/lib/cmake_install.cmake")
+  include("/workspaces/finalProject/cs225FinalProject/build/src/cmake_install.cmake")
+>>>>>>> refs/remotes/origin/main
 
 endif()
 
@@ -57,5 +66,9 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
+<<<<<<< HEAD
 file(WRITE "/workspaces/FinalProject/cs225FinalProject/build/${CMAKE_INSTALL_MANIFEST}"
+=======
+file(WRITE "/workspaces/finalProject/cs225FinalProject/build/${CMAKE_INSTALL_MANIFEST}"
+>>>>>>> refs/remotes/origin/main
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

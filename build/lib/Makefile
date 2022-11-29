@@ -57,10 +57,17 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /workspaces/FinalProject/cs225FinalProject
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /workspaces/FinalProject/cs225FinalProject/build
+=======
+CMAKE_SOURCE_DIR = /workspaces/finalProject/cs225FinalProject
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /workspaces/finalProject/cs225FinalProject/build
+>>>>>>> refs/remotes/origin/main
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +94,24 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
+<<<<<<< HEAD
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(CMAKE_COMMAND) -E cmake_progress_start /workspaces/FinalProject/cs225FinalProject/build/CMakeFiles /workspaces/FinalProject/cs225FinalProject/build/lib//CMakeFiles/progress.marks
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/FinalProject/cs225FinalProject/build/CMakeFiles 0
+=======
+	cd /workspaces/finalProject/cs225FinalProject/build && $(CMAKE_COMMAND) -E cmake_progress_start /workspaces/finalProject/cs225FinalProject/build/CMakeFiles /workspaces/finalProject/cs225FinalProject/build/lib//CMakeFiles/progress.marks
+	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/finalProject/cs225FinalProject/build/CMakeFiles 0
+>>>>>>> refs/remotes/origin/main
 .PHONY : all
 
 # The main clean target
 clean:
+<<<<<<< HEAD
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/clean
+=======
+	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/clean
+>>>>>>> refs/remotes/origin/main
 .PHONY : clean
 
 # The main clean target
@@ -103,18 +120,31 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
+<<<<<<< HEAD
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/preinstall
+=======
+	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/preinstall
+>>>>>>> refs/remotes/origin/main
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
+<<<<<<< HEAD
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/preinstall
+=======
+	cd /workspaces/finalProject/cs225FinalProject/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/preinstall
+>>>>>>> refs/remotes/origin/main
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
+<<<<<<< HEAD
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(CMAKE_COMMAND) -P /workspaces/FinalProject/cs225FinalProject/build/CMakeFiles/VerifyGlobs.cmake
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+=======
+	cd /workspaces/finalProject/cs225FinalProject/build && $(CMAKE_COMMAND) -P /workspaces/finalProject/cs225FinalProject/build/CMakeFiles/VerifyGlobs.cmake
+	cd /workspaces/finalProject/cs225FinalProject/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+>>>>>>> refs/remotes/origin/main
 .PHONY : depend
 
 # Help Target
@@ -136,7 +166,12 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
+<<<<<<< HEAD
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(CMAKE_COMMAND) -P /workspaces/FinalProject/cs225FinalProject/build/CMakeFiles/VerifyGlobs.cmake
 	cd /workspaces/FinalProject/cs225FinalProject/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+=======
+	cd /workspaces/finalProject/cs225FinalProject/build && $(CMAKE_COMMAND) -P /workspaces/finalProject/cs225FinalProject/build/CMakeFiles/VerifyGlobs.cmake
+	cd /workspaces/finalProject/cs225FinalProject/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+>>>>>>> refs/remotes/origin/main
 .PHONY : cmake_check_build_system
 

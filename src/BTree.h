@@ -75,7 +75,7 @@
       /*
       * The default constructor for the BTree.
       */
-      BTree();
+      BTree(ReadCSV csvfile);
 
       /**
       * Constructs a graphical represenation of all the streamers, their feature data, and connections.
@@ -94,5 +94,6 @@
     private:
       /* This vector contains the entire B-Tree. */
       vector<BTreeNode> b_tree;
+      ReadCSV csvfiles;
 
  };

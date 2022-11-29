@@ -1,5 +1,9 @@
 CMakeFiles/test.dir/tests/tests.cpp.o: \
+<<<<<<< HEAD
   /workspaces/FinalProject/cs225FinalProject/tests/tests.cpp \
+=======
+  /workspaces/finalProject/cs225FinalProject/tests/tests.cpp \
+>>>>>>> refs/remotes/origin/main
   /usr/include/catch2/catch_test_macros.hpp \
   /usr/include/catch2/internal/catch_test_macro_impl.hpp \
   /usr/include/catch2/catch_user_config.hpp \
@@ -231,12 +235,21 @@ CMakeFiles/test.dir/tests/tests.cpp.o: \
   /usr/include/catch2/internal/catch_test_registry.hpp \
   /usr/include/catch2/interfaces/catch_interfaces_testcase.hpp \
   /usr/include/catch2/internal/catch_preprocessor_remove_parens.hpp \
+<<<<<<< HEAD
   /workspaces/FinalProject/cs225FinalProject/src/BTree.h \
   /workspaces/FinalProject/cs225FinalProject/src/ReadCSV.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/iostream \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/istream \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/istream.tcc \
   /workspaces/FinalProject/cs225FinalProject/src/Data.h \
+=======
+  /workspaces/finalProject/cs225FinalProject/src/BTree.h \
+  /workspaces/finalProject/cs225FinalProject/src/ReadCSV.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/iostream \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/istream \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/istream.tcc \
+  /workspaces/finalProject/cs225FinalProject/src/Data.h \
+>>>>>>> refs/remotes/origin/main
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/map \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_tree.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/ext/aligned_buffer.h \

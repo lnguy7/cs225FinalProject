@@ -13,6 +13,8 @@ BTree::BTreeNode::BTreeNode(int s_id, ReadCSV csvfile) {
     streamer_iden_ = stoi(to_pull[0]);
     viewcount_ = stoi(to_pull[1]);
     languages_ = to_pull[2];
+
+    mutual_followers = csvfile.getMutuals(s_id);
 }
 
 int BTree::BTreeNode::getId() { return streamer_iden_; } //CHANGE THIS
@@ -27,7 +29,14 @@ void BTree::BTreeNode::setStreamerData(int id, int views, std::string language) 
     languages_ = language;
 }
 
-BTree::BTree() {}
+BTree::BTree(ReadCSV csvfile) {
+    //for every line of the csv file, make a node
+    csvfiles = csvfile;
+    for (int i = 0; i < csvfiles.size; i++) {
+        BTree::BTreeNode temp(i, csvfiles);
+        b_tree.push_back(temp);
+    }
+}
 
 BTree::BTree(vector<BTreeNode> streamers) { b_tree = streamers; }
 
