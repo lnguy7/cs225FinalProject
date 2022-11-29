@@ -6,6 +6,7 @@
 #include <string>
 #include <vector>
 using namespace std;
+
 BTree::BTreeNode constructBTreeNode() {
     string streamer_id = "0";
     vector<std::string> streamer_data;
@@ -19,15 +20,10 @@ BTree::BTreeNode constructBTreeNode() {
     return b_tree_node;
 }
 
-// TEST_CASE("BTree and BTreeNode construction", "[weight=2][part=1]") {
-//   vector<BTree::BTreeNode> nodes;
-//   nodes.push_back(constructBTreeNode());
-//   BTree testing_b_tree = new BTree(nodes);
-
-//   REQUIRE(b_tree.getBTree().at(0).getLanguage() == 6);
-// }
-
 TEST_CASE("Testing if Test Cases work", "[weight=1][part=1]") {
-  cout << "SUS" << endl;
   REQUIRE(0==0);
+}
+
+TEST_CASE(""){
+
 }
