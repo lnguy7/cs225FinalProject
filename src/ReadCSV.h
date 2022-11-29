@@ -9,19 +9,15 @@
 
 #include <string>
 #include <vector>
-#include <map>
-#include <unordered_map>
-#include <fstream>
-#include <sstream>
-#include <set>
+#include <iostream>
 
 using namespace std;
 
 class ReadCSV{
     public:
-    
+        ReadCSV(const string & featureFile, const string & edgesFile);
         vector<string> getFeatureVector();
     private:
-        const string & featureFile_;
-        const string & edgesFile_;
-}
+        string & featureFile_;
+        string & edgesFile_;
+};
