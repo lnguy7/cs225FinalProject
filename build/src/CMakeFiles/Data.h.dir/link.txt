@@ -1,2 +1,2 @@
-/usr/bin/ar qc libData.h.a CMakeFiles/Data.h.dir/BTree.cpp.o CMakeFiles/Data.h.dir/Data.cpp.o CMakeFiles/Data.h.dir/src.cpp.o
+/usr/bin/ar qc libData.h.a CMakeFiles/Data.h.dir/BTree.cpp.o CMakeFiles/Data.h.dir/Data.cpp.o CMakeFiles/Data.h.dir/ReadCSV.cpp.o
 /usr/bin/ranlib libData.h.a
