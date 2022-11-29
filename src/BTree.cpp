@@ -8,7 +8,7 @@
 
 BTree::BTreeNode::BTreeNode() {}
 
-BTree::BTreeNode::BTreeNode(int s_id) {
+BTree::BTreeNode::BTreeNode(int s_id, ReadCSV csvfile) {
     vector<string> to_pull = getFeatureVector(s_id);
 
     streamer_iden_ = stoi(to_pull[0]);

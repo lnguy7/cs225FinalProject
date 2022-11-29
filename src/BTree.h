@@ -29,7 +29,7 @@
            * 
            * @param streamer_id_and_feature_data vector that is used to initialize the BTreeNode member variable, "streamer_data".
            */
-           BTreeNode(int s_id);
+           BTreeNode(int s_id, ReadCSV csvfile);
 
            /**
            * Returns the streamer id.
