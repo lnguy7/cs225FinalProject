@@ -21,9 +21,9 @@ BTree::BTreeNode constructBTreeNode() {
 }
 
 TEST_CASE("BTree and BTreeNode construction", "[weight=2][part=1]") {
-  vector<BTreeNode> nodes;
-  temp.push_back(constructBTreeNode());
-  BTree testing_b_tree = new BTree(temp);
+  vector<BTree::BTreeNode> nodes;
+  nodes.push_back(constructBTreeNode());
+  BTree testing_b_tree = new BTree::BTree(nodes);
 
   REQUIRE(b_tree.getBTree().at(0).getLanguage() == 6);
 }
