@@ -37,14 +37,14 @@
            * 
            * @return numeric_id.
            */
-           string getId();
+           int getId();
 
            /**
            * Returns the number of streamer views.
            * 
            * @return views.
            */
-           string getStreamerViews();
+           int getStreamerViews();
 
            /**
            * Returns the primary language of the streamer.
