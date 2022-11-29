@@ -1,7 +1,7 @@
 src/CMakeFiles/src.dir/Data.cpp.o: \
-  /workspaces/FinalProject/cs225FinalProject/src/Data.cpp \
-  /workspaces/FinalProject/cs225FinalProject/src/Data.h \
-  /workspaces/FinalProject/cs225FinalProject/src/BTree.h \
+  /workspaces/finalProject/cs225FinalProject/src/Data.cpp \
+  /workspaces/finalProject/cs225FinalProject/src/Data.h \
+  /workspaces/finalProject/cs225FinalProject/src/BTree.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/vector \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_algobase.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -167,7 +167,7 @@ src/CMakeFiles/src.dir/Data.cpp.o: \
   /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/charconv.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/basic_string.tcc \
-  /workspaces/FinalProject/cs225FinalProject/src/ReadCSV.h \
+  /workspaces/finalProject/cs225FinalProject/src/ReadCSV.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/iostream \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/ostream \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/ios \

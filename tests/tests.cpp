@@ -24,6 +24,13 @@ TEST_CASE("Test Reads CSV", "[weight=2][part=1]") {
   REQUIRE(test2 == read_file2);
 }
 
+TEST_CASE("BTreeNodes build corretly", "[weight=2][part=1]") {
+  BTree::BTreeNode testNode(2, CSV);
+
+  REQUIRE(testNode.getLanguage() == "EN");
+  REQUIRE(testNode.getStreamerViews() == 382502);
+}
+
 TEST_CASE("Test if node has right amount of mutuals", "[weight=3][part=1]") {
   
   REQUIRE(CSV.getMutuals(162967).size() == 502);

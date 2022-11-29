@@ -1,5 +1,5 @@
 src/CMakeFiles/Data.cpp.dir/ReadCSV.cpp.o: \
-  /workspaces/FinalProject/cs225FinalProject/src/ReadCSV.cpp \
+  /workspaces/finalProject/cs225FinalProject/src/ReadCSV.cpp \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/string \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11/bits/c++config.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -219,9 +219,9 @@ src/CMakeFiles/Data.cpp.dir/ReadCSV.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/pstl/execution_defs.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/sstream \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/sstream.tcc \
-  /workspaces/FinalProject/cs225FinalProject/src/ReadCSV.h \
-  /workspaces/FinalProject/cs225FinalProject/src/Data.h \
-  /workspaces/FinalProject/cs225FinalProject/src/BTree.h \
+  /workspaces/finalProject/cs225FinalProject/src/ReadCSV.h \
+  /workspaces/finalProject/cs225FinalProject/src/Data.h \
+  /workspaces/finalProject/cs225FinalProject/src/BTree.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/map \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_tree.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_map.h \
