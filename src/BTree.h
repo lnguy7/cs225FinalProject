@@ -29,7 +29,7 @@
            * 
            * @param streamer_id_and_feature_data vector that is used to initialize the BTreeNode member variable, "streamer_data".
            */
-           BTreeNode(vector<string> streamer_id_and_feature_data);
+           BTreeNode(int s_id);
 
            /**
            * Returns the streamer id.
@@ -46,41 +46,6 @@
            string getStreamerViews();
 
            /**
-           * Returns the number of the streamer's mature viewings.
-           * 
-           * @return mature.
-           */
-           string getStreamerMatureViewings();
-
-           /**
-           * Returns the how long it's been since the streamer created their account.
-           * 
-           * @return life_time.
-           */
-           string getLifeTime();
-
-           /**
-           * Returns the date the streamer created their account.
-           * 
-           * @return created_at.
-           */
-           string getAccountCreatedAt();
-
-           /**
-           * Returns the most recent date that the streamer updated their account.
-           * 
-           * @return updated_at.
-           */
-           string getAccountUpdatedAt();
-
-           /**
-           * Returns whether the streamer's account is a dead account.
-           * 
-           * @return dead_account.
-           */
-           string getDeadAccount();
-
-           /**
            * Returns the primary language of the streamer.
            * 
            * @return language.
@@ -88,26 +53,21 @@
            string getLanguage();
 
            /**
-           * Returns the streamer's affiliation.
-           * 
-           * @return affiliate.
+           * Changes the streamer's data.
            */
-           string getAffiliate();
-           
-           void setStreamerData(std::string id, vector<std::string> streamer_data1);
+           void setStreamerData(int id, int views, std::string language);
 
          private:
-           /*
-           * The .first of the pair is the streamer id.
-           * The .second of the pair is the streamer's feature data.
-           */
-           pair<string, vector<string>> streamer_data;
+
+           int streamer_iden_;
+           int viewcount_;
+           std::string languages_;
 
            /*
            * The nodes in the vector represent the people that the 
            * currect streamer shares mutual followers with.
            */
-           vector<string> mutual_followers;
+           vector<int> mutual_followers;
 
       };
 

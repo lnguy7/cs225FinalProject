@@ -1,5 +1,5 @@
 CMakeFiles/main.dir/entry/main.cpp.o: \
-  /workspaces/FinalProject/cs225FinalProject/entry/main.cpp \
+  /workspaces/finalProject/cs225FinalProject/entry/main.cpp \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/iostream \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11/bits/c++config.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
