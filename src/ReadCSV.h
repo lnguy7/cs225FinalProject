@@ -1,11 +1,11 @@
  /**
  * @file ReadCSV.h
- * File converts reads CSV files as needed
+ * Integrates reading the CSV to adding it to the BTree
  *
  * @author Lucas Nguyen
  */
 
- #pragma once
+#pragma once
 
 #include <string>
 #include <vector>
@@ -18,8 +18,11 @@ class ReadCSV{
         ReadCSV();
         ReadCSV(const string & featureFile, const string & edgesFile);
         vector<string> getFeatureVector(int id);
+        vector<int> getMutuals(int id);
+        int size;
     private:
         string featureFile_;
         string edgesFile_;
-        vector<vector<string>> nestedVector_;
+        vector<vector<string>> featureVector_;
+        vector<vector<string>> edgesVector_;
 };

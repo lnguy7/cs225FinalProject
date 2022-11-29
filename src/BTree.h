@@ -6,7 +6,7 @@
  * @author Bella Cruz
  */
 
- #pragma once
+#pragma once
 
  #include <vector>
  #include <string>
