@@ -7,7 +7,7 @@ int main()
 {
     // Write your own main here
     ReadCSV obj("../lib/large_twitch_features.csv", "../lib/large_twitch_edges.csv");
-    vector<int> mutuals = obj.getMutuals(162967);
+    vector<int> mutuals = obj.getMutuals(6369);
     
     for(int i: mutuals){
         cout << i << endl;

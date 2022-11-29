@@ -37,8 +37,6 @@ vector<string> ReadCSV::getFeatureVector(int id){
 
 vector<int> ReadCSV::getMutuals(int id){
     vector<int> mutuals;
-            cout << "SUS" << endl;
-
     for(pair<string,string> mId: edgesVector_){
         string str0 = mId.first;
         string str1 = mId.second;

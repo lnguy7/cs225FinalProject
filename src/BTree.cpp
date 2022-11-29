@@ -17,9 +17,9 @@ BTree::BTreeNode::BTreeNode(int s_id, ReadCSV csvfile) {
     mutual_followers = csvfile.getMutuals(s_id);
 }
 
-int BTree::BTreeNode::getId() { return streamer_iden_; } //CHANGE THIS
+int BTree::BTreeNode::getId() { return streamer_iden_; } 
 
-int BTree::BTreeNode::getStreamerViews() { return viewcount_; } //CHANGE THIS
+int BTree::BTreeNode::getStreamerViews() { return viewcount_; } 
 
 string BTree::BTreeNode::getLanguage() { return languages_; }
 

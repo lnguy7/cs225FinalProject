@@ -2,4 +2,6 @@ add_test( [==[Testing if Test Cases work]==] /workspaces/FinalProject/cs225Final
 set_tests_properties( [==[Testing if Test Cases work]==] PROPERTIES WORKING_DIRECTORY /workspaces/FinalProject/cs225FinalProject/build)
 add_test( [==[Test Reads CSV]==] /workspaces/FinalProject/cs225FinalProject/build/test [==[Test Reads CSV]==]  )
 set_tests_properties( [==[Test Reads CSV]==] PROPERTIES WORKING_DIRECTORY /workspaces/FinalProject/cs225FinalProject/build)
-set( test_TESTS [==[Testing if Test Cases work]==] [==[Test Reads CSV]==])
+add_test( [==[Test if node has right amount of mutuals]==] /workspaces/FinalProject/cs225FinalProject/build/test [==[Test if node has right amount of mutuals]==]  )
+set_tests_properties( [==[Test if node has right amount of mutuals]==] PROPERTIES WORKING_DIRECTORY /workspaces/FinalProject/cs225FinalProject/build)
+set( test_TESTS [==[Testing if Test Cases work]==] [==[Test Reads CSV]==] [==[Test if node has right amount of mutuals]==])
