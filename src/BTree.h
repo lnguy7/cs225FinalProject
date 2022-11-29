@@ -63,7 +63,6 @@
            int streamer_iden_;
            int viewcount_;
            std::string languages_;
-           ReadCSV csvfiles;
 
            /*
            * The nodes in the vector represent the people that the 
@@ -76,7 +75,7 @@
       /*
       * The default constructor for the BTree.
       */
-      BTree();
+      BTree(ReadCSV csvfile);
 
       /**
       * Constructs a graphical represenation of all the streamers, their feature data, and connections.
@@ -95,5 +94,6 @@
     private:
       /* This vector contains the entire B-Tree. */
       vector<BTreeNode> b_tree;
+      ReadCSV csvfiles;
 
  };
