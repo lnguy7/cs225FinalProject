@@ -6,6 +6,6 @@ using namespace std;
 int main()
 {
     // Write your own main here
-    ReadCSV obj("../lib/large_twitch_features.csv", "../lib/large_twitch_edges.csv");
+    ReadCSV obj("../lib/test_features.csv", "../lib/test_edges.csv");
     return 0;
 }

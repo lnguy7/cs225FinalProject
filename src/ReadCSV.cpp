@@ -67,11 +67,10 @@ vector<pair<string,string>> ReadCSV::fileToVecPair(const string & filename){ //F
     while(true){
         char c = fgetc(fp);
         if(feof(fp)){
-            edges.push_back(sPair);
             sPair.second = intStr;
+            edges.push_back(sPair);
             break;
         }if(c == ','){
-            c = fgetc(fp);
             sPair.first = intStr;
             intStr.clear();
         }else if(c == '\n'){
@@ -80,7 +79,7 @@ vector<pair<string,string>> ReadCSV::fileToVecPair(const string & filename){ //F
             edges.push_back(sPair);
             intStr.clear();
         }else{
-            intStr = intStr + c;
+            intStr =  + c;
         }
         
     }
