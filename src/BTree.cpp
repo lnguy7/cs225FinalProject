@@ -34,13 +34,14 @@ BTree::BTree(ReadCSV csvfile) {
         BTree::BTreeNode temp(i, csvfiles);
         b_tree.push_back(temp);
     }
+    mutualmap = csvfile.getMutuals();
 }
 
 BTree::BTree(vector<BTreeNode> streamers) { b_tree = streamers; }
 
 vector<BTree::BTreeNode> BTree::getBTree() { return b_tree; }
 
-std::map<int, std::vector<int>> BTree::getMutualMap() { return mutualmap; }
+std::map<int, std::set<int>> BTree::getMutualMap() { return mutualmap; }
 
 void BTree::MergeSort(std::vector<BTreeNode>& vec, int start, int end)
 {
@@ -53,7 +54,7 @@ void BTree::MergeSort(std::vector<BTreeNode>& vec, int start, int end)
     }
 }
 
-void BTree::MergeVectors(vector<BTreeNode> vec, int start, int middle, int end)
+void BTree::MergeVectors(vector<BTreeNode>& vec, int start, int middle, int end)
 {
     std::vector<BTreeNode> hold;
 

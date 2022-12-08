@@ -98,12 +98,16 @@
       * 
       * @return map of adjacency lists for our graph.
       */
-      std::map<int, std::vector<int>> getMutualMap();
+      std::map<int, std::set<int>> getMutualMap();
+
+      void MergeSort(std::vector<BTreeNode>& vec, int start, int end);
+
+      void MergeVectors(std::vector<BTreeNode>& vec, int start, int middle, int end);
 
     private:
       /* This vector contains the entire B-Tree. */
       vector<BTreeNode> b_tree;
       ReadCSV csvfiles;
-      std::map<int, std::vector<int>> mutualmap;
+      std::map<int, std::set<int>> mutualmap;
 
  };
