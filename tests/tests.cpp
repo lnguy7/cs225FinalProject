@@ -30,3 +30,15 @@ TEST_CASE("BTreeNodes build corretly", "[weight=2][part=1]") {
   REQUIRE(testNode.getLanguage() == "EN");
   REQUIRE(testNode.getStreamerViews() == 382502);
 }
+
+TEST_CASE("Testing the Btree setter", "[weight=4][part=1]") {
+  ReadCSV csv = ReadCSV();
+  std::vector<std::string> read_file = CSV.getFeatureVector(108);
+
+  BTree::BTreeNode node = BTree::BTreeNode();
+  node.setStreamerData(std::stoi(read_file.at(0)), std::stoi(read_file.at(1)), read_file.at(2));
+
+  REQUIRE(node.getId() == 108);
+  REQUIRE(node.getLanguage() == "TR");
+  REQUIRE(node.getStreamerViews() == 1946);
+}
