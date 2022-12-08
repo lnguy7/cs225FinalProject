@@ -35,24 +35,22 @@ vector<string> ReadCSV::getFeatureVector(int id){
     return {featureVector_[id+1][5],featureVector_[id+1][0],featureVector_[id+1][7]};
 }
 
-vector<int> ReadCSV::getMutuals(int id){
-    vector<int> mutuals;
-    for(pair<string,string> mId: edgesVector_){
-        string str0 = mId.first;
-        string str1 = mId.second;
-        stringstream stream0(str0);
-        int num0 = 0;
-        stream0 >> num0;
-        stringstream stream1(str1);
-        int num1 = 0;
-        stream1 >> num1;
-        if(num0 == id){
-            mutuals.push_back(num1);
-        }else if(num1 == id){
-            mutuals.push_back(num0);
-        }
+std::map<int, std::set<int>> ReadCSV::getMutuals(){
+    std::map<int, std::set<int>> to_return;
+    //run through the entire mutuals file
+    //look at ids, if either of them is not in the map, add them with an empty vector
+    //push the ids to eachothers adjacency list
+    for (size_t i = 0; i < featureVector_.size(); i++) {
+        std::set<int> temp;
+        to_return.insert({i, temp});
     }
-    return mutuals;
+    for(pair<string,string> mId: edgesVector_){
+        int id1 = stoi(mId.first);
+        int id2 = stoi(mId.second);
+        to_return.at(id1).insert(id2);
+        to_return.at(id2).insert(id1);
+    }
+    return to_return;
 }
 
 vector<pair<string,string>> ReadCSV::fileToVecPair(const string & filename){ //Fix bug for pairs
