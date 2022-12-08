@@ -11,6 +11,8 @@
 #include <vector>
 #include <iostream>
 #include <utility>
+#include <map>
+#include <set>
 
 using namespace std;
 
@@ -41,7 +43,7 @@ class ReadCSV{
         /**
         * TODO: remove this function once map of followers is created. 
         */
-        vector<int> getMutuals(int id);
+        std::map<int, std::set<int>> getMutuals();
 
         /**
         * Takes in the mutual followers edge data and converts it into a vector data structure that allows easy access to each id's
