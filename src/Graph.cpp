@@ -10,8 +10,6 @@
 
 using namespace std;
 
-Graph::GraphNode::GraphNode()=default;
-
 Graph::GraphNode::GraphNode(int id, ReadCSV data){
     vector<string> temp = data.getFeatureVector(id);
     id_ = stoi(temp[0]);

@@ -20,10 +20,6 @@ class Graph {
     public:
         class GraphNode {
             public:
-                /*
-                *Default GraphNode constructor
-                */
-                GraphNode();
 
                 /*
                 * Based on a given ID create a GraphNode with its data
@@ -31,28 +27,28 @@ class Graph {
                 GraphNode(int id, ReadCSV data);
 
                 /**
-                * Returns the streamer id.
+                * Returns the streamer id
                 * 
-                * @return numeric_id.
+                * @return numeric_id
                 */
                 int getId();
 
                 /**
-                * Returns the number of streamer views.
+                * Returns the number of streamer views
                 * 
-                * @return views.
+                * @return views
                 */
                 int getViews();
 
                 /**
-                * Returns the primary language of the streamer.
+                * Returns the primary language of the streamer
                 * 
-                * @return language.
+                * @return language
                 */
                 string getLanguage();
 
                 /*
-                * Changes the data in node.
+                * Set data of node in graph
                 */
                 void setData(int id, int views, string language, vector<int> mutuals);
 
@@ -79,7 +75,7 @@ class Graph {
         };
 
         /*
-        *Default Graph constructor
+        * Creates graph based on the ReadCSV file
         */    
         Graph(ReadCSV file);
 
