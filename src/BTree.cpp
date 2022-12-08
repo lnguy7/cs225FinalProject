@@ -42,3 +42,4 @@ BTree::BTree(vector<BTreeNode> streamers) { b_tree = streamers; }
 
 vector<BTree::BTreeNode> BTree::getBTree() { return b_tree; }
 
+std::map<int, std::vector<int>> BTree::getMutualMap() { return mutualmap; }
