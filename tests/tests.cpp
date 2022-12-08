@@ -30,9 +30,3 @@ TEST_CASE("BTreeNodes build corretly", "[weight=2][part=1]") {
   REQUIRE(testNode.getLanguage() == "EN");
   REQUIRE(testNode.getStreamerViews() == 382502);
 }
-
-TEST_CASE("Test if node has right amount of mutuals", "[weight=3][part=1]") {
-  
-  REQUIRE(CSV.getMutuals(162967).size() == 502);
-  REQUIRE(CSV.getMutuals(6369).size() == 266);
-}
