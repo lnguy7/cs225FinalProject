@@ -61,6 +61,9 @@ class ReadCSV{
         * @return the size of the csv file.
         */
         int getSize();
+
+        std::map<int, std::set<int>> getMutualMap();
+        
     private:
         /*
         * The size of the csv file.
@@ -84,4 +87,6 @@ class ReadCSV{
         * The edgesFile_ string parsed into a nested vector of strings.
         */
         vector<pair<string,string>> edgesVector_;
+
+        std::map<int, std::set<int>> mutualmap_;
 };

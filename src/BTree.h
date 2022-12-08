@@ -70,7 +70,7 @@
            * The nodes in the vector represent the people that the 
            * currect streamer shares mutual followers with.
            */
-           vector<int> mutual_followers;
+           set<int> mutual_followers;
 
       };
 
@@ -98,7 +98,6 @@
       * 
       * @return map of adjacency lists for our graph.
       */
-      std::map<int, std::set<int>> getMutualMap();
 
       void MergeSort(std::vector<BTreeNode>& vec, int start, int end);
 
@@ -108,6 +107,4 @@
       /* This vector contains the entire B-Tree. */
       vector<BTreeNode> b_tree;
       ReadCSV csvfiles;
-      std::map<int, std::set<int>> mutualmap;
-
  };

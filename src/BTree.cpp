@@ -13,6 +13,7 @@ BTree::BTreeNode::BTreeNode(int s_id, ReadCSV csvfile) {
     streamer_iden_ = stoi(to_pull[0]);
     viewcount_ = stoi(to_pull[1]);
     languages_ = to_pull[2];
+    mutual_followers = csvfile.getMutualMap().at(streamer_iden_);
 }
 
 int BTree::BTreeNode::getId() { return streamer_iden_; } 
@@ -34,14 +35,11 @@ BTree::BTree(ReadCSV csvfile) {
         BTree::BTreeNode temp(i, csvfiles);
         b_tree.push_back(temp);
     }
-    mutualmap = csvfile.getMutuals();
 }
 
 BTree::BTree(vector<BTreeNode> streamers) { b_tree = streamers; }
 
 vector<BTree::BTreeNode> BTree::getBTree() { return b_tree; }
-
-std::map<int, std::set<int>> BTree::getMutualMap() { return mutualmap; }
 
 void BTree::MergeSort(std::vector<BTreeNode>& vec, int start, int end)
 {

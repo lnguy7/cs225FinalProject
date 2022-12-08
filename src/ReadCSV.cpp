@@ -20,6 +20,7 @@ ReadCSV::ReadCSV(){
     featureVector_ = CSVFile.file_to_nested_vector(featureFile_);
     edgesVector_ = fileToVecPair(edgesFile_);
     size_ = featureVector_.size();
+    mutualmap_ = getMutuals();
 }
 
 ReadCSV::ReadCSV(const string & featureFile, const string & edgesFile){
@@ -29,6 +30,7 @@ ReadCSV::ReadCSV(const string & featureFile, const string & edgesFile){
     featureVector_ = CSVFile.file_to_nested_vector(featureFile_);
     edgesVector_ = fileToVecPair(edgesFile_);
     size_ = featureVector_.size();
+    mutualmap_ = getMutuals();
 }
 
 vector<string> ReadCSV::getFeatureVector(int id){
@@ -87,3 +89,5 @@ vector<pair<string,string>> ReadCSV::fileToVecPair(const string & filename){ //F
 }
 
 int ReadCSV::getSize() { return size_; }
+
+std::map<int, std::set<int>> ReadCSV::getMutualMap() { return mutualmap_; }
