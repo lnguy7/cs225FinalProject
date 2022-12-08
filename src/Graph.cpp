@@ -15,6 +15,7 @@ Graph::GraphNode::GraphNode(int id, ReadCSV data){
     id_ = stoi(temp[0]);
     views_ = stoi(temp[1]);
     language_ = temp[2];
+    mutuals_ = data.getMutualMap()[id];
 }
 
 int Graph::GraphNode::getId() {return id_; }
@@ -23,7 +24,7 @@ int Graph::GraphNode::getViews() {return views_; }
 
 string Graph::GraphNode::getLanguage() {return language_; }
 
-void Graph::GraphNode::setData(int id, int views, string language, vector<int> mutuals){
+void Graph::GraphNode::setData(int id, int views, string language, set<int> mutuals){
     id_ = id;
     views_ = views;
     language_ = language;

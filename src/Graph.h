@@ -50,7 +50,7 @@ class Graph {
                 /*
                 * Set data of node in graph
                 */
-                void setData(int id, int views, string language, vector<int> mutuals);
+                void setData(int id, int views, string language, set<int> mutuals);
 
            private:
                 /*
@@ -71,7 +71,7 @@ class Graph {
                 /*
                 * Vector of mutual nodes (Neighbors of node)
                 */
-                vector<int> mutuals_;
+                set<int> mutuals_;
         };
 
         /*
