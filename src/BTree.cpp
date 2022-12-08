@@ -6,7 +6,7 @@
 #include "ReadCSV.h"
 #include "BTree.h"
 
-BTree::BTreeNode::BTreeNode() {}//deafult constructor
+BTree::BTreeNode::BTreeNode() {}
 
 BTree::BTreeNode::BTreeNode(int s_id, ReadCSV csvfile) {
     vector<string> to_pull = csvfile.getFeatureVector(s_id);
