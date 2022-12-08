@@ -1,2 +1,0 @@
-/usr/bin/ar qc libData.cpp.a CMakeFiles/Data.cpp.dir/BTree.cpp.o CMakeFiles/Data.cpp.dir/Data.cpp.o CMakeFiles/Data.cpp.dir/ReadCSV.cpp.o
-/usr/bin/ranlib libData.cpp.a
