@@ -85,3 +85,5 @@ vector<pair<string,string>> ReadCSV::fileToVecPair(const string & filename){ //F
     fclose(fp);
     return edges;
 }
+
+int ReadCSV::getSize() { return size; }
