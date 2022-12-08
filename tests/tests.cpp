@@ -42,3 +42,14 @@ TEST_CASE("Testing the Btree setter", "[weight=4][part=1]") {
   REQUIRE(node.getLanguage() == "TR");
   REQUIRE(node.getStreamerViews() == 1946);
 }
+
+TEST_CASE("Testing MergeSort sorting", "[weight=2][part=1]") {
+  ReadCSV csv("../lib/test_features.csv", "../lib/test_edges.csv");
+  BTree testTree = BTree(csv);
+  testTree.MergeSort(testTree.getBTree(), 0, int(testTree.getBTree().size()-1));
+
+  for (int i = 0; i < 8; i++)
+  {
+    REQUIRE(testTree.getBTree()[i].getStreamerViews() < testTree.getBTree()[i+1].getStreamerViews());
+  }
+}

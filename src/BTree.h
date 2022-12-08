@@ -99,9 +99,9 @@
       * @return map of adjacency lists for our graph.
       */
 
-      void MergeSort(std::vector<BTreeNode>& vec, int start, int end);
+      void MergeSort(std::vector<BTreeNode> vec, int start, int end);
 
-      void MergeVectors(std::vector<BTreeNode>& vec, int start, int middle, int end);
+      void MergeVectors(std::vector<BTreeNode> vec, int start, int middle, int end);
 
     private:
       /* This vector contains the entire B-Tree. */
