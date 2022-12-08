@@ -10,6 +10,7 @@
 
  #include <vector>
  #include <string>
+ #include <map>
  #include "ReadCSV.h"
 
  using namespace std;
@@ -90,10 +91,18 @@
       * @return the vector representation of a B-Tree.
       */
       vector<BTreeNode> getBTree();
+      
+      /**
+      * Getter for our mutual followers map.
+      * 
+      * @return map of adjacency lists for our graph.
+      */
+      std::map<int, std::vector<int>> getMutualMap();
 
     private:
       /* This vector contains the entire B-Tree. */
       vector<BTreeNode> b_tree;
       ReadCSV csvfiles;
+      std::map<int, std::vector<int>> mutualmap;
 
  };
