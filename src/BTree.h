@@ -44,7 +44,8 @@
            * 
            * @return views.
            */
-           int getStreamerViews();
+           int getStreamerViews(); 
+           
 
            /**
            * Returns the primary language of the streamer.
