@@ -19,7 +19,7 @@ ReadCSV::ReadCSV(){
     edgesFile_ =    "../lib/large_twitch_edges.csv";
     featureVector_ = CSVFile.file_to_nested_vector(featureFile_);
     edgesVector_ = fileToVecPair(edgesFile_);
-    size = featureVector_.size();
+    size_ = featureVector_.size();
 }
 
 ReadCSV::ReadCSV(const string & featureFile, const string & edgesFile){
@@ -28,7 +28,7 @@ ReadCSV::ReadCSV(const string & featureFile, const string & edgesFile){
     edgesFile_ = edgesFile;
     featureVector_ = CSVFile.file_to_nested_vector(featureFile_);
     edgesVector_ = fileToVecPair(edgesFile_);
-    size = featureVector_.size();
+    size_ = featureVector_.size();
 }
 
 vector<string> ReadCSV::getFeatureVector(int id){
@@ -86,4 +86,4 @@ vector<pair<string,string>> ReadCSV::fileToVecPair(const string & filename){ //F
     return edges;
 }
 
-int ReadCSV::getSize() { return size; }
+int ReadCSV::getSize() { return size_; }
