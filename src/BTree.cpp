@@ -13,8 +13,6 @@ BTree::BTreeNode::BTreeNode(int s_id, ReadCSV csvfile) {
     streamer_iden_ = stoi(to_pull[0]);
     viewcount_ = stoi(to_pull[1]);
     languages_ = to_pull[2];
-
-    mutual_followers = csvfile.getMutuals(s_id);
 }
 
 int BTree::BTreeNode::getId() { return streamer_iden_; } 
@@ -32,7 +30,7 @@ void BTree::BTreeNode::setStreamerData(int id, int views, std::string language) 
 BTree::BTree(ReadCSV csvfile) {
     //for every line of the csv file, make a node
     csvfiles = csvfile;
-    for (int i = 0; i < csvfiles.size; i++) {
+    for (int i = 0; i < csvfiles.getSize(); i++) {
         BTree::BTreeNode temp(i, csvfiles);
         b_tree.push_back(temp);
     }
@@ -43,3 +41,54 @@ BTree::BTree(vector<BTreeNode> streamers) { b_tree = streamers; }
 vector<BTree::BTreeNode> BTree::getBTree() { return b_tree; }
 
 std::map<int, std::vector<int>> BTree::getMutualMap() { return mutualmap; }
+
+void BTree::MergeSort(std::vector<BTreeNode>& vec, int start, int end)
+{
+    if (start < end)
+    {
+        int middle = (start+end) / 2;
+        MergeSort(vec, start, middle);
+        MergeSort(vec, middle + 1, end);
+        MergeVectors(vec, start, middle, end);
+    }
+}
+
+void BTree::MergeVectors(vector<BTreeNode> vec, int start, int middle, int end)
+{
+    std::vector<BTreeNode> hold;
+
+    int i, j;
+    i = start;
+    j = middle + 1;
+
+    while (i <= middle && j <= end)
+    {
+        if (vec[i].getStreamerViews() <= vec[j].getStreamerViews())
+        {
+            hold.push_back(vec[i]);
+            i++;
+        }
+        else
+        {
+            hold.push_back(vec[j]);
+            j++;
+        }
+    }
+
+    while (i <= middle)
+    {
+        hold.push_back(vec[i]);
+        i++;
+    }
+
+    while (j <= end)
+    {
+        hold.push_back(vec[j]);
+        j++;
+    }
+
+    for(int i = start; i <= end; i++)
+    {
+        vec[i] = hold[i - start];
+    }
+}
