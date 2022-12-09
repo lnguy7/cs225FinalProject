@@ -13,7 +13,7 @@ BTree::BTreeNode::BTreeNode(int s_id, ReadCSV csvfile) {
     streamer_iden_ = stoi(to_pull[0]);
     viewcount_ = stoi(to_pull[1]);
     languages_ = to_pull[2];
-    mutual_followers = csvfile.getMutualMap().at(streamer_iden_);
+    mutual_followers = csvfile.getMutualMap()[streamer_iden_];
 }
 
 int BTree::BTreeNode::getId() { return streamer_iden_; } 
