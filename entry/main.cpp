@@ -33,49 +33,82 @@ int main()
     std::vector<int> italian_viewerships;    // IT
     std::vector<int> chinese_viewerships;    // ZH
 
+    int english_viewerships_sum = 0;
+    int spanish_viewerships_sum = 0;
+    int french_viewerships_sum = 0;
+    int russian_viewerships_sum = 0;
+    int german_viewerships_sum = 0;
+    int japanese_viewerships_sum = 0;
+    int portuguese_viewerships_sum = 0;
+    int korean_viewerships_sum = 0;
+    int italian_viewerships_sum = 0;
+    int chinese_viewerships_sum = 0;
+
     for (int i = 0; i < (int) graph.size(); i++) {
         if (graph.at(i).getLanguage() == "EN") {
             english_viewerships.push_back(graph.at(i).getViews());
+            english_viewerships_sum += graph.at(i).getViews();
         } else if (graph.at(i).getLanguage() == "ES") {
             spanish_viewerships.push_back(graph.at(i).getViews());
+            spanish_viewerships_sum += graph.at(i).getViews();
         } else if (graph.at(i).getLanguage() == "FR") {
             french_viewerships.push_back(graph.at(i).getViews());
+            french_viewerships_sum += graph.at(i).getViews();
         } else if (graph.at(i).getLanguage() == "RU") {
             russian_viewerships.push_back(graph.at(i).getViews());
+            russian_viewerships_sum += graph.at(i).getViews();
         } else if (graph.at(i).getLanguage() == "DE") {
             german_viewerships.push_back(graph.at(i).getViews());
+            german_viewerships_sum += graph.at(i).getViews();
         } else if (graph.at(i).getLanguage() == "JA") {
             japanese_viewerships.push_back(graph.at(i).getViews());
+            japanese_viewerships_sum += graph.at(i).getViews();
         } else if (graph.at(i).getLanguage() == "PT") {
             portuguese_viewerships.push_back(graph.at(i).getViews());
+            portuguese_viewerships_sum += graph.at(i).getViews();
         } else if (graph.at(i).getLanguage() == "KO") {
             korean_viewerships.push_back(graph.at(i).getViews());
+            korean_viewerships_sum += graph.at(i).getViews();
         } else if (graph.at(i).getLanguage() == "IT") {
             italian_viewerships.push_back(graph.at(i).getViews());
+            italian_viewerships_sum += graph.at(i).getViews();
         } else if (graph.at(i).getLanguage() == "ZH") {
             chinese_viewerships.push_back(graph.at(i).getViews());
+            chinese_viewerships_sum += graph.at(i).getViews();
         }
     }
 
-    int english_average_viewerships = std::accumulate(english_viewerships.begin(), english_viewerships.end(), 0) / (int) english_viewerships.size();
 
-    int spanish_average_viewerships = std::accumulate(spanish_viewerships.begin(), spanish_viewerships.end(), 0) / (int) spanish_viewerships.size();
+    // int english_viewerships_sum = 0;
+    // int spanish_viewerships_sum = 0;
+    // int french_viewerships_sum = 0;
+    // int russian_viewerships_sum = 0;
+    // int german_viewerships_sum = 0;
+    // int japanese_viewerships_sum = 0;
+    // int portuguese_viewerships_sum = 0;
+    // int korean_viewerships_sum = 0;
+    // int italian_viewerships_sum = 0;
+    // int chinese_viewerships_sum = 0;
 
-    int french_average_viewerships = std::accumulate(french_viewerships.begin(), french_viewerships.end(), 0) / (int) french_viewerships.size();
+    int english_average_viewerships = (int) ((int) english_viewerships_sum / (int) english_viewerships.size());
 
-    int russian_average_viewerships = std::accumulate(russian_viewerships.begin(), russian_viewerships.end(), 0) / (int) russian_viewerships.size();
+    int spanish_average_viewerships = (int) ((int) spanish_viewerships_sum / (int) spanish_viewerships.size());
 
-    int german_average_viewerships = std::accumulate(german_viewerships.begin(), german_viewerships.end(), 0) / (int) german_viewerships.size();
+    int french_average_viewerships = (int) ((int) french_viewerships_sum / (int) french_viewerships.size());
 
-    int japanese_average_viewerships = std::accumulate(japanese_viewerships.begin(), japanese_viewerships.end(), 0) / (int) japanese_viewerships.size();
+    int russian_average_viewerships = (int) ((int) russian_viewerships_sum / (int) russian_viewerships.size());
 
-    int portuguese_average_viewerships = std::accumulate(portuguese_viewerships.begin(), portuguese_viewerships.end(), 0) / (int) portuguese_viewerships.size();
+    int german_average_viewerships = (int) ((int) german_viewerships_sum / (int) german_viewerships.size());
 
-    int korean_average_viewerships = std::accumulate(korean_viewerships.begin(), korean_viewerships.end(), 0) / (int) korean_viewerships.size();
+    int japanese_average_viewerships = (int) ((int) japanese_viewerships_sum / (int) japanese_viewerships.size());
 
-    int italian_average_viewerships = std::accumulate(italian_viewerships.begin(), italian_viewerships.end(), 0) / (int) italian_viewerships.size();
+    int portuguese_average_viewerships = (int) ((int) portuguese_viewerships_sum / (int) portuguese_viewerships.size());
 
-    int chinese_average_viewerships = std::accumulate(chinese_viewerships.begin(), chinese_viewerships.end(), 0) / (int) chinese_viewerships.size();
+    int korean_average_viewerships = (int) ((int) korean_viewerships_sum / (int) korean_viewerships.size());
+
+    int italian_average_viewerships = (int) ((int) italian_viewerships_sum/ (int) italian_viewerships.size());
+
+    int chinese_average_viewerships = (int) ((int) chinese_viewerships_sum / (int) chinese_viewerships.size());
 
     ////////
     //0. English (EN)
