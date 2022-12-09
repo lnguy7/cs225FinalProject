@@ -22,36 +22,45 @@ ReadCSV Class:
         This function returns our mutualmap_ private variable. This variable was earlier populated by getMutuals(), but since it is stored as a private variable, we don't have to rebuild the map every time we want to access the edges of our data conviniently. However, for outside classes to have access to this map, we have this getter to provide access to it.
 
 BTree Class:
-    BTreeNode()-
-    BTreeNode(parameters)-
-    getId()-
-    getStreamerViews()-
-    getLanguage()-
-    setStreamerData()-
+    This class is our tree representation of our data. We used this to sort and store our data in a way that is convenient to access. The nodes were sorted in order of viewership so we can access the data here based on viewcount per channel.
+
+    BTreeNode::BTreeNode()-
+        This is the default constructor for our BTree nodes. 
+    BTreeNode::BTreeNode(parameters)-
+        This is our parameterized constructor for the BTree nodes. The parameters pass in a streamer id and a ReadCSV object that has our file data. This initializes the id, viewcount, and language parameters for the node by pulling information from the ReadCSV objects featureVector. The mutual followers variable is initialized using the getMutualMap() function. The test case "BTreeNodes build corretly" tests the building of our nodes by checking a random node to see if all of the data is correct based on what we know needs to be the correct data from the csv file.
+    BTreeNode::getId()-
+        This function is the getter for the id value for the streamer whose node we are accessing. Returns the private int variable streamer_iden_.
+    BTreeNode::getStreamerViews()-
+        This function is the getter for the view count of the streamer whose node we are accessing. Returns the private int variable viewcount_.
+    BTreeNode::getLanguage()-
+        This function is the getter for the language of the streamer whose node we are accessing. Returns the private string variable languages_.
+    BTreeNode::setStreamerData()-
+        This function allows us to change or set the streamer data for a BTree node. It takes the streamer_id, the viewcount, and the language as parameters and changes the private variables that are in the BTree node.
     BTree(csvfile)-
+        
     BTree(vector)-
     getBTree()-
     MergeSort()-
     MergeVectors()-
 
 Graph Class:
-GraphNode()-
-getId()-
-getViews()-
-getLanguage()-
-setData()-
-Graph()-
-getGraph()-
-getMap()-
+    GraphNode()-
+    getId()-
+    getViews()-
+    getLanguage()-
+    setData()-
+    Graph()-
+    getGraph()-
+    getMap()-
 
 Data Class:
-Data()-
-file_to_nested_vector()-
-data_to_string()-
-split_string()-
-trim_right_side()-
-trim_left_side()-
-trim_all()-
+    Data()-
+    file_to_nested_vector()-
+    data_to_string()-
+    split_string()-
+    trim_right_side()-
+    trim_left_side()-
+    trim_all()-
 
 
 //how was leading questions answered
