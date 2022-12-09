@@ -61,6 +61,8 @@ class ReadCSV{
 
         vector<pair<int,string>> getFeatureVector();
 
+        vector<pair<string,string>> getEdgesVector();
+
         void printFeature();
 
         void printEdges();

@@ -123,6 +123,7 @@ string ReadCSV::getLanguage(int id) { return featureVector_[id].second; }
 
 vector<pair<int,string>> ReadCSV::getFeatureVector(){return featureVector_;}
 
+vector<pair<string,string>> ReadCSV::getEdgesVector(){return edgesVector_;}
 
 void ReadCSV::printFeature(){
     for(pair<int,string> featureVectorVector: featureVector_){
