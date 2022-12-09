@@ -23,8 +23,6 @@ int main()
     test.MergeSort(copy, 0, int(test.getBTree().size()) - 1);
 
 
-    std::cout << "start" << std::endl;
-
     ////////////////////////////////////////////////////////////////////////////////////
     //VISUALIZATION
 
@@ -104,7 +102,6 @@ int main()
 
     int chinese_average_viewerships = (int) ((int) chinese_viewerships_sum / (int) chinese_viewerships.size());
 
-    std::cout << "start2" << std::endl;
     ////////
     //0. English (EN)
     //1. Spanish (ES)
@@ -207,9 +204,8 @@ int main()
             break;
         }
     }
-    
+
     ////////
-    std::cout << "end" << std::endl;
 
     std::ofstream output("../entry/graph.txt");
     output << "~~~~~~~STATISTICS AND RESULTS~~~~~~~" << "\n" << "\n";
@@ -227,6 +223,48 @@ int main()
     output << "Chinese                  " << chinese_average_viewerships << "\n" << "\n";
     output << "-----Top Streamers per Language-----" << "\n";
     output << "    ###ID###         ###VIEWS###" << "\n";
+    output << "            ~English~" << "\n";
+    output << "1. " << mostviewed[0][0].first << "            " << mostviewed[0][0].second << "\n";
+    output << "2. " << mostviewed[0][1].first << "            " << mostviewed[0][1].second << "\n";
+    output << "3. " << mostviewed[0][2].first << "            " << mostviewed[0][2].second << "\n" << "\n";
+    output << "            ~Spanish~" << "\n";
+    output << "1. " << mostviewed[1][0].first << "            " << mostviewed[1][0].second << "\n";
+    output << "2. " << mostviewed[1][1].first << "            " << mostviewed[1][1].second << "\n";
+    output << "3. " << mostviewed[1][2].first << "            " << mostviewed[1][2].second << "\n" << "\n";
+    output << "            ~French~" << "\n";
+    output << "1. " << mostviewed[2][0].first << "            " << mostviewed[2][0].second << "\n";
+    output << "2. " << mostviewed[2][1].first << "            " << mostviewed[2][1].second << "\n";
+    output << "3. " << mostviewed[2][2].first << "            " << mostviewed[2][2].second << "\n" << "\n";
+    output << "            ~Russian~" << "\n";
+    output << "1. " << mostviewed[3][0].first << "            " << mostviewed[3][0].second << "\n";
+    output << "2. " << mostviewed[3][1].first << "            " << mostviewed[3][1].second << "\n";
+    output << "3. " << mostviewed[3][2].first << "            " << mostviewed[3][2].second << "\n" << "\n";
+    output << "            ~German~" << "\n";
+    output << "1. " << mostviewed[4][0].first << "            " << mostviewed[4][0].second << "\n";
+    output << "2. " << mostviewed[4][1].first << "            " << mostviewed[4][1].second << "\n";
+    output << "3. " << mostviewed[4][2].first << "            " << mostviewed[4][2].second << "\n" << "\n";
+    output << "            ~Japanese~" << "\n";
+    output << "1. " << mostviewed[5][0].first << "            " << mostviewed[5][0].second << "\n";
+    output << "2. " << mostviewed[5][1].first << "            " << mostviewed[5][1].second << "\n";
+    output << "3. " << mostviewed[5][2].first << "            " << mostviewed[5][2].second << "\n" << "\n";
+    output << "           ~Portuguese~" << "\n";
+    output << "1. " << mostviewed[6][0].first << "            " << mostviewed[6][0].second << "\n";
+    output << "2. " << mostviewed[6][1].first << "            " << mostviewed[6][1].second << "\n";
+    output << "3. " << mostviewed[6][2].first << "            " << mostviewed[6][2].second << "\n" << "\n";
+    output << "            ~Korean~" << "\n";
+    output << "1. " << mostviewed[7][0].first << "            " << mostviewed[7][0].second << "\n";
+    output << "2. " << mostviewed[7][1].first << "            " << mostviewed[7][1].second << "\n";
+    output << "3. " << mostviewed[7][2].first << "            " << mostviewed[7][2].second << "\n" << "\n";
+    output << "            ~Italian~" << "\n";
+    output << "1. " << mostviewed[8][0].first << "            " << mostviewed[8][0].second << "\n";
+    output << "2. " << mostviewed[8][1].first << "            " << mostviewed[8][1].second << "\n";
+    output << "3. " << mostviewed[8][2].first << "            " << mostviewed[8][2].second << "\n" << "\n";
+    output << "            ~Chinese~" << "\n" << "\n";
+    output << "1. " << mostviewed[9][0].first << "            " << mostviewed[9][0].second << "\n";
+    output << "2. " << mostviewed[9][1].first << "            " << mostviewed[9][1].second << "\n";
+    output << "3. " << mostviewed[9][2].first << "            " << mostviewed[9][2].second << "\n" << "\n";
+    output << "-----Average Mutual Followers per Language-----" << "\n";
+    output << "Language:                Avg. Edges:" << "\n";
     
 
     return 0;
