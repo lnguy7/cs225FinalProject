@@ -8,6 +8,8 @@ int main()
 {
     // Write your own main here
     ReadCSV obj("../lib/test_features.csv", "../lib/test_edges.csv");
+
+
     // the important part
     // std::vector<std::string> one = {"0", "Spanish"};
     // std::vector<std::string> 
@@ -15,11 +17,11 @@ int main()
     // std::vector<std::string> seventy_five = {"75", "Portuguese"};
 
 
-    // std::ofstream output("../entry/graph.txt");
-    // std::string white_space = "";
-    // for (int i = 0; i < 5; i++) {
-    //     output << white_space << i << "\n";
-    //     white_space += "   ";
-    // }
+    std::ofstream output("../entry/graph.txt");
+    std::string white_space = "";
+    for (int i = 0; i < 5; i++) {
+        output << white_space << i << "\n";
+        white_space += "   ";
+    }
     return 0;
 }

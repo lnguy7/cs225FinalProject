@@ -62,6 +62,10 @@ class ReadCSV{
         */
         int getSize();
 
+        void printFeature();
+
+        void printEdges();
+
         std::map<int, std::set<int>> getMutualMap();
         
     private:
