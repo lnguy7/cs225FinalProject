@@ -1,3 +1,5 @@
+~~~~~~~STATISTICS AND RESULTS~~~~~~~
+
 -----Average Viewcount per Language-----
 Language:                Avg. Views:
 English                  109293944

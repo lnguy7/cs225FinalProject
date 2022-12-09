@@ -10,6 +10,7 @@ int main()
     // Write your own main here
     ReadCSV obj("../lib/test_features.csv", "../lib/test_edges.csv");
     Graph g(obj);
+    BTree b(obj);
     vector<Graph::GraphNode> graph = g.getGraph();
 
 
@@ -95,14 +96,14 @@ int main()
     std::vector<std::pair<int, int>> starter2(3, starter1);
     std::vector<std::vector<std::pair<int, int>>> mostviewed(10, starter2);
     std::vector<std::string> languages = {"EN", "ES", "FR", "RU", "DE", "JA", "PT", "KO", "IT", "ZH"};
-    std::vector<BTreeNode> tempBTree = getBTree();
+    std::vector<BTree::BTreeNode> tempBTree = b.getBTree();
     std::map<std::string, bool> truefalse;
     int counter = 0;
     for (size_t i = 0; i < languages.size(); i++) {
         truefalse.insert({languages[i], true});
     }
     for (size_t i = 0; i < tempBTree.size(); i++) {
-        BTreeNode temp = tempBTree[i];
+        BTree::BTreeNode temp = tempBTree[i];
         std::pair<int, int> temp2 = {temp.getId(), temp.getStreamerViews()};
         std::string lang = temp.getLanguage();
         if (lang == "EN" && truefalse["EN"]) {
@@ -181,12 +182,11 @@ int main()
     }
 
     ////////
-    
+
     std::ofstream output("../entry/graph.txt");
-    std::string white_space = "";
-    for (int i = 0; i < 5; i++) {
-        output << white_space << i << "\n";
-        white_space += "   ";
-    }
+    output << "~~~~~~~STATISTICS AND RESULTS~~~~~~~" << "\n" << "\n";
+    output << "-----Average Viewcount per Language-----" << "\n";
+    output << "Language:                Avg. Views:" << "\n";
+
     return 0;
 }
