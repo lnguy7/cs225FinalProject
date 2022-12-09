@@ -31,14 +31,6 @@ class ReadCSV{
         */
         ReadCSV(const string & featureFile, const string & edgesFile);
 
-        /**
-        * Gets the feature data of a specific viewer.
-        * 
-        * @param id the id of the viewer whose data needs to be fetched.
-        *
-        * @return the feature data of the provided viewer.
-        */
-        vector<string> getFeatureVector(int id);
 
         /**
         * TODO: remove this function once map of followers is created. 
@@ -55,6 +47,7 @@ class ReadCSV{
         */
         vector<pair<string,string>> fileToVecPair(const string & filename);
         
+        vector<pair<int,string>> fileToVecPairWithInt(const string & filename);
         /**
         * gets the size of the csv file.
         *
@@ -82,13 +75,14 @@ class ReadCSV{
         * The data file that holds each streamer's mutual followers; parsed into a string.
         */
         string edgesFile_;
-        /*
-        * The featureFile_ string parsed into a nested vector of strings.
-        */
-        vector<vector<string>> featureVector_;
 
         /*
-        * The edgesFile_ string parsed into a nested vector of strings.
+        * The featureFile_ string parsed into a pair of int and string.
+        */
+        vector<pair<int,string>> featureVector_;
+
+        /*
+        * The edgesFile_ string parsed into a pair of 2 strings.
         */
         vector<pair<string,string>> edgesVector_;
 

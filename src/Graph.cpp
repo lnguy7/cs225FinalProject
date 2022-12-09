@@ -10,12 +10,11 @@
 
 using namespace std;
 
-Graph::GraphNode::GraphNode(int id, ReadCSV data){
-    vector<string> temp = data.getFeatureVector(id);
-    id_ = stoi(temp[0]);
-    views_ = stoi(temp[1]);
-    language_ = temp[2];
-    mutuals_ = data.getMutualMap()[id];
+Graph::GraphNode::GraphNode(int id, ReadCSV *data){
+    id_ = id;
+    views_ = data->;
+    // language_ = temp[2];
+    mutuals_ = data->getMutualMap()[id];
 }
 
 int Graph::GraphNode::getId() {return id_; }

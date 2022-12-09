@@ -15,11 +15,9 @@
 using namespace std;
 ReadCSV::ReadCSV(){
     Data CSVFile;
-    featureFile_ = "../lib/large_twitch_features.csv";
+    featureFile_ = "../lib/large_twitch.csv";
     edgesFile_ =    "../lib/large_twitch_edges.csv";
-    featureVector_ = CSVFile.file_to_nested_vector(featureFile_);
-    featureVector_.erase(featureVector_.begin());
-    featureVector_.erase(featureVector_.begin()+featureVector_.size()-1);
+    featureVector_ = fileToVecPairWithInt(featureFile_);
     edgesVector_ = fileToVecPair(edgesFile_);
     size_ = featureVector_.size();
     mutualmap_ = getMutuals();
@@ -29,23 +27,20 @@ ReadCSV::ReadCSV(const string & featureFile, const string & edgesFile){
     Data CSVFile;
     featureFile_ = featureFile;
     edgesFile_ = edgesFile;
-    featureVector_ = CSVFile.file_to_nested_vector(featureFile_);
-    featureVector_.erase(featureVector_.begin());
+    featureVector_ = fileToVecPairWithInt(featureFile_);
     edgesVector_ = fileToVecPair(edgesFile_);
     size_ = featureVector_.size();
     mutualmap_ = getMutuals();
 }
 
-vector<string> ReadCSV::getFeatureVector(int id){
-    return {featureVector_[id][5],featureVector_[id][0],featureVector_[id][7]};
-}
+
 
 std::map<int, std::set<int>> ReadCSV::getMutuals(){
     std::map<int, std::set<int>> to_return;
     //run through the entire mutuals file
     //look at ids, if either of them is not in the map, add them with an empty vector
     //push the ids to eachothers adjacency list
-    for (size_t i = 0; i < featureVector_.size(); i++) {
+    for (size_t i = 0; i < featureVector_.size()+1; i++) {
         std::set<int> temp;
         to_return.insert({i, temp});
     }
@@ -95,15 +90,40 @@ vector<pair<string,string>> ReadCSV::fileToVecPair(const string & filename){ //F
     return edges;
 }
 
+vector<pair<int,string>> ReadCSV::fileToVecPairWithInt(const string & filename){ //Fix bug for pairs
+    vector<pair<int,string>> edges;
+    pair<int,string> sPair;
+    string intStr;
+    FILE * fp = fopen(filename.c_str(), "r");
+    while(true){
+        char c = fgetc(fp);
+        if(feof(fp)){
+            sPair.second = intStr;
+            edges.push_back(sPair);
+            break;
+        }if(c == ','){
+            sPair.first = stoi(intStr);
+            intStr.clear();
+        }else if(c == '\n'){
+            sPair.second = intStr;
+            intStr.clear();
+            edges.push_back(sPair);
+            intStr.clear();
+        }else{
+            intStr = intStr + c;
+        }
+        
+    }
+    fclose(fp);
+    return edges;
+}
+
 int ReadCSV::getSize() { return size_; }
 
 void ReadCSV::printFeature(){
-    for(vector<string> featureVectorVector: featureVector_){
-        for(string vectorString: featureVectorVector){
-            cout << vectorString << ", ";
-        }
-        cout << endl;
-    }
+    for(pair<int,string> featureVectorVector: featureVector_){
+        cout << featureVectorVector.first << ", " << featureVectorVector.second << endl;
+     }
 }
 
 void ReadCSV::printEdges(){

@@ -24,7 +24,7 @@ class Graph {
                 /*
                 * Based on a given ID create a GraphNode with its data
                 */
-                GraphNode(int id, ReadCSV data);
+                GraphNode(int id, ReadCSV *data);
 
                 /**
                 * Returns the streamer id

@@ -9,10 +9,10 @@
 BTree::BTreeNode::BTreeNode() {}
 
 BTree::BTreeNode::BTreeNode(int s_id, ReadCSV csvfile) {
-    vector<string> to_pull = csvfile.getFeatureVector(s_id);
-    streamer_iden_ = stoi(to_pull[0]);
-    viewcount_ = stoi(to_pull[1]);
-    languages_ = to_pull[2];
+    // vector<string> to_pull = csvfile.getFeatureVector(s_id);
+    // streamer_iden_ = stoi(to_pull[0]);
+    // viewcount_ = stoi(to_pull[1]);
+    // languages_ = to_pull[2];
     mutual_followers = csvfile.getMutualMap()[streamer_iden_];
 }
 
