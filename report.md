@@ -56,9 +56,14 @@ Graph Class:
     getMap()-
 
 Data Class:
-    Data()-
-    file_to_nested_vector()-
+    This class is a helper class composed of functions that are used to help parse and organize the data for the readCSV class. 
+
+    Data()- 
+        This is the default constructor for our Data class. 
+    file_to_nested_vector()- 
+        Given a filename to a CSV-formatted text file, a 2D vector of strings is created where each row in the text file is a row in the V2D and each comma-separated value is stripped of whitespace and stored as its own string. The nested vector of strings created is returned in this function.
     data_to_string()-
+        This takes a filename and reads in all the text from the file. The data in the file is read into a string data structure, which is necessary for converting the string to a nested vector. The string that is returned from this function will be the input of the function above, file_to_nested_vector().
     split_string()-
     trim_right_side()-
     trim_left_side()-
