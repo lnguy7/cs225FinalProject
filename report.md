@@ -35,11 +35,13 @@ BTree Class:
     BTreeNode::getLanguage()-
         This function is the getter for the language of the streamer whose node we are accessing. Returns the private string variable languages_.
     BTreeNode::setStreamerData()-
-        This function allows us to change or set the streamer data for a BTree node. It takes the streamer_id, the viewcount, and the language as parameters and changes the private variables that are in the BTree node.
+        This function allows us to change or set the streamer data for a BTree node. It takes the streamer_id, the viewcount, and the language as parameters and changes the private variables that are in the BTree node. This function is tested in the test case labeled "Testing the Btree setter" where it checks to see if the data can properly be changed inside of a node.
     BTree(csvfile)-
-        
+        This is one of the constructors for our BTree class. It takes a ReadCSV file, and then reads from the vectors in this object to construct all of the nodes for the BTree. It does this by looping through the vector of streamer data and using the BTreeNode constructor to make the node, and then adds them all to a vector to store the nodes in the BTree.
     BTree(vector)-
+        This is one of the constructors for our BTree class. It takes a vector containing all of our streamer data, and then reads from this vector to construct all of the nodes for the BTree. It does this by looping through the vector of streamer data and using the BTreeNode constructor to make the node, and then adds them all to a vector to store the nodes in the BTree.
     getBTree()-
+        This function accesses the vector of BTreeNodes that represents our entire BTree by returning the b_tree private variable. Returns a graphical represenation of all the streamers.
     MergeSort()-
     MergeVectors()-
 
