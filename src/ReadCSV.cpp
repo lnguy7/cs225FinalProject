@@ -18,6 +18,7 @@ ReadCSV::ReadCSV(){
     featureFile_ = "../lib/large_twitch_features.csv";
     edgesFile_ =    "../lib/large_twitch_edges.csv";
     featureVector_ = CSVFile.file_to_nested_vector(featureFile_);
+    featureVector_.erase(featureVector_.begin());
     edgesVector_ = fileToVecPair(edgesFile_);
     size_ = featureVector_.size();
     mutualmap_ = getMutuals();
@@ -28,13 +29,15 @@ ReadCSV::ReadCSV(const string & featureFile, const string & edgesFile){
     featureFile_ = featureFile;
     edgesFile_ = edgesFile;
     featureVector_ = CSVFile.file_to_nested_vector(featureFile_);
+    featureVector_.erase(featureVector_.begin());
     edgesVector_ = fileToVecPair(edgesFile_);
     size_ = featureVector_.size();
     mutualmap_ = getMutuals();
 }
 
 vector<string> ReadCSV::getFeatureVector(int id){
-    return {featureVector_[id+1][5],featureVector_[id+1][0],featureVector_[id+1][7]};
+    cout << featureVector_[id][5] << ", " << featureVector_[id][0] << ", " << featureVector_[id][7] << ", " << endl;
+    return {featureVector_[id][5],featureVector_[id][0],featureVector_[id][7]};
 }
 
 std::map<int, std::set<int>> ReadCSV::getMutuals(){
@@ -79,7 +82,7 @@ vector<pair<string,string>> ReadCSV::fileToVecPair(const string & filename){ //F
             edges.push_back(sPair);
             intStr.clear();
         }else{
-            intStr =  + c;
+            intStr = intStr + c;
         }
         
     }
@@ -88,5 +91,20 @@ vector<pair<string,string>> ReadCSV::fileToVecPair(const string & filename){ //F
 }
 
 int ReadCSV::getSize() { return size_; }
+
+void ReadCSV::printFeature(){
+    for(vector<string> featureVectorVector: featureVector_){
+        for(string vectorString: featureVectorVector){
+            cout << vectorString << ", ";
+        }
+        cout << endl;
+    }
+}
+
+void ReadCSV::printEdges(){
+     for(pair<string,string> edgesVectorVector: edgesVector_){
+        cout << edgesVectorVector.first << ", " << edgesVectorVector.second << endl;
+     }
+}
 
 std::map<int, std::set<int>> ReadCSV::getMutualMap() { return mutualmap_; }
