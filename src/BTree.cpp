@@ -40,8 +40,7 @@ BTree::BTree(vector<BTreeNode> streamers) { b_tree = streamers; }
 
 vector<BTree::BTreeNode> BTree::getBTree() { return b_tree; }
 
-void BTree::MergeSort(std::vector<BTreeNode> vec, int start, int end)
-{
+void BTree::MergeSort(std::vector<BTreeNode>& vec, int start, int end) {
     if (start < end)
     {
         int middle = (start+end) / 2;
@@ -51,7 +50,7 @@ void BTree::MergeSort(std::vector<BTreeNode> vec, int start, int end)
     }
 }
 
-void BTree::MergeVectors(vector<BTreeNode> vec, int start, int middle, int end)
+void BTree::MergeVectors(vector<BTreeNode>& vec, int start, int middle, int end)
 {
     std::vector<BTreeNode> hold;
 
@@ -61,7 +60,7 @@ void BTree::MergeVectors(vector<BTreeNode> vec, int start, int middle, int end)
 
     while (i <= middle && j <= end)
     {
-        if (vec[i].getStreamerViews() <= vec[j].getStreamerViews())
+        if (vec[i].getStreamerViews() >= vec[j].getStreamerViews())
         {
             hold.push_back(vec[i]);
             i++;
@@ -87,6 +86,6 @@ void BTree::MergeVectors(vector<BTreeNode> vec, int start, int middle, int end)
 
     for(int i = start; i <= end; i++)
     {
-        vec[i] = hold[i - start];
+        vec[i] = hold[i-start];
     }
 }
