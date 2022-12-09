@@ -9,28 +9,29 @@
 #include <vector>
 using namespace std;
 
-ReadCSV CSV;
+// ReadCSV CSV; //Our dataset in a CSV class
+ReadCSV CSVtest("../lib/test_features.csv", "../lib/test_edges.csv"); //test data we made
 
 TEST_CASE("Testing if Test Cases work", "[weight=1][part=1]") {
   REQUIRE(0==0);
 }
 
-TEST_CASE("Test Reads CSV", "[weight=2][part=1]") {
-  std::vector<std::string> test = {"0", "7879", "EN"};
-  std::vector<std::string> test2 = {"446", "7252", "EN"};
-  std::vector<std::string> read_file = CSV.getFeatureVector(0);
-  std::vector<std::string> read_file2 = CSV.getFeatureVector(446);
+// TEST_CASE("Test Reads CSV", "[weight=2][part=1]") {
+//   std::vector<std::string> test = {"0", "7879", "EN"};
+//   std::vector<std::string> test2 = {"446", "7252", "EN"};
+//   std::vector<std::string> read_file = CSV.getFeatureVector(0);
+//   std::vector<std::string> read_file2 = CSV.getFeatureVector(446);
 
-  REQUIRE(test == read_file);
-  REQUIRE(test2 == read_file2);
-}
+//   REQUIRE(test == read_file);
+//   REQUIRE(test2 == read_file2);
+// }
 
-TEST_CASE("BTreeNodes build corretly", "[weight=2][part=1]") {
-  BTree::BTreeNode testNode(2, CSV);
+// TEST_CASE("BTreeNodes build corretly", "[weight=2][part=1]") {
+//   BTree::BTreeNode testNode(2, CSV);
 
-  REQUIRE(testNode.getLanguage() == "EN");
-  REQUIRE(testNode.getStreamerViews() == 382502);
-}
+//   REQUIRE(testNode.getLanguage() == "EN");
+//   REQUIRE(testNode.getStreamerViews() == 382502);
+// }
 
 // TEST_CASE("Testing the Btree setter", "[weight=4][part=1]") {
 //   std::vector<std::string> read_file = CSV.getFeatureVector(108);
@@ -43,13 +44,24 @@ TEST_CASE("BTreeNodes build corretly", "[weight=2][part=1]") {
 //   REQUIRE(node.getStreamerViews() == 1946);
 // }
 
-// TEST_CASE("Testing MergeSort sorting", "[weight=2][part=1]") {
-//   ReadCSV csv("../lib/test_features.csv", "../lib/test_edges.csv");
-//   BTree testTree = BTree(csv);
-//   testTree.MergeSort(testTree.getBTree(), 0, int(testTree.getBTree().size()-1));
+Graph graphTest(CSVtest);
 
-//   for (int i = 0; i < 8; i++)
-//   {
-//     REQUIRE(testTree.getBTree()[i].getStreamerViews() < testTree.getBTree()[i+1].getStreamerViews());
-//   }
-// }
+TEST_CASE("Testing if graph constructs with IDs in order", "[weight=2][part=1]"){
+  for(size_t i = 0; i < graphTest.getGraph().size(); i++){
+    REQUIRE(graphTest.getGraph()[i].getId() == int(i));
+  }
+}
+
+TEST_CASE("Check if each node had the correct language and avg viewers", "[weight=6][part=1]"){
+  REQUIRE(graphTest.getGraph()[0].getLanguage() == "EN");
+  REQUIRE(graphTest.getGraph()[1].getLanguage() == "EN");
+  REQUIRE(graphTest.getGraph()[2].getLanguage() == "EN");
+  REQUIRE(graphTest.getGraph()[3].getLanguage() == "EN");
+  REQUIRE(graphTest.getGraph()[4].getLanguage() == "FR");
+  REQUIRE(graphTest.getGraph()[5].getLanguage() == "JP");
+  REQUIRE(graphTest.getGraph()[6].getViews() == 234);
+  REQUIRE(graphTest.getGraph()[7].getViews() == 775);
+  REQUIRE(graphTest.getGraph()[8].getViews() == 69420);
+  REQUIRE(graphTest.getGraph()[14].getViews() == 123420);
+
+}
