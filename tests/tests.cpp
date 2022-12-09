@@ -43,24 +43,47 @@ TEST_CASE("Testing if Test Cases work", "[weight=1][part=1]") {
 //   REQUIRE(node.getStreamerViews() == 1946);
 // }
 
-Graph graphTest(CSV);
+Graph graphTest(CSVtest);
+Graph graphProper(CSV);
+TEST_CASE("Testing if graph constructs with IDs in order", "[weight=2][part=1]"){
+  for(size_t i = 0; i < graphTest.getGraph().size(); i++){
+    REQUIRE(graphTest.getGraph()[i].getId() == int(i));
+  }
+}
 
-// TEST_CASE("Testing if graph constructs with IDs in order", "[weight=2][part=1]"){
-//   for(size_t i = 0; i < graphTest.getGraph().size(); i++){
-//     REQUIRE(graphTest.getGraph()[i].getId() == int(i));
-//   }
-// }
+TEST_CASE("Check if each node in real had the correct language and avg viewers", "[weight=6][part=1]"){
+  REQUIRE(graphProper.getGraph()[0].getLanguage() == "EN");
+  REQUIRE(graphProper.getGraph()[1].getLanguage() == "EN");
+  REQUIRE(graphProper.getGraph()[2].getLanguage() == "EN");
+  REQUIRE(graphProper.getGraph()[3].getLanguage() == "EN");
+  REQUIRE(graphProper.getGraph()[6].getLanguage() == "FR");
+  REQUIRE(graphProper.getGraph()[13].getLanguage() == "RU");
+  REQUIRE(graphProper.getGraph()[6].getViews() == 775);
+  REQUIRE(graphProper.getGraph()[7].getViews() == 69020);
+  REQUIRE(graphProper.getGraph()[8].getViews() == 32073);
+  REQUIRE(graphProper.getGraph()[14].getViews() == 33882);
 
-// TEST_CASE("Check if each node had the correct language and avg viewers", "[weight=6][part=1]"){
-//   REQUIRE(graphTest.getGraph()[0].getLanguage() == "EN");
-//   REQUIRE(graphTest.getGraph()[1].getLanguage() == "EN");
-//   REQUIRE(graphTest.getGraph()[2].getLanguage() == "EN");
-//   REQUIRE(graphTest.getGraph()[3].getLanguage() == "EN");
-//   REQUIRE(graphTest.getGraph()[4].getLanguage() == "FR");
-//   REQUIRE(graphTest.getGraph()[5].getLanguage() == "JP");
-//   REQUIRE(graphTest.getGraph()[6].getViews() == 234);
-//   REQUIRE(graphTest.getGraph()[7].getViews() == 775);
-//   REQUIRE(graphTest.getGraph()[8].getViews() == 69420);
-//   REQUIRE(graphTest.getGraph()[14].getViews() == 123420);
+}
 
-// }
+TEST_CASE("Check if each node had the correct language and avg viewers", "[weight=6][part=1]"){
+  REQUIRE(graphTest.getGraph()[0].getLanguage() == "EN");
+  REQUIRE(graphTest.getGraph()[1].getLanguage() == "EN");
+  REQUIRE(graphTest.getGraph()[2].getLanguage() == "EN");
+  REQUIRE(graphTest.getGraph()[3].getLanguage() == "EN");
+  REQUIRE(graphTest.getGraph()[4].getLanguage() == "FR");
+  REQUIRE(graphTest.getGraph()[5].getLanguage() == "JP");
+  REQUIRE(graphTest.getGraph()[6].getViews() == 234);
+  REQUIRE(graphTest.getGraph()[7].getViews() == 775);
+  REQUIRE(graphTest.getGraph()[8].getViews() == 69420);
+  REQUIRE(graphTest.getGraph()[13].getViews() == 123420);
+
+}
+
+TEST_CASE("Check if the proper nodes are adjacent", "[weight=6][part=1]"){
+  for(size_t i = 0; i < graphTest.getGraph().size(); i++){
+    for(int testGraphMutuals: graphTest.getGraph()[i].getMutuals()){
+      set<int> mutualSet = graphTest.getGraph()[testGraphMutuals].getMutuals();
+      REQUIRE(mutualSet.find(i) != mutualSet.end());
+    }
+  }
+}

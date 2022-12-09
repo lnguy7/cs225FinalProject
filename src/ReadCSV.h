@@ -59,6 +59,8 @@ class ReadCSV{
 
         string getLanguage(int id);
 
+        vector<pair<int,string>> getFeatureVector();
+
         void printFeature();
 
         void printEdges();

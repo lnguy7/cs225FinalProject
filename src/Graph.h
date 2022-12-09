@@ -21,6 +21,8 @@ class Graph {
         class GraphNode {
             public:
 
+
+                GraphNode();
                 /*
                 * Based on a given ID create a GraphNode with its data
                 */
@@ -47,6 +49,7 @@ class Graph {
                 */
                 string getLanguage();
 
+                set<int> getMutuals();
 
                 int getMutualSize();
                 /*
@@ -106,4 +109,8 @@ class Graph {
         */
         map<int, set<int>> map_;
 
+        /*
+        * The featureFile_ string parsed into a pair of int and string.
+        */
+        vector<pair<int,string>> featureVector_;
 };

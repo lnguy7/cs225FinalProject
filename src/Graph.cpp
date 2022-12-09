@@ -10,6 +10,13 @@
 
 using namespace std;
 
+Graph::GraphNode::GraphNode(){
+    id_ = 0;
+    views_ = 0;
+    language_ = "";
+    mutuals_ = {0};
+}
+
 Graph::GraphNode::GraphNode(int id, int views, string language, std::set<int> mutuals){
     id_ = id;
     views_ = views;
@@ -23,6 +30,8 @@ int Graph::GraphNode::getViews() {return views_; }
 
 string Graph::GraphNode::getLanguage() {return language_; }
 
+set<int> Graph::GraphNode::getMutuals() {return mutuals_;}
+
 int Graph::GraphNode::getMutualSize() {return mutuals_.size(); }
 
 void Graph::GraphNode::setData(int id, int views, string language, set<int> mutuals){
@@ -33,12 +42,14 @@ void Graph::GraphNode::setData(int id, int views, string language, set<int> mutu
 }
 
 Graph::Graph(ReadCSV file){
-    for(auto i = 0; i < file.getSize(); i++){
-        // Graph::GraphNode temporaryGraphNode(i, file.getViews(i), file.getLanguage(i), file.getMutuals()[i]);
-        // graph_.push_back(temporaryGraphNode);
-        cout << i << "\n";
-    }
+    Graph::GraphNode temporaryGraphNode;
+    vector<GraphNode> graph(file.getSize(), temporaryGraphNode);
+    graph_ = graph;
     map_ = file.getMutuals();
+    featureVector_ = file.getFeatureVector();
+    for(auto i = 0; i < file.getSize(); i++){
+        graph_[i].setData(i, featureVector_[i].first, featureVector_[i].second, map_[i]);
+    }
 }
 
 vector<Graph::GraphNode> Graph::getGraph(){ return graph_;}

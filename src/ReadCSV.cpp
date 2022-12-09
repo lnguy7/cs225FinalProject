@@ -121,6 +121,9 @@ int ReadCSV::getViews(int id) { return featureVector_[id].first; }
 
 string ReadCSV::getLanguage(int id) { return featureVector_[id].second; }
 
+vector<pair<int,string>> ReadCSV::getFeatureVector(){return featureVector_;}
+
+
 void ReadCSV::printFeature(){
     for(pair<int,string> featureVectorVector: featureVector_){
         cout << featureVectorVector.first << ", " << featureVectorVector.second << endl;
