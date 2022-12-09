@@ -85,5 +85,7 @@ Data Class:
         This function removes the whitespace to the left and right of a string.
 
 
-//how was leading questions answered
 --------Leading Questions--------
+
+Q: How does gaming culture change across different regions? How does language affect how connected and large each community on Twitch is?
+    
