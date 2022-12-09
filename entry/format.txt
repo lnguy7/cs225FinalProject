@@ -1,0 +1,28 @@
+-----Average Viewcount per Language-----
+Language:                Avg. Views:
+English                  109293944
+Spanish                  129304049  
+French                   283948848
+
+-----Top Streamers per Language-----
+    ###ID###         ###VIEWS### 
+            ~English~
+ 1. 7823884            83142423
+ 2. 7232312            85665323
+ 3. 78884              32059833
+
+            ~Spanish~
+ 1. 7823884            83142423
+ 2. 7232312            85665323
+ 3. 78884              32059833
+
+            ~French~
+ 1. 7823884            83142423
+ 2. 7232312            85665323
+ 3. 78884              32059833
+
+-----Average Mutual Followers per Language-----
+Language:                Avg. Edges:
+English                  109293944
+Spanish                  129304049  
+French                   283948848

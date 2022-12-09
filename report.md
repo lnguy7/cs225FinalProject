@@ -23,8 +23,6 @@ ReadCSV Class:
 BTree Class:
     This class is our tree representation of our data. We used this to sort and store our data in a way that is convenient to access. The nodes were sorted in order of viewership so we can access the data here based on viewcount per channel.
 
-    BTreeNode::BTreeNode()-
-        This is the default constructor for our BTree nodes.
     BTreeNode::BTreeNode(parameters)-
         This is our parameterized constructor for the BTree nodes. The parameters pass in a streamer id and a ReadCSV object that has our file data. This initializes the id, viewcount, and language parameters for the node by pulling information from the ReadCSV objects featureVector. The mutual followers variable is initialized using the getMutualMap() function. The test case "BTreeNodes build corretly" tests the building of our nodes by checking a random node to see if all of the data is correct based on what we know needs to be the correct data from the csv file. This runs in O(n) time.
     BTreeNode::getId()-
@@ -88,4 +86,3 @@ Data Class:
 --------Leading Questions--------
 
 Q: How does gaming culture change across different regions? How does language affect how connected and large each community on Twitch is?
-    
