@@ -30,9 +30,8 @@ void BTree::BTreeNode::setStreamerData(int id, int views, std::string language) 
 
 BTree::BTree(ReadCSV csvfile) {
     //for every line of the csv file, make a node
-    csvfiles = csvfile;
-    for (int i = 0; i < csvfiles.getSize(); i++) {
-        BTree::BTreeNode temp(i, csvfiles);
+    for (int i = 0; i < csvfile.getSize(); i++) {
+        BTree::BTreeNode temp(i, csvfile);
         b_tree.push_back(temp);
     }
 }

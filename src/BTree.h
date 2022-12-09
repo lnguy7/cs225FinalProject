@@ -106,5 +106,4 @@
     private:
       /* This vector contains the entire B-Tree. */
       vector<BTreeNode> b_tree;
-      ReadCSV csvfiles;
  };
