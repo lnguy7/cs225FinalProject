@@ -75,10 +75,14 @@ Data Class:
         Given a filename to a CSV-formatted text file, a 2D vector of strings is created where each row in the text file is a row in the V2D and each comma-separated value is stripped of whitespace and stored as its own string. The nested vector of strings created is returned in this function.
     data_to_string()-
         This takes a filename and reads in all the text from the file. The data in the file is read into a string data structure, which is necessary for converting the string to a nested vector. The string that is returned from this function will be the input of the function above, file_to_nested_vector().
-    split_string()-
+    split_string()- 
+        Given a string and character, the string is split by the character and stored in a vector. A 'split' string treats the character as a breakpoint and creates a separate item in the output vector for each substring. The function returns the number of substrings that were created during the splitting.
     trim_right_side()-
+        This function removes the whitespace to the right of a string.
     trim_left_side()-
+        This function removes the whitespace to the left of a string.
     trim_all()-
+        This function removes the whitespace to the left and right of a string.
 
 
 //how was leading questions answered
