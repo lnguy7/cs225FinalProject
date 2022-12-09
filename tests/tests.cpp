@@ -1,6 +1,5 @@
 #include <catch2/catch_test_macros.hpp>
 #include "BTree.h"
-#include "Data.h"
 #include "ReadCSV.h"
 #include "Graph.h"
 #include <algorithm>
@@ -13,7 +12,6 @@ ReadCSV CSV; //Our dataset in a CSV class
 ReadCSV CSVtest("../lib/test_features.csv", "../lib/test_edges.csv"); //test data we made
 
 TEST_CASE("Testing if Test Cases work", "[weight=1][part=1]") {
-  //CSV.printFeature();
   REQUIRE(0==0);
 }
 
@@ -45,7 +43,7 @@ TEST_CASE("Testing if Test Cases work", "[weight=1][part=1]") {
 //   REQUIRE(node.getStreamerViews() == 1946);
 // }
 
-// Graph graphTest(CSVtest);
+Graph graphTest(CSV);
 
 // TEST_CASE("Testing if graph constructs with IDs in order", "[weight=2][part=1]"){
 //   for(size_t i = 0; i < graphTest.getGraph().size(); i++){

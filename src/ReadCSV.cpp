@@ -10,11 +10,10 @@
 #include <algorithm>
 #include <sstream>
 #include "ReadCSV.h"
-#include "Data.h"
+
 
 using namespace std;
 ReadCSV::ReadCSV(){
-    Data CSVFile;
     featureFile_ = "../lib/large_twitch.csv";
     edgesFile_ =    "../lib/large_twitch_edges.csv";
     featureVector_ = fileToVecPairWithInt(featureFile_);
@@ -24,7 +23,6 @@ ReadCSV::ReadCSV(){
 }
 
 ReadCSV::ReadCSV(const string & featureFile, const string & edgesFile){
-    Data CSVFile;
     featureFile_ = featureFile;
     edgesFile_ = edgesFile;
     featureVector_ = fileToVecPairWithInt(featureFile_);
@@ -99,7 +97,6 @@ vector<pair<int,string>> ReadCSV::fileToVecPairWithInt(const string & filename){
         char c = fgetc(fp);
         if(feof(fp)){
             sPair.second = intStr;
-            edges.push_back(sPair);
             break;
         }if(c == ','){
             sPair.first = stoi(intStr);
@@ -119,6 +116,10 @@ vector<pair<int,string>> ReadCSV::fileToVecPairWithInt(const string & filename){
 }
 
 int ReadCSV::getSize() { return size_; }
+
+int ReadCSV::getViews(int id) { return featureVector_[id].first; }
+
+string ReadCSV::getLanguage(int id) { return featureVector_[id].second; }
 
 void ReadCSV::printFeature(){
     for(pair<int,string> featureVectorVector: featureVector_){

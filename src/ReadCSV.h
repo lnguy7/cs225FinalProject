@@ -55,6 +55,10 @@ class ReadCSV{
         */
         int getSize();
 
+        int getViews(int id);
+
+        string getLanguage(int id);
+
         void printFeature();
 
         void printEdges();

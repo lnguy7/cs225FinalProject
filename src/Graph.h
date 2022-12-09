@@ -24,7 +24,7 @@ class Graph {
                 /*
                 * Based on a given ID create a GraphNode with its data
                 */
-                GraphNode(int id, ReadCSV *data);
+                GraphNode(int id, int views, string language, std::set<int> mutuals);
 
                 /**
                 * Returns the streamer id
@@ -47,6 +47,8 @@ class Graph {
                 */
                 string getLanguage();
 
+
+                int getMutualSize();
                 /*
                 * Set data of node in graph
                 */

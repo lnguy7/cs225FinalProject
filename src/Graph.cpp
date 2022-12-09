@@ -10,11 +10,11 @@
 
 using namespace std;
 
-Graph::GraphNode::GraphNode(int id, ReadCSV *data){
+Graph::GraphNode::GraphNode(int id, int views, string language, std::set<int> mutuals){
     id_ = id;
-    views_ = data->;
-    // language_ = temp[2];
-    mutuals_ = data->getMutualMap()[id];
+    views_ = views;
+    language_ = language;
+    mutuals_ = mutuals;
 }
 
 int Graph::GraphNode::getId() {return id_; }
@@ -22,6 +22,8 @@ int Graph::GraphNode::getId() {return id_; }
 int Graph::GraphNode::getViews() {return views_; }
 
 string Graph::GraphNode::getLanguage() {return language_; }
+
+int Graph::GraphNode::getMutualSize() {return mutuals_.size(); }
 
 void Graph::GraphNode::setData(int id, int views, string language, set<int> mutuals){
     id_ = id;
@@ -32,8 +34,9 @@ void Graph::GraphNode::setData(int id, int views, string language, set<int> mutu
 
 Graph::Graph(ReadCSV file){
     for(auto i = 0; i < file.getSize(); i++){
-        Graph::GraphNode temporaryGraphNode(i, file);
-        graph_.push_back(temporaryGraphNode);
+        // Graph::GraphNode temporaryGraphNode(i, file.getViews(i), file.getLanguage(i), file.getMutuals()[i]);
+        // graph_.push_back(temporaryGraphNode);
+        cout << i << "\n";
     }
     map_ = file.getMutuals();
 }
