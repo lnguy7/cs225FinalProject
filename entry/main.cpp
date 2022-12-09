@@ -7,17 +7,21 @@ using namespace std;
 
 int main()
 {
+    std::cout << "start22" << std::endl;
     // Write your own main here
-    ReadCSV obj("../lib/test_features.csv", "../lib/test_edges.csv");
+    ReadCSV obj("../lib/large_twitch_features.csv", "../lib/large_twitch_edges.csv");
+    std::cout << "start223" << std::endl;
     Graph g(obj);
+    std::cout << "start224" << std::endl;
     BTree b(obj);
+    std::cout << "start225" << std::endl;
     vector<Graph::GraphNode> graph = g.getGraph();
 
 
 
 
 
-
+    std::cout << "start" << std::endl;
 
     //////////////////////////////////////////////////////////////////////////////////////
     //VISUALIZATION
@@ -44,7 +48,7 @@ int main()
     int italian_viewerships_sum = 0;
     int chinese_viewerships_sum = 0;
 
-    for (int i = 0; i < (int) graph.size(); i++) {
+    for (size_t i = 0; i < graph.size(); i++) {
         if (graph.at(i).getLanguage() == "EN") {
             english_viewerships.push_back(graph.at(i).getViews());
             english_viewerships_sum += graph.at(i).getViews();
@@ -78,18 +82,6 @@ int main()
         }
     }
 
-
-    // int english_viewerships_sum = 0;
-    // int spanish_viewerships_sum = 0;
-    // int french_viewerships_sum = 0;
-    // int russian_viewerships_sum = 0;
-    // int german_viewerships_sum = 0;
-    // int japanese_viewerships_sum = 0;
-    // int portuguese_viewerships_sum = 0;
-    // int korean_viewerships_sum = 0;
-    // int italian_viewerships_sum = 0;
-    // int chinese_viewerships_sum = 0;
-
     int english_average_viewerships = (int) ((int) english_viewerships_sum / (int) english_viewerships.size());
 
     int spanish_average_viewerships = (int) ((int) spanish_viewerships_sum / (int) spanish_viewerships.size());
@@ -110,6 +102,7 @@ int main()
 
     int chinese_average_viewerships = (int) ((int) chinese_viewerships_sum / (int) chinese_viewerships.size());
 
+    std::cout << "start2" << std::endl;
     ////////
     //0. English (EN)
     //1. Spanish (ES)
@@ -212,13 +205,26 @@ int main()
             break;
         }
     }
-
     ////////
+    std::cout << "end" << std::endl;
 
     std::ofstream output("../entry/graph.txt");
     output << "~~~~~~~STATISTICS AND RESULTS~~~~~~~" << "\n" << "\n";
     output << "-----Average Viewcount per Language-----" << "\n";
     output << "Language:                Avg. Views:" << "\n";
+    output << "English                  " << english_average_viewerships << "\n";
+    output << "Spanish                  " << spanish_average_viewerships << "\n";
+    output << "French                   " << french_average_viewerships << "\n";
+    output << "Russian                  " << russian_average_viewerships << "\n";
+    output << "German                   " << german_average_viewerships << "\n";
+    output << "Japanese                 " << japanese_average_viewerships << "\n";
+    output << "Portuguese               " << portuguese_average_viewerships << "\n";
+    output << "Korean                   " << korean_average_viewerships << "\n";
+    output << "Italian                  " << italian_average_viewerships << "\n";
+    output << "Chinese                  " << chinese_average_viewerships << "\n" << "\n";
+    output << "-----Top Streamers per Language-----" << "\n";
+    output << "    ###ID###         ###VIEWS###" << "\n";
+    
 
     return 0;
 }
