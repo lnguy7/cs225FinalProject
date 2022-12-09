@@ -11,7 +11,7 @@ int main()
 {
     std::cout << "start22" << std::endl;
     // Write your own main here
-    ReadCSV obj("../lib/large_twitch_features.csv", "../lib/large_twitch_edges.csv");
+    ReadCSV obj;
     std::cout << "start223" << std::endl;
     Graph g(obj);
     std::cout << "start224" << std::endl;
@@ -51,34 +51,35 @@ int main()
     int chinese_viewerships_sum = 0;
 
     for (size_t i = 0; i < graph.size(); i++) {
-        if (graph.at(i).getLanguage() == "EN") {
+        std::string lan = graph.at(i).getLanguage();
+        if (lan == "EN") {
             english_viewerships.push_back(graph.at(i).getViews());
             english_viewerships_sum += graph.at(i).getViews();
-        } else if (graph.at(i).getLanguage() == "ES") {
+        } else if (lan == "ES") {
             spanish_viewerships.push_back(graph.at(i).getViews());
             spanish_viewerships_sum += graph.at(i).getViews();
-        } else if (graph.at(i).getLanguage() == "FR") {
+        } else if (lan == "FR") {
             french_viewerships.push_back(graph.at(i).getViews());
             french_viewerships_sum += graph.at(i).getViews();
-        } else if (graph.at(i).getLanguage() == "RU") {
+        } else if (lan == "RU") {
             russian_viewerships.push_back(graph.at(i).getViews());
             russian_viewerships_sum += graph.at(i).getViews();
-        } else if (graph.at(i).getLanguage() == "DE") {
+        } else if (lan == "DE") {
             german_viewerships.push_back(graph.at(i).getViews());
             german_viewerships_sum += graph.at(i).getViews();
-        } else if (graph.at(i).getLanguage() == "JA") {
+        } else if (lan == "JA") {
             japanese_viewerships.push_back(graph.at(i).getViews());
             japanese_viewerships_sum += graph.at(i).getViews();
-        } else if (graph.at(i).getLanguage() == "PT") {
+        } else if (lan == "PT") {
             portuguese_viewerships.push_back(graph.at(i).getViews());
             portuguese_viewerships_sum += graph.at(i).getViews();
-        } else if (graph.at(i).getLanguage() == "KO") {
+        } else if (lan == "KO") {
             korean_viewerships.push_back(graph.at(i).getViews());
             korean_viewerships_sum += graph.at(i).getViews();
-        } else if (graph.at(i).getLanguage() == "IT") {
+        } else if (lan == "IT") {
             italian_viewerships.push_back(graph.at(i).getViews());
             italian_viewerships_sum += graph.at(i).getViews();
-        } else if (graph.at(i).getLanguage() == "ZH") {
+        } else if (lan == "ZH") {
             chinese_viewerships.push_back(graph.at(i).getViews());
             chinese_viewerships_sum += graph.at(i).getViews();
         }
@@ -232,34 +233,35 @@ int main()
     int chinese_adj_sum = 0;
 
     for (size_t i = 0; i < graph.size(); i++) {
-        if (graph.at(i).getLanguage() == "EN") {
+        std::string lang = graph.at(i).getLanguage();
+        if (lang == "EN") {
             english_adj.push_back(graph.at(i).getId());
             english_adj_sum += graph.at(i).getMutualSize();
-        } else if (graph.at(i).getLanguage() == "ES") {
+        } else if (lang == "ES") {
             spanish_adj.push_back(graph.at(i).getId());
             spanish_adj_sum += graph.at(i).getMutualSize();
-        } else if (graph.at(i).getLanguage() == "FR") {
+        } else if (lang == "FR") {
             french_adj.push_back(graph.at(i).getId());
             french_adj_sum += graph.at(i).getMutualSize();
-        } else if (graph.at(i).getLanguage() == "RU") {
+        } else if (lang == "RU") {
             russian_adj.push_back(graph.at(i).getId());
             russian_adj_sum += graph.at(i).getMutualSize();
-        } else if (graph.at(i).getLanguage() == "DE") {
+        } else if (lang == "DE") {
             german_adj.push_back(graph.at(i).getId());
             german_adj_sum += graph.at(i).getMutualSize();
-        } else if (graph.at(i).getLanguage() == "JA") {
+        } else if (lang == "JA") {
             japanese_adj.push_back(graph.at(i).getId());
             japanese_adj_sum += graph.at(i).getMutualSize();
-        } else if (graph.at(i).getLanguage() == "PT") {
+        } else if (lang == "PT") {
             portuguese_adj.push_back(graph.at(i).getId());
             portuguese_adj_sum += graph.at(i).getMutualSize();
-        } else if (graph.at(i).getLanguage() == "KO") {
+        } else if (lang == "KO") {
             korean_adj.push_back(graph.at(i).getId());
             korean_adj_sum += graph.at(i).getMutualSize();
-        } else if (graph.at(i).getLanguage() == "IT") {
+        } else if (lang == "IT") {
             italian_adj.push_back(graph.at(i).getId());
             italian_adj_sum += graph.at(i).getMutualSize();
-        } else if (graph.at(i).getLanguage() == "ZH") {
+        } else if (lang == "ZH") {
             chinese_adj.push_back(graph.at(i).getId());
             chinese_adj_sum += graph.at(i).getMutualSize();
         }
