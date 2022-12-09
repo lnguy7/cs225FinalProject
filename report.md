@@ -40,7 +40,7 @@ BTree Class:
     BTree(vector)-
         This is one of the constructors for our BTree class. It takes a vector containing all of our streamer data, and then reads from this vector to construct all of the nodes for the BTree. It does this by looping through the vector of streamer data and using the BTreeNode constructor to make the node, and then adds them all to a vector to store the nodes in the BTree. This runs in O(n) time.
     getBTree()-
-        This function accesses the vector of BTreeNodes that represents our entire BTree by returning the b_tree private variable. Returns a graphical represenation of all the streamers. This runs in O(1) time.
+        This function accesses the vector of BTreeNodes that represents our entire BTree by returning the b_tree private variable. Returns a tree represenation of all the streamers. This runs in O(1) time.
     MergeSort()-
         This is our sorting algorithm for our BTree. It uses the helper function MergeVectors() to merge sort our vector in order of viewcount. The run time of this function is O(nlogn), and is our way to organize our data before we use it in our graph representation of the data. 
     MergeVectors()-
@@ -52,12 +52,19 @@ Graph Class:
     GraphNode::GraphNode()-
         This is the default constructor for the nodes in our graph. Similar to the nodes of the BTree it initializes the streamer id, views, language, and mutual followers. The information is taken from the ReadCSV file that was passed to the graphs constructor. This allows us to take all of this data from the same object just from using the one ReadCSV object. This runs in O(n) time.
     GraphNode::getId()-
+        This function is the getter for the id value for the streamer whose node we are accessing. Returns the private int variable id_. This runs in O(1) time.
     GraphNode::getViews()-
+        This function is the getter for the view count of the streamer whose node we are accessing. Returns the private int variable views_. This runs in O(1) time.
     GraphNode::getLanguage()-
+        This function is the getter for the language of the streamer whose node we are accessing. Returns the private string variable language_. This runs in O(1) time.
     GraphNode::setData()-
+        This function allows us to change or set the streamer data for the graph node. It takes the streamer_id, the viewcount, the language, and the set of connected streamers as parameters and changes the private variables that are in the graph node. This runs in O(1) time.
     Graph()-
+        This is the constructor for our Graph class. It takes a ReadCSV object as a parameter and uses this to construct the graph nodes and obtain the data for each of those nodes. It does this by looping through the vector of streamer data (in the readcsv object) and using the graph node constructor to make the node, and then adds them all to a vector to store the nodes in the graph.
     getGraph()-
+        This function accesses the vector of Graph that represents our entire Graph by returning the graph_ private variable. Returns a graphical represenation of all the streamers. This runs in O(1) time.
     getMap()-
+        This is a getter for the private variable map_ which contains the map of edges that was constructed and copied from the ReadCSV file.
 
 Data Class:
     This class is a helper class composed of functions that are used to help parse and organize the data for the readCSV class. 
