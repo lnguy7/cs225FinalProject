@@ -20,9 +20,9 @@ int main()
     vector<Graph::GraphNode> graph = g.getGraph();
 
     //Sorting needs a copy of BTree to work at this point.
-    BTree test(obj);
-    vector<BTree::BTreeNode> copy = test.getBTree();
-    test.MergeSort(copy, 0, int(test.getBTree().size()) - 1);
+    // BTree test(obj);
+    // vector<BTree::BTreeNode> copy = test.getBTree();
+    // test.MergeSort(copy, 0, int(test.getBTree().size()) - 1);
 
 
     ////////////////////////////////////////////////////////////////////////////////////
@@ -119,8 +119,7 @@ int main()
 
     //first vector is the language #, second vector is the 3 streamers, pair is the streamer and views
     //vector of vector of pairs pair<streamer id, views> 
-    std::pair<int, int> starter1 = {0, 0};
-    std::vector<std::pair<int, int>> starter2(3, starter1);
+    std::vector<std::pair<int, int>> starter2;
     std::vector<std::vector<std::pair<int, int>>> mostviewed(10, starter2);
     std::vector<std::string> languages = {"EN", "ES", "FR", "RU", "DE", "JA", "PT", "KO", "IT", "ZH"};
     std::vector<BTree::BTreeNode> tempBTree = b.getBTree();
