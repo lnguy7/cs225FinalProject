@@ -1,8 +1,10 @@
 #include <iostream>
 #include "ReadCSV.h"
-#include "Data.h"
 #include "Graph.h"
+#include "BTree.h"
+#include <fstream>
 #include <numeric>
+#include <cstdlib>
 using namespace std;
 
 int main()
@@ -207,6 +209,85 @@ int main()
 
     ////////
 
+    std::vector<int> english_adj;    // EN
+    std::vector<int> spanish_adj;    // ES
+    std::vector<int> french_adj;     // FR
+    std::vector<int> russian_adj;    // RU
+    std::vector<int> german_adj;     // DE
+    std::vector<int> japanese_adj;   // JA
+    std::vector<int> portuguese_adj; // PT
+    std::vector<int> korean_adj;     // KO
+    std::vector<int> italian_adj;    // IT
+    std::vector<int> chinese_adj;    // ZH
+
+    int english_adj_sum = 0;
+    int spanish_adj_sum = 0;
+    int french_adj_sum = 0;
+    int russian_adj_sum = 0;
+    int german_adj_sum = 0;
+    int japanese_adj_sum = 0;
+    int portuguese_adj_sum = 0;
+    int korean_adj_sum = 0;
+    int italian_adj_sum = 0;
+    int chinese_adj_sum = 0;
+
+    for (size_t i = 0; i < graph.size(); i++) {
+        if (graph.at(i).getLanguage() == "EN") {
+            english_adj.push_back(graph.at(i).getId());
+            english_adj_sum += graph.at(i).getMutualSize();
+        } else if (graph.at(i).getLanguage() == "ES") {
+            spanish_adj.push_back(graph.at(i).getId());
+            spanish_adj_sum += graph.at(i).getMutualSize();
+        } else if (graph.at(i).getLanguage() == "FR") {
+            french_adj.push_back(graph.at(i).getId());
+            french_adj_sum += graph.at(i).getMutualSize();
+        } else if (graph.at(i).getLanguage() == "RU") {
+            russian_adj.push_back(graph.at(i).getId());
+            russian_adj_sum += graph.at(i).getMutualSize();
+        } else if (graph.at(i).getLanguage() == "DE") {
+            german_adj.push_back(graph.at(i).getId());
+            german_adj_sum += graph.at(i).getMutualSize();
+        } else if (graph.at(i).getLanguage() == "JA") {
+            japanese_adj.push_back(graph.at(i).getId());
+            japanese_adj_sum += graph.at(i).getMutualSize();
+        } else if (graph.at(i).getLanguage() == "PT") {
+            portuguese_adj.push_back(graph.at(i).getId());
+            portuguese_adj_sum += graph.at(i).getMutualSize();
+        } else if (graph.at(i).getLanguage() == "KO") {
+            korean_adj.push_back(graph.at(i).getId());
+            korean_adj_sum += graph.at(i).getMutualSize();
+        } else if (graph.at(i).getLanguage() == "IT") {
+            italian_adj.push_back(graph.at(i).getId());
+            italian_adj_sum += graph.at(i).getMutualSize();
+        } else if (graph.at(i).getLanguage() == "ZH") {
+            chinese_adj.push_back(graph.at(i).getId());
+            chinese_adj_sum += graph.at(i).getMutualSize();
+        }
+    }
+
+    int english_average_adj = (int) ((int) english_adj_sum / (int) english_adj.size());
+
+    int spanish_average_adj = (int) ((int) spanish_adj_sum / (int) spanish_adj.size());
+
+    int french_average_adj = (int) ((int) french_adj_sum / (int) french_adj.size());
+
+    int russian_average_adj = (int) ((int) russian_adj_sum / (int) russian_adj.size());
+
+    int german_average_adj = (int) ((int) german_adj_sum / (int) german_adj.size());
+
+    int japanese_average_adj = (int) ((int) japanese_adj_sum / (int) japanese_adj.size());
+
+    int portuguese_average_adj = (int) ((int) portuguese_adj_sum / (int) portuguese_adj.size());
+
+    int korean_average_adj = (int) ((int) korean_adj_sum / (int) korean_adj.size());
+
+    int italian_average_adj = (int) ((int) italian_adj_sum/ (int) italian_adj.size());
+
+    int chinese_average_adj = (int) ((int) chinese_adj_sum / (int) chinese_adj.size());
+
+
+    ///////
+
     std::ofstream output("../entry/graph.txt");
     output << "~~~~~~~STATISTICS AND RESULTS~~~~~~~" << "\n" << "\n";
     output << "-----Average Viewcount per Language-----" << "\n";
@@ -265,7 +346,16 @@ int main()
     output << "3. " << mostviewed[9][2].first << "            " << mostviewed[9][2].second << "\n" << "\n";
     output << "-----Average Mutual Followers per Language-----" << "\n";
     output << "Language:                Avg. Edges:" << "\n";
-    
+    output << "English                  " << english_average_adj << "\n";
+    output << "Spanish                  " << spanish_average_adj << "\n";
+    output << "French                   " << french_average_adj << "\n";
+    output << "Russian                  " << russian_average_adj << "\n";
+    output << "German                   " << german_average_adj << "\n";
+    output << "Japanese                 " << japanese_average_adj << "\n";
+    output << "Portuguese               " << portuguese_average_adj << "\n";
+    output << "Korean                   " << korean_average_adj << "\n";
+    output << "Italian                  " << italian_average_adj << "\n";
+    output << "Chinese                  " << chinese_average_adj << "\n" << "\n";
 
     return 0;
 }
