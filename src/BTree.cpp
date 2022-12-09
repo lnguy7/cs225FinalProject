@@ -6,14 +6,15 @@
 #include "ReadCSV.h"
 #include "BTree.h"
 
+using namespace std;
+
 BTree::BTreeNode::BTreeNode() {}
 
-BTree::BTreeNode::BTreeNode(int s_id, ReadCSV csvfile) {
-    // vector<string> to_pull = csvfile.getFeatureVector(s_id);
-    // streamer_iden_ = stoi(to_pull[0]);
-    // viewcount_ = stoi(to_pull[1]);
-    // languages_ = to_pull[2];
-    mutual_followers = csvfile.getMutualMap()[streamer_iden_];
+BTree::BTreeNode::BTreeNode(int id, int views, string language, std::set<int> mutuals) {
+    streamer_iden_ = id;
+    viewcount_ = views;
+    languages_ = language;
+    mutual_followers = mutuals;
 }
 
 int BTree::BTreeNode::getId() { return streamer_iden_; } 
@@ -22,17 +23,22 @@ int BTree::BTreeNode::getStreamerViews() { return viewcount_; }
 
 string BTree::BTreeNode::getLanguage() { return languages_; }
 
-void BTree::BTreeNode::setStreamerData(int id, int views, std::string language) {
+void BTree::BTreeNode::setStreamerData(int id, int views, string language, set<int> mutuals) {
     streamer_iden_ = id;
     viewcount_ = views;
     languages_ = language;
+    mutual_followers = mutuals;
 }
 
 BTree::BTree(ReadCSV csvfile) {
     //for every line of the csv file, make a node
-    for (int i = 0; i < csvfile.getSize(); i++) {
-        BTree::BTreeNode temp(i, csvfile);
-        b_tree.push_back(temp);
+    BTree::BTreeNode temporaryNode;
+    vector<BTreeNode> btree(csvfile.getSize(), temporaryNode);
+    b_tree = btree;
+    map_ = csvfile.getMutuals();
+    featureVector_ = csvfile.getFeatureVector();
+    for(auto i = 0; i < csvfile.getSize(); i++){
+        b_tree[i].setStreamerData(i, featureVector_[i].first, featureVector_[i].second, map_[i]);
     }
 }
 

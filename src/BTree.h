@@ -31,7 +31,7 @@
            * 
            * @param streamer_id_and_feature_data vector that is used to initialize the BTreeNode member variable, "streamer_data".
            */
-           BTreeNode(int s_id, ReadCSV csvfile);
+           BTreeNode(int id, int views, string language, std::set<int> mutuals);
 
            /**
            * Returns the streamer id.
@@ -58,7 +58,7 @@
            /**
            * Changes the streamer's data.
            */
-           void setStreamerData(int id, int views, std::string language);
+           void setStreamerData(int id, int views, string language, set<int> mutuals);
 
          private:
 
@@ -106,4 +106,6 @@
     private:
       /* This vector contains the entire B-Tree. */
       vector<BTreeNode> b_tree;
+      map<int, set<int>> map_;
+      vector<pair<int,string>> featureVector_;
  };
