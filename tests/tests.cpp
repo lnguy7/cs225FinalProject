@@ -15,6 +15,7 @@ TEST_CASE("Testing if Test Cases work", "[weight=1][part=1]") {
 }
 
 TEST_CASE("Test Reads CSV", "[weight=2][part=1]") {
+  std::cout << "Mountain View" << std::endl;
   std::vector<std::string> test = {"0", "7879", "EN"};
   std::vector<std::string> test2 = {"446", "7252", "EN"};
   std::vector<std::string> read_file = CSV.getFeatureVector(0);
@@ -32,9 +33,7 @@ TEST_CASE("BTreeNodes build corretly", "[weight=2][part=1]") {
 }
 
 TEST_CASE("Testing the Btree setter", "[weight=4][part=1]") {
-  ReadCSV csv = ReadCSV();
   std::vector<std::string> read_file = CSV.getFeatureVector(108);
-
   BTree::BTreeNode node = BTree::BTreeNode();
   node.setStreamerData(std::stoi(read_file.at(0)), std::stoi(read_file.at(1)), read_file.at(2));
 
