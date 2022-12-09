@@ -19,6 +19,7 @@ ReadCSV::ReadCSV(){
     edgesFile_ =    "../lib/large_twitch_edges.csv";
     featureVector_ = CSVFile.file_to_nested_vector(featureFile_);
     featureVector_.erase(featureVector_.begin());
+    featureVector_.erase(featureVector_.begin()+featureVector_.size()-1);
     edgesVector_ = fileToVecPair(edgesFile_);
     size_ = featureVector_.size();
     mutualmap_ = getMutuals();
@@ -36,7 +37,6 @@ ReadCSV::ReadCSV(const string & featureFile, const string & edgesFile){
 }
 
 vector<string> ReadCSV::getFeatureVector(int id){
-    cout << featureVector_[id][5] << ", " << featureVector_[id][0] << ", " << featureVector_[id][7] << ", " << endl;
     return {featureVector_[id][5],featureVector_[id][0],featureVector_[id][7]};
 }
 
@@ -50,10 +50,15 @@ std::map<int, std::set<int>> ReadCSV::getMutuals(){
         to_return.insert({i, temp});
     }
     for(pair<string,string> mId: edgesVector_){
+        if (mId.first != "" && mId.second != "")
+        {
         int id1 = stoi(mId.first);
         int id2 = stoi(mId.second);
         to_return.at(id1).insert(id2);
         to_return.at(id2).insert(id1);
+        }
+        
+       
     }
     return to_return;
 }
