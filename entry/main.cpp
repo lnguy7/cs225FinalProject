@@ -39,16 +39,16 @@ int main()
     std::vector<int> italian_viewerships;    // IT
     std::vector<int> chinese_viewerships;    // ZH
 
-    int english_viewerships_sum = 0;
-    int spanish_viewerships_sum = 0;
-    int french_viewerships_sum = 0;
-    int russian_viewerships_sum = 0;
-    int german_viewerships_sum = 0;
-    int japanese_viewerships_sum = 0;
-    int portuguese_viewerships_sum = 0;
-    int korean_viewerships_sum = 0;
-    int italian_viewerships_sum = 0;
-    int chinese_viewerships_sum = 0;
+    unsigned long english_viewerships_sum = 0;
+    unsigned long spanish_viewerships_sum = 0;
+    unsigned long french_viewerships_sum = 0;
+    unsigned long russian_viewerships_sum = 0;
+    unsigned long german_viewerships_sum = 0;
+    unsigned long japanese_viewerships_sum = 0;
+    unsigned long portuguese_viewerships_sum = 0;
+    unsigned long korean_viewerships_sum = 0;
+    unsigned long italian_viewerships_sum = 0;
+    unsigned long chinese_viewerships_sum = 0;
 
     for (size_t i = 0; i < graph.size(); i++) {
         std::string lan = graph.at(i).getLanguage();
@@ -85,25 +85,25 @@ int main()
         }
     }
 
-    int english_average_viewerships = (int) ((int) english_viewerships_sum / (int) english_viewerships.size());
+    unsigned long english_average_viewerships = (english_viewerships_sum / english_viewerships.size());
 
-    int spanish_average_viewerships = (int) ((int) spanish_viewerships_sum / (int) spanish_viewerships.size());
+    unsigned long spanish_average_viewerships = (spanish_viewerships_sum / spanish_viewerships.size());
 
-    int french_average_viewerships = (int) ((int) french_viewerships_sum / (int) french_viewerships.size());
+    unsigned long french_average_viewerships = (french_viewerships_sum / french_viewerships.size());
 
-    int russian_average_viewerships = (int) ((int) russian_viewerships_sum / (int) russian_viewerships.size());
+    unsigned long russian_average_viewerships =  (russian_viewerships_sum / russian_viewerships.size());
 
-    int german_average_viewerships = (int) ((int) german_viewerships_sum / (int) german_viewerships.size());
+    unsigned long german_average_viewerships = (german_viewerships_sum / german_viewerships.size());
 
-    int japanese_average_viewerships = (int) ((int) japanese_viewerships_sum / (int) japanese_viewerships.size());
+    unsigned long japanese_average_viewerships = (japanese_viewerships_sum / japanese_viewerships.size());
 
-    int portuguese_average_viewerships = (int) ((int) portuguese_viewerships_sum / (int) portuguese_viewerships.size());
+    unsigned long portuguese_average_viewerships = (portuguese_viewerships_sum / portuguese_viewerships.size());
 
-    int korean_average_viewerships = (int) ((int) korean_viewerships_sum / (int) korean_viewerships.size());
+    unsigned long korean_average_viewerships = (korean_viewerships_sum / korean_viewerships.size());
 
-    int italian_average_viewerships = (int) ((int) italian_viewerships_sum/ (int) italian_viewerships.size());
+    unsigned long italian_average_viewerships = (italian_viewerships_sum/ italian_viewerships.size());
 
-    int chinese_average_viewerships = (int) ((int) chinese_viewerships_sum / (int) chinese_viewerships.size());
+    unsigned long chinese_average_viewerships = (chinese_viewerships_sum / chinese_viewerships.size());
 
     ////////
     //0. English (EN)
@@ -267,25 +267,25 @@ int main()
         }
     }
 
-    int english_average_adj = (int) ((int) english_adj_sum / (int) english_adj.size());
+    unsigned int english_average_adj = (english_adj_sum / english_adj.size());
 
-    int spanish_average_adj = (int) ((int) spanish_adj_sum / (int) spanish_adj.size());
+    unsigned int spanish_average_adj = (spanish_adj_sum / spanish_adj.size());
 
-    int french_average_adj = (int) ((int) french_adj_sum / (int) french_adj.size());
+    unsigned int french_average_adj = (french_adj_sum / french_adj.size());
 
-    int russian_average_adj = (int) ((int) russian_adj_sum / (int) russian_adj.size());
+    unsigned int russian_average_adj = (russian_adj_sum / russian_adj.size());
 
-    int german_average_adj = (int) ((int) german_adj_sum / (int) german_adj.size());
+    unsigned int german_average_adj = (german_adj_sum / german_adj.size());
 
-    int japanese_average_adj = (int) ((int) japanese_adj_sum / (int) japanese_adj.size());
+    unsigned int japanese_average_adj = (japanese_adj_sum / japanese_adj.size());
 
-    int portuguese_average_adj = (int) ((int) portuguese_adj_sum / (int) portuguese_adj.size());
+    unsigned int portuguese_average_adj = (portuguese_adj_sum / portuguese_adj.size());
 
-    int korean_average_adj = (int) ((int) korean_adj_sum / (int) korean_adj.size());
+    unsigned int korean_average_adj = (korean_adj_sum / korean_adj.size());
 
-    int italian_average_adj = (int) ((int) italian_adj_sum/ (int) italian_adj.size());
+    unsigned int italian_average_adj = (italian_adj_sum / italian_adj.size());
 
-    int chinese_average_adj = (int) ((int) chinese_adj_sum / (int) chinese_adj.size());
+    unsigned int chinese_average_adj = (chinese_adj_sum / chinese_adj.size());
 
 
     ///////

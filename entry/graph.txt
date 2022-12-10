@@ -2,10 +2,10 @@
 
 -----Average Viewcount per Language-----
 Language:                Avg. Views:
-English                  -10151
+English                  162462
 Spanish                  125785
 French                   175994
-Russian                  -409767
+Russian                  481119
 German                   146274
 Japanese                 163549
 Portuguese               390806
