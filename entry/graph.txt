@@ -2,3 +2,80 @@
 
 -----Average Viewcount per Language-----
 Language:                Avg. Views:
+English                  -10151
+Spanish                  125785
+French                   175994
+Russian                  -409767
+German                   146274
+Japanese                 163549
+Portuguese               390806
+Korean                   472689
+Italian                  163607
+Chinese                  642223
+
+-----Top Streamers per Language-----
+    ###ID###         ###VIEWS###
+            ~English~
+1. 129895            368912220
+2. 61861            340602050
+3. 128863            297117159
+
+            ~Spanish~
+1. 21404            63285497
+2. 151557            30545569
+3. 104405            24773157
+
+            ~French~
+1. 56293            108432615
+2. 103341            62713570
+3. 121164            44534929
+
+            ~Russian~
+1. 96472            384396587
+2. 70349            117655872
+3. 15923            104155193
+
+            ~German~
+1. 75090            100394785
+2. 18986            70620803
+3. 45836            54516100
+
+            ~Japanese~
+1. 116251            24733116
+2. 110904            18122259
+3. 103359            10745266
+
+           ~Portuguese~
+1. 128588            116392808
+2. 81836            40659090
+3. 51886            40456102
+
+            ~Korean~
+1. 155069            26898752
+2. 108277            25851129
+3. 116995            17119152
+
+            ~Italian~
+1. 37156            38793358
+2. 133887            24497283
+3. 147854            16670354
+
+            ~Chinese~
+
+1. 125827            179513429
+2. 2049            177293299
+3. 130325            80911081
+
+-----Average Mutual Followers per Language-----
+Language:                Avg. Edges:
+English                  81
+Spanish                  78
+French                   81
+Russian                  81
+German                   79
+Japanese                 80
+Portuguese               77
+Korean                   81
+Italian                  84
+Chinese                  72
+

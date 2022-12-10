@@ -123,6 +123,7 @@ int main()
     std::vector<std::vector<std::pair<int, int>>> mostviewed(10, starter2);
     std::vector<std::string> languages = {"EN", "ES", "FR", "RU", "DE", "JA", "PT", "KO", "IT", "ZH"};
     std::vector<BTree::BTreeNode> tempBTree = b.getBTree();
+    b.MergeSort(tempBTree, 0, int(tempBTree.size())-1);
     std::map<std::string, bool> truefalse;
     int counter = 0;
     for (size_t i = 0; i < languages.size(); i++) {
