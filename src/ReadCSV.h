@@ -33,7 +33,10 @@ class ReadCSV{
 
 
         /**
-        * TODO: remove this function once map of followers is created. 
+        * Creates a map from the that allows access to a streamer's mutual followers by using the streamer id as the key, and their
+        * followers as the values.
+        * 
+        * @return a map that uses a streamer id as a key to access that streamer's mutual followers.
         */
         std::map<int, std::set<int>> getMutuals();
 
@@ -46,27 +49,71 @@ class ReadCSV{
         * @return the parsed data file.
         */
         vector<pair<string,string>> fileToVecPair(const string & filename);
-        
-        vector<pair<int,string>> fileToVecPairWithInt(const string & filename);
+
         /**
-        * gets the size of the csv file.
+        * Takes in the streamers and their feature data and converts it into a vector data structure that allows easy access to each id 
+        * and the feature data for that streamer.
+        * 
+        * @param filename the feature data file.
+        *
+        * @return the parsed data file.
+        */
+        vector<pair<int,string>> fileToVecPairWithInt(const string & filename);
+
+        /**
+        * Gets the size of the csv file.
         *
         * @return the size of the csv file.
         */
         int getSize();
 
+        /**
+        * Gets the average views of a specific streamer.
+        *
+        * @param id the streamer id.
+        *
+        * @return the number of average views for the streamer.
+        */
         int getViews(int id);
 
+        /**
+        * Gets the language of a specific streamer.
+        *
+        * @param id the streamer id.
+        *
+        * @return the language the streamer uses for streaming.
+        */
         string getLanguage(int id);
 
+        /**
+        * Gets the entire parsed dataset of streamers and their individual feature data.
+        *
+        * @return all the streamers and their feature data.
+        */
         vector<pair<int,string>> getFeatureVector();
 
+        /**
+        * Gets the entire parsed dataset of mutual followers for each streamer.
+        *
+        * @return all the mutual followers for each streamer.
+        */
         vector<pair<string,string>> getEdgesVector();
 
+        /**
+        * Prints out the streamer's id and their corresponding feature data.
+        */
         void printFeature();
 
+        /**
+        * Prints out all the edges (mutual follwerships for each streamer).
+        */
         void printEdges();
 
+        /**
+        * Gets the map of mutual followers among streamers.
+        *
+        * @return the map of mutual followers.
+        */
         std::map<int, std::set<int>> getMutualMap();
         
     private:
@@ -94,5 +141,9 @@ class ReadCSV{
         */
         vector<pair<string,string>> edgesVector_;
 
+        /*
+        * A map of the mutual followers for each streamer. The map optiizes program performance when accessing the different
+        * connections. It was taken from the edges data vector and converted.
+        */
         std::map<int, std::set<int>> mutualmap_;
 };
