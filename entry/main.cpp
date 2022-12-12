@@ -9,15 +9,15 @@ using namespace std;
 
 int main()
 {
-    std::cout << "start22" << std::endl;
-    // Write your own main here
+    std::cout << "Creating ReadCSV Object" << std::endl;
     ReadCSV obj;
-    std::cout << "start223" << std::endl;
+    std::cout << "Creating Graph Using ReadCSV" << std::endl;
     Graph g(obj);
-    std::cout << "start224" << std::endl;
+    std::cout << "Creating BTree Using ReadCSV" << std::endl;
     BTree b(obj);
-    std::cout << "start225" << std::endl;
+    std::cout << "Copying Graph Nodes to Vector" << std::endl;
     vector<Graph::GraphNode> graph = g.getGraph();
+    std::cout << "Starting Analysis" << std::endl;
 
     //Sorting needs a copy of BTree to work at this point.
     // BTree test(obj);
@@ -359,5 +359,6 @@ int main()
     output << "Italian                  " << italian_average_adj << "\n";
     output << "Chinese                  " << chinese_average_adj << "\n" << "\n";
 
+    std::cout << "Analysis Complete" << std::endl;
     return 0;
 }
