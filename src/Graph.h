@@ -26,8 +26,13 @@ class Graph {
                 */
                 GraphNode();
 
-                /*
+                /**
                 * Based on a given ID create a GraphNode with its data
+                *
+                * @param id the streamer id.
+                * @param views the streamer's average views.
+                * @param language the streamer's native language.
+                * @param mutuals a set of all the individual streamer's mutual followers.
                 */
                 GraphNode(int id, int views, string language, std::set<int> mutuals);
 
@@ -66,8 +71,13 @@ class Graph {
                 */
                 int getMutualSize();
 
-                /*
-                * Set data of node in graph
+                /**
+                * Set data of node in graph.
+                *
+                * @param id the streamer id.
+                * @param views the streamer's average views.
+                * @param language the streamer's native language.
+                * @param mutuals a set of all the individual streamer's mutual followers.
                 */
                 void setData(int id, int views, string language, set<int> mutuals);
 
@@ -93,8 +103,10 @@ class Graph {
                 set<int> mutuals_;
         };
 
-        /*
+        /**
         * Creates graph based on the ReadCSV file
+        *
+        * @param file that contains the parsed and organized data.
         */    
         Graph(ReadCSV file);
 

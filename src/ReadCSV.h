@@ -105,7 +105,7 @@ class ReadCSV{
         void printFeature();
 
         /**
-        * Prints out all the edges (mutual follwerships for each streamer).
+        * Prints out all the edges (mutual followers for each streamer).
         */
         void printEdges();
 

@@ -27,7 +27,10 @@
            /**
            * Constructs a BTreeNode with the provided streamer's id and their corresponding feature data. 
            * 
-           * @param streamer_id_and_feature_data vector that is used to initialize the BTreeNode member variable, "streamer_data".
+           * @param id the streamer id.
+           * @param views the streamer's average views.
+           * @param language the streamer's native language.
+           * @param mutuals a set of all the individual streamer's mutual followers.
            */
            BTreeNode(int id, int views, string language, std::set<int> mutuals);
 
@@ -55,6 +58,10 @@
 
            /**
            * Changes the streamer's data.
+           * @param id the streamer id.
+           * @param views the streamer's average views.
+           * @param language the streamer's native language.
+           * @param mutuals a set of all the individual streamer's mutual followers.
            */
            void setStreamerData(int id, int views, string language, set<int> mutuals);
 
@@ -83,8 +90,10 @@
 
       };
 
-      /*
+      /**
       * The default constructor for the BTree.
+      *
+      * @param csvfile that contains the parsed and organized data.
       */
       BTree(ReadCSV csvfile);
 
@@ -103,20 +112,21 @@
       vector<BTreeNode> getBTree();
       
       /**
-      * Sorts the B-tree in increasing order of streamer ids.
+      * Sorts the B-tree according to the user's specification (by language, viewcounts, etc). 
+      * The algorithm maintains the structure and function of the B-tree as it is sorted.
       * 
-      * @param vec the B-tree of streamer data.
-      * @param start
-      * @param end
+      * @param vec the B-tree.
+      * @param start the starting index for a node in the B-tree.
+      * @param end the ending index for a node in the B-tree.
       */
       void MergeSort(std::vector<BTreeNode>& vec, int start, int end);
 
       /**
       * A helper function that is used to help the MergeSort function above.
       * 
-      * @param vec the B-tree of streamer data.
-      * @param start
-      * @param end
+      * @param vec the B-tree.
+      * @param start the starting index for a node in the B-tree.
+      * @param end the ending index for a node in the B-tree.
       */
       void MergeVectors(std::vector<BTreeNode>& vec, int start, int middle, int end);
 
