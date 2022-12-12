@@ -27,8 +27,6 @@
            /**
            * Constructs a BTreeNode with the provided streamer's id and their corresponding feature data. 
            * 
-           * TODO: Add a parameter for the streamer's mutual followers to initialize, the member variable "mutual_followers". 
-           * 
            * @param streamer_id_and_feature_data vector that is used to initialize the BTreeNode member variable, "streamer_data".
            */
            BTreeNode(int id, int views, string language, std::set<int> mutuals);
@@ -62,8 +60,19 @@
 
          private:
 
+           /**
+           * The streamer id.
+           */
            int streamer_iden_;
+
+           /**
+           * The streamer's average viewcount.
+           */
            int viewcount_;
+
+           /**
+           * The streamer native language.
+           */
            std::string languages_;
 
            /*
@@ -94,18 +103,36 @@
       vector<BTreeNode> getBTree();
       
       /**
-      * Getter for our mutual followers map.
+      * Sorts the B-tree in increasing order of streamer ids.
       * 
-      * @return map of adjacency lists for our graph.
+      * @param vec the B-tree of streamer data.
+      * @param start
+      * @param end
       */
-
       void MergeSort(std::vector<BTreeNode>& vec, int start, int end);
 
+      /**
+      * A helper function that is used to help the MergeSort function above.
+      * 
+      * @param vec the B-tree of streamer data.
+      * @param start
+      * @param end
+      */
       void MergeVectors(std::vector<BTreeNode>& vec, int start, int middle, int end);
 
     private:
-      /* This vector contains the entire B-Tree. */
+      /**
+      * The B-tree.
+      */
       vector<BTreeNode> b_tree;
+
+      /**
+      * A map that takes in the streamer id as a key and returns their mutual followers.
+      */
       map<int, set<int>> map_;
+
+      /**
+      * The streamer (id) and their feature data.
+      */
       vector<pair<int,string>> featureVector_;
  };
