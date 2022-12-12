@@ -21,8 +21,11 @@ class Graph {
         class GraphNode {
             public:
 
-
+                /*
+                * Default constructor.
+                */
                 GraphNode();
+
                 /*
                 * Based on a given ID create a GraphNode with its data
                 */
@@ -49,9 +52,20 @@ class Graph {
                 */
                 string getLanguage();
 
+                /**
+                * Gets the mutual followers for the specific streamer.
+                * 
+                * @return the mutual followers of a streamer.
+                */
                 set<int> getMutuals();
 
+                /**
+                * Returns the number of mutual followers for a specific streamer.
+                * 
+                * @return the number of mutual followers a streamer has.
+                */
                 int getMutualSize();
+
                 /*
                 * Set data of node in graph
                 */
