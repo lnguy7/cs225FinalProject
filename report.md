@@ -19,6 +19,10 @@ ReadCSV Class:
         This function returns the total size of our featureFile_ vector, which is also the amount of streamer id's that we have. This is just a simple getter to access size since we don't have access outside of the class to get private variables without this. This runs in O(1) time.
     getMutualMap()-
         This function returns our mutualmap_ private variable. This variable was earlier populated by getMutuals(), but since it is stored as a private variable, we don't have to rebuild the map every time we want to access the edges of our data conviniently. However, for outside classes to have access to this map, we have this getter to provide access to it. This runs in O(1) time.
+    printEdges()-
+        This function prints out all of the edges in our graph to the terminal using cout. This is mostly used for testing purposes. Runs in O(n) time.
+    printFeature()-
+        This function prints out all of data in our feature vector (which holds all of the streamer data) to the terminal using cout. This is mostly used for testing purposes. Runs in O(n) time.
 
 BTree Class:
     This class is our tree representation of our data. We used this to sort and store our data in a way that is convenient to access. The nodes were sorted in order of viewership so we can access the data here based on viewcount per channel.
@@ -57,6 +61,8 @@ Graph Class:
         This function is the getter for the language of the streamer whose node we are accessing. Returns the private string variable language_. This runs in O(1) time.
     GraphNode::setData()-
         This function allows us to change or set the streamer data for the graph node. It takes the streamer_id, the viewcount, the language, and the set of connected streamers as parameters and changes the private variables that are in the graph node. This runs in O(1) time.
+    GraphNode::getMutualSize()-
+        This function returned the size of the set that contained all of the adjacent nodes to this graph node. We used this to collect some of our data in main and figure out the average amount of edges per language. This runs in O(1) time as it is just returning the size of a set.
     Graph()-
         This is the constructor for our Graph class. It takes a ReadCSV object as a parameter and uses this to construct the graph nodes and obtain the data for each of those nodes. It does this by looping through the vector of streamer data (in the readcsv object) and using the graph node constructor to make the node, and then adds them all to a vector to store the nodes in the graph.
     getGraph()-
@@ -64,25 +70,11 @@ Graph Class:
     getMap()-
         This is a getter for the private variable map_ which contains the map of edges that was constructed and copied from the ReadCSV file.
 
-Data Class:
-    This class is a helper class composed of functions that are used to help parse and organize the data for the readCSV class. 
-
-    Data()- 
-        This is the default constructor for our Data class. 
-    file_to_nested_vector()- 
-        Given a filename to a CSV-formatted text file, a 2D vector of strings is created where each row in the text file is a row in the V2D and each comma-separated value is stripped of whitespace and stored as its own string. The nested vector of strings created is returned in this function.
-    data_to_string()-
-        This takes a filename and reads in all the text from the file. The data in the file is read into a string data structure, which is necessary for converting the string to a nested vector. The string that is returned from this function will be the input of the function above, file_to_nested_vector().
-    split_string()- 
-        Given a string and character, the string is split by the character and stored in a vector. A 'split' string treats the character as a breakpoint and creates a separate item in the output vector for each substring. The function returns the number of substrings that were created during the splitting.
-    trim_right_side()-
-        This function removes the whitespace to the right of a string.
-    trim_left_side()-
-        This function removes the whitespace to the left of a string.
-    trim_all()-
-        This function removes the whitespace to the left and right of a string.
-
 
 --------Leading Questions--------
 
-Q: How does gaming culture change across different regions? How does language affect how connected and large each community on Twitch is?
+Q: How does gaming culture change across different regions? Which languages are the most popular on Twitch? How does language affect how connected and large each community on Twitch is?
+
+    Through our functions and code, we were able to analyze all of the data we had in order to answer these questions. The three different results we ended up displaying were the average viewer count of the top ten languages, the top streamers for those languages and their viewcounts, and the average number of nodes per language. With this data we had hoped to answer our leading question. Our original hypothesis was that the English language would have the highest viewcount, most connected community, etc. but this ended up not entirely being the case. When we finalized our results, it ended up being that Chinese had the highest average viewcount. English, Spanish, and French all still had relatively high average viewcounts, but still none as high as Chinese. Though this was unexpected, the rest of our data supported certain reasons for this. When we looked at the top highest streamers for each language and compared them, we found that the top English streamer had more than three times the amount of yearly views than the top Chinese streamers. This actually makes sense because the way we calculated this average viewcount was by adding up all of the viewcounts for every streamer under the language, and then dividing by the total number of streamers in that language. There are many many more English streamers than there are Chinese streamers, however most of those English streamers have very low viewcounts. When we took the average of the English streamers, having all of these smaller streamers made the average decrease significantly. On the contrary, there are not very many Chinese streamers, so the ones that there are have very large viewcounts. This is why the average for Chinese viewership is so much higher than the other languages. This generally holds true and shows a pattern for the rest of the data in our first two categories. 
+    Seperately, we had also collected the data on the average number of nodes for each language. This was how we planned to answer the second half of our question. Unfortunately the results for this section were not very different and all of the languages had about the same number of average nodes, implying that each community is the same amount connected. This makes sense, however it is not a very interesting result. 
+    Overall I think we were successfully able to get the data that we wanted. I think at the beginning of our project we were a bit too ambitious and made questions and had plans to do things that we did not have the time for. We ended up narrowing this down, but I think in the future we will try to be more specific in coming up with our leading questions and planning our project in advance to not have this issue.
